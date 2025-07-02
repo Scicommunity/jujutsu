@@ -1,5 +1,5 @@
 ---
-title: "Fundamentals"
+title: "Новости"
 weight: 1
 # bookFlatSection: false
 # bookToc: true
