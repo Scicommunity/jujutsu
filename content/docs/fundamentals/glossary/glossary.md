@@ -1,5 +1,5 @@
 ---
-title: "Книги"
+title: "Глоссарий"
 weight: 1
 # bookFlatSection: false
 # bookToc: true
@@ -9,4 +9,4 @@ weight: 1
 # bookSearchExclude: false
 ---
 
-# Книги
+#  Глоссарий

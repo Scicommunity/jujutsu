@@ -1,6 +1,6 @@
 ---
-title: "Основы"
-weight: 1
+title: "Инструкции"
+weight: 3
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false

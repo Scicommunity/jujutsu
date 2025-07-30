@@ -1,6 +1,6 @@
 ---
-title: "Книги"
-weight: 1
+title: "Rabbithole"
+weight: 10
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false
@@ -9,4 +9,4 @@ weight: 1
 # bookSearchExclude: false
 ---
 
-# Книги
+# Дополнительные материалы
