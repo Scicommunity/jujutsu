@@ -2,3 +2,18 @@ baseURL: https://jujutsu.sci.community/
 languageCode: ru-RU
 title: Дзю-Дзюцу
 theme: hugo-book
+
+menu:
+  main:
+    - name: "Главная"
+      url: "/"
+      weight: 1
+    - name: "О нас"
+      url: "/about/"
+      weight: 2
+    - name: "Контакты"
+      url: "/contacts/"
+      weight: 3
+    - name: "Блог"
+      url: "/blog/"
+      weight: 4

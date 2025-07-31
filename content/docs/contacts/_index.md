@@ -1,6 +1,6 @@
 ---
-title: "Rabbithole"
-weight: 4
+title: "Контакты"
+weight: 5
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false
@@ -9,4 +9,5 @@ weight: 4
 # bookSearchExclude: false
 ---
 
-# Дополнительные материалы
+# Контакты
+
