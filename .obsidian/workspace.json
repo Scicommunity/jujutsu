@@ -1,0 +1,267 @@
+{
+  "main": {
+    "id": "6bf59b8eb8df26d8",
+    "type": "split",
+    "children": [
+      {
+        "id": "6fc36028e1cd4472",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f4ae3d3e3c42c6b5",
+            "type": "leaf",
+            "state": {
+              "type": "reveal-preview-view",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Плагин больше не активен"
+            }
+          },
+          {
+            "id": "3df55fcdc0677a4b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/docs/posts/etnofest/etnofest.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "etnofest"
+            }
+          },
+          {
+            "id": "157588947d6d3117",
+            "type": "leaf",
+            "state": {
+              "type": "diagram-edit",
+              "state": {
+                "file": "content/docs/guides/contribute/knowledgemachine.svg"
+              },
+              "icon": "lucide-file",
+              "title": "Плагин больше не активен"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "31cd09614aac7c55",
+    "type": "split",
+    "children": [
+      {
+        "id": "c90f7c89f7534bfb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fddab1e91421cf81",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Файловый менеджер"
+            }
+          },
+          {
+            "id": "dc43386a0d3310ab",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Поиск"
+            }
+          },
+          {
+            "id": "e68fdf37802a6e31",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 449.5
+  },
+  "right": {
+    "id": "2dace323d37d6b22",
+    "type": "split",
+    "children": [
+      {
+        "id": "13c5a59b02865c21",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "88a419699485ce68",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Плагин больше не активен"
+            }
+          },
+          {
+            "id": "4b8e84a69de030f8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Обратные ссылки"
+            }
+          },
+          {
+            "id": "9366ed94725e905e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "content/docs/guides/contribute/seafknowledge.md",
+                "linksCollapsed": true,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Исходящие ссылки из seafknowledge"
+            }
+          },
+          {
+            "id": "4a023bcf919c79d1",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Теги"
+            }
+          },
+          {
+            "id": "56340a1d9c381e02",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "content/docs/posts/etnofest/etnofest.md",
+                "followCursor": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Структура etnofest"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 278.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Меню быстрого перехода": false,
+      "graph:Граф": false,
+      "canvas:Создать новый холст": false,
+      "daily-notes:Сегодняшняя заметка": false,
+      "templates:Вставить шаблон": false,
+      "command-palette:Открыть палитру команд": false,
+      "zk-prefixer:Создать заметку с уникальным идентификатором": false,
+      "publish:Публикация изменений": false,
+      "markdown-importer:Импорт Markdown-файлов": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-excalidraw-plugin:Создать новый чертеж": false,
+      "mermaid-tools:Open Mermaid Toolbar": false,
+      "github-sync:Sync with Remote": false,
+      "obsidian-advanced-slides:Show Slide Preview": false
+    }
+  },
+  "active": "3df55fcdc0677a4b",
+  "lastOpenFiles": [
+    "content/docs/contacts/instructors/instructors.md",
+    "content/docs/guides/contribute/knowledgemachine.svg",
+    "content/docs/guides/contribute/seafknowledge.md",
+    "content/docs/guides/contribute/models/knowledgeformsout.svg",
+    "content/docs/guides/contribute/Вопросы к рассмотрению (разобрать).svg",
+    "content/docs/guides/contribute/Untitled Diagram 1.svg",
+    "content/docs/guides/contribute/stakeholders.svg",
+    "content/docs/guides/contribute/formats.svg",
+    "content/docs/guides/contribute/typesbylogic.svg",
+    "content/docs/guides/contribute/models/knowledgeformsin.svg",
+    "content/docs/guides/contribute/Knowledge Cube v1.jpg",
+    "content/docs/guides/contribute/models",
+    "content/docs/guides/contribute/Темы для проработки Рабочей группой SEAF.md",
+    "content/docs/guides/contribute/Knowledgekpi.svg",
+    "content/docs/guides/contribute/tags.md",
+    "content/docs/guides/contribute/todolist.md",
+    "content/docs/guides/contribute/deep.md",
+    "content/docs/guides/contribute/contributors.md",
+    "content/docs/guides/contribute/202504071852.md",
+    "content/ObsidianVault/СООБЩЕСТВО SEAF/План мероприятий SEAF_2024Q3-4_v2.excalidraw.md",
+    "content/ObsidianVault/СООБЩЕСТВО SEAF/что-то про стратегию со старого холста моего.excalidraw.excalidraw.md",
+    "content/ObsidianVault/СООБЩЕСТВО SEAF/что-то про стратегию со старого холста 11.54.34.excalidraw.md",
+    "content/ObsidianVault/SEAF.sci.community/Drawing 2025-03-17 13.31.23.excalidraw.md",
+    "content/ObsidianVault/СООБЩЕСТВО SEAF/ЧЕГО МЫ ХОТИМ ОТ SEAF.md",
+    "content/ObsidianVault/СООБЩЕСТВО SEAF/Сообщество SEAF tobe v2.excalidraw.md",
+    "content/ObsidianVault/СООБЩЕСТВО SEAF/Рекомендации Андрея Блинова по развитию SEAF в части управления знаниями, формирования базы знаний.md",
+    "content/ObsidianVault/СООБЩЕСТВО SEAF/План мероприятий SEAF_2024Q1-2.excalidraw.md",
+    "content/ObsidianVault/СООБЩЕСТВО SEAF/План мероприятий SEAF и прочее (архив)_v0.1.excalidraw.md",
+    "content/docs/guides/contribute/othernotes/Что такое deepwiki.md",
+    "content/docs/guides/contribute/SEAF TAGS.drawio",
+    "content/docs/guides/contribute/othernotes/deepwiki.md",
+    "content/docs/guides/contribute/_index.md",
+    "content/docs/guides/contribute/howtomarkdata.md",
+    "content/docs/guides/_index.md",
+    "seafonapage/_index.md",
+    "content/docs/guides/contribute/howtoformat.md",
+    "content/docs/guides/contribute/howtostart.md",
+    "content/docs/fundamentals/_index.md",
+    "Без названия 1.canvas",
+    "Без названия.canvas",
+    "content/docs/guides/contribute/othernotes",
+    "content/docs/posts/AI",
+    "content/docs/fundamentals/refprocs",
+    "seafonapage",
+    "README.md~",
+    "content/docs/fundamentals/_index.md~",
+    "content/docs/fundamentals/values4org",
+    "static/rev_idea",
+    "Без названия 3.canvas",
+    "Untitled.canvas",
+    "Untitled 2.canvas",
+    "Untitled 1.canvas",
+    "Без названия 2.canvas"
+  ]
+}

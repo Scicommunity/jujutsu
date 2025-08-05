@@ -1,0 +1,10 @@
+{
+  "accentColor": "#e5e1ef",
+  "enabledCssSnippets": [
+    "dashboard",
+    "dashboard-ReadLineLength"
+  ],
+  "theme": "obsidian",
+  "baseFontSizeAction": true,
+  "baseFontSize": 19
+}

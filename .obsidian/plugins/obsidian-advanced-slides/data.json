@@ -1,0 +1,21 @@
+{
+  "port": "3001",
+  "autoReload": true,
+  "exportDirectory": "/export",
+  "enableChalkboard": true,
+  "enableOverview": true,
+  "enableMenu": true,
+  "enablePointer": true,
+  "enableTimeBar": false,
+  "theme": "mattropolis",
+  "highlightTheme": "",
+  "transition": "slide",
+  "transitionSpeed": "fast",
+  "controls": true,
+  "progress": true,
+  "slideNumber": true,
+  "showGrid": false,
+  "autoComplete": "inPreview",
+  "paneMode": "split",
+  "motm": "2025-07-06T17:35:27.321Z"
+}
