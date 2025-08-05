@@ -11,12 +11,14 @@
             "id": "900436c04c3fe68c",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "content/docs/backlog/План работ.excalidraw.md"
+                "file": "content/docs/posts/etnofest/etnofest.md",
+                "mode": "source",
+                "source": true
               },
-              "icon": "excalidraw-icon",
-              "title": "План работ.excalidraw"
+              "icon": "lucide-file",
+              "title": "etnofest"
             }
           }
         ]
@@ -76,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 449.5
+    "width": 449.5,
+    "collapsed": true
   },
   "right": {
     "id": "2dace323d37d6b22",
@@ -149,13 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/docs/backlog/План работ.excalidraw.md",
+                "file": "content/docs/posts/etnofest/etnofest.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура План работ.excalidraw"
+              "title": "Структура etnofest"
             }
           }
         ],
@@ -183,7 +186,7 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "fddab1e91421cf81",
+  "active": "900436c04c3fe68c",
   "lastOpenFiles": [
     "content/docs/backlog/План работ.excalidraw.md",
     "content/docs/posts/etnofest/etnofest.md",
