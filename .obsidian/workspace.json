@@ -4,47 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "6fc36028e1cd4472",
+        "id": "204a74771b9414c0",
         "type": "tabs",
         "children": [
           {
-            "id": "f4ae3d3e3c42c6b5",
+            "id": "900436c04c3fe68c",
             "type": "leaf",
             "state": {
-              "type": "reveal-preview-view",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Плагин больше не активен"
-            }
-          },
-          {
-            "id": "3df55fcdc0677a4b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "content/docs/posts/etnofest/etnofest.md",
-                "mode": "preview",
-                "source": true
+                "file": "content/docs/backlog/План работ.excalidraw.md"
               },
-              "icon": "lucide-file",
-              "title": "etnofest"
-            }
-          },
-          {
-            "id": "157588947d6d3117",
-            "type": "leaf",
-            "state": {
-              "type": "diagram-edit",
-              "state": {
-                "file": "content/docs/guides/contribute/knowledgemachine.svg"
-              },
-              "icon": "lucide-file",
-              "title": "Плагин больше не активен"
+              "icon": "excalidraw-icon",
+              "title": "План работ.excalidraw"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -174,13 +149,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/docs/posts/etnofest/etnofest.md",
+                "file": "content/docs/backlog/План работ.excalidraw.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура etnofest"
+              "title": "Структура План работ.excalidraw"
             }
           }
         ],
@@ -208,8 +183,11 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "3df55fcdc0677a4b",
+  "active": "fddab1e91421cf81",
   "lastOpenFiles": [
+    "content/docs/backlog/План работ.excalidraw.md",
+    "content/docs/posts/etnofest/etnofest.md",
+    "content/docs/backlog",
     "content/docs/contacts/instructors/instructors.md",
     "content/docs/guides/contribute/knowledgemachine.svg",
     "content/docs/guides/contribute/seafknowledge.md",
@@ -246,8 +224,6 @@
     "content/docs/guides/_index.md",
     "seafonapage/_index.md",
     "content/docs/guides/contribute/howtoformat.md",
-    "content/docs/guides/contribute/howtostart.md",
-    "content/docs/fundamentals/_index.md",
     "Без названия 1.canvas",
     "Без названия.canvas",
     "content/docs/guides/contribute/othernotes",
@@ -257,7 +233,6 @@
     "README.md~",
     "content/docs/fundamentals/_index.md~",
     "content/docs/fundamentals/values4org",
-    "static/rev_idea",
     "Без названия 3.canvas",
     "Untitled.canvas",
     "Untitled 2.canvas",
