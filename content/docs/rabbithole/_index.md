@@ -7,6 +7,7 @@ weight: 4
 # bookCollapseSection: false
 # bookComments: false
 # bookSearchExclude: false
+draft: true
 ---
 
 # Дополнительные материалы
