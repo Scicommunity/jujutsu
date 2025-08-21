@@ -7,6 +7,7 @@ weight: 5
 bookCollapseSection: true
 # bookComments: false
 # bookSearchExclude: false
+draft: true
 ---
 
 # Контакты
