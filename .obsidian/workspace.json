@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/docs/posts/etnofest/index.md",
+                "file": "content/docs/posts/etnofest/etnofest.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "etnofest"
             }
           }
         ]
@@ -151,13 +151,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/docs/posts/etnofest/index.md",
+                "file": "content/docs/posts/etnofest/etnofest.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура index"
+              "title": "Структура etnofest"
             }
           }
         ],
@@ -186,15 +186,15 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "fddab1e91421cf81",
+  "active": "d975692edfb90c2b",
   "lastOpenFiles": [
+    "content/docs/posts/etnofest/index.md",
+    "static/etnofest_01.JPG",
     "static/Values4ProdTeam.png",
     "static/ProductCode.png",
     "content/docs/posts/etnofest/etnofest.md",
-    "static/etnofest_01.JPG",
     "content/docs/posts/etnofest/IMG_3968.JPG",
     "Clippings/Обучающая онлайн-платформа Skillbox.md",
-    "content/docs/posts/etnofest/index.md",
     "Clippings",
     "content/docs/posts/_index.md",
     "content/docs/backlog/План работ.excalidraw.md",
@@ -208,7 +208,6 @@
     "content/docs/guides/contribute/Untitled Diagram 1.svg",
     "content/docs/guides/contribute/stakeholders.svg",
     "content/docs/guides/contribute/formats.svg",
-    "content/docs/guides/contribute/typesbylogic.svg",
     "content/docs/guides/contribute/models",
     "content/docs/guides/contribute/Темы для проработки Рабочей группой SEAF.md",
     "content/docs/guides/contribute/tags.md",
