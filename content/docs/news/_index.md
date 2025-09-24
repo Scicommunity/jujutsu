@@ -1,6 +1,6 @@
 ---
-title: "Публикации"
-weight: 2
+title: "Новости"
+weight: 1
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false
@@ -9,4 +9,4 @@ bookCollapseSection: true
 # bookSearchExclude: false
 ---
 
-# Публикации
+# Лента новостей

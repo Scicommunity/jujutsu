@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "39b0ebb5c6f5b61a",
+        "id": "72d21f64891ff893",
         "type": "tabs",
         "children": [
           {
-            "id": "d975692edfb90c2b",
+            "id": "b013bebf8ae88b05",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/docs/posts/etnofest/etnofest.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "etnofest"
+              "title": "Новая вкладка"
             }
           }
         ]
@@ -151,13 +147,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/docs/posts/etnofest/etnofest.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура etnofest"
+              "title": "Структура"
             }
           }
         ],
@@ -186,17 +181,30 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "d975692edfb90c2b",
+  "active": "b013bebf8ae88b05",
   "lastOpenFiles": [
+    "content/docs/posts/metsuki_sutemi/metsuki_sutemi.md",
+    "static/post_1_01.png",
+    "static/post_1_02.png",
+    "static/post_1_03.png",
+    "content/docs/posts/_index.md~",
+    "content/docs/posts/metsuki_sutemi/etnofest.md",
+    "content/docs/posts/metsuki_sutemi",
+    "content/docs/posts/etnofest/etnofest.md",
+    "content/docs/posts/etnofest",
+    "content/docs/posts/_index.md",
+    "content/docs/posts",
+    "content/docs/news/etnofest/etnofest.md",
+    "content/docs/news/_index.md",
+    "content/docs/news/etnofest",
+    "content/docs/news",
     "content/docs/posts/etnofest/index.md",
     "static/etnofest_01.JPG",
     "static/Values4ProdTeam.png",
     "static/ProductCode.png",
-    "content/docs/posts/etnofest/etnofest.md",
     "content/docs/posts/etnofest/IMG_3968.JPG",
     "Clippings/Обучающая онлайн-платформа Skillbox.md",
     "Clippings",
-    "content/docs/posts/_index.md",
     "content/docs/backlog/План работ.excalidraw.md",
     "content/docs/backlog/План работ_2.excalidraw.md",
     "content/docs/backlog",
@@ -205,9 +213,6 @@
     "content/docs/guides/contribute/seafknowledge.md",
     "content/docs/guides/contribute/models/knowledgeformsout.svg",
     "content/docs/guides/contribute/Вопросы к рассмотрению (разобрать).svg",
-    "content/docs/guides/contribute/Untitled Diagram 1.svg",
-    "content/docs/guides/contribute/stakeholders.svg",
-    "content/docs/guides/contribute/formats.svg",
     "content/docs/guides/contribute/models",
     "content/docs/guides/contribute/Темы для проработки Рабочей группой SEAF.md",
     "content/docs/guides/contribute/tags.md",
@@ -222,19 +227,9 @@
     "content/ObsidianVault/СООБЩЕСТВО SEAF/ЧЕГО МЫ ХОТИМ ОТ SEAF.md",
     "content/ObsidianVault/СООБЩЕСТВО SEAF/Сообщество SEAF tobe v2.excalidraw.md",
     "content/ObsidianVault/СООБЩЕСТВО SEAF/Рекомендации Андрея Блинова по развитию SEAF в части управления знаниями, формирования базы знаний.md",
-    "content/ObsidianVault/СООБЩЕСТВО SEAF/План мероприятий SEAF_2024Q1-2.excalidraw.md",
-    "content/ObsidianVault/СООБЩЕСТВО SEAF/План мероприятий SEAF и прочее (архив)_v0.1.excalidraw.md",
-    "content/docs/guides/contribute/othernotes/Что такое deepwiki.md",
     "content/docs/guides/contribute/SEAF TAGS.drawio",
-    "content/docs/guides/contribute/othernotes/deepwiki.md",
     "Без названия 1.canvas",
     "Без названия.canvas",
-    "content/docs/guides/contribute/othernotes",
-    "content/docs/posts/AI",
-    "content/docs/fundamentals/refprocs",
-    "seafonapage",
-    "README.md~",
-    "content/docs/fundamentals/_index.md~",
     "Без названия 3.canvas",
     "Untitled.canvas",
     "Untitled 2.canvas",
