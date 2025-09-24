@@ -26,7 +26,7 @@ bookSearchExclude: false
 
 ## Связь с традиционным дзю-дзюцу
 
-В контексте японских боевых искусств **Metsuki Sutemi** тесно связано с традиционными техниками жертвенности. В дзю-дзюцу и дзюдо существует целая категория техник под названием **Sutemi Waza** (捨身技) — "жертвенные техники":
+В контексте японских боевых искусств **Metsuki Sutemi** тесно связано с традиционными техниками жертвенности. В дзю-дзюцу существует целая категория техник под названием **Sutemi Waza** (捨身技) — "жертвенные техники":
 
 ### Философское основание Sutemi Waza
 
@@ -118,12 +118,7 @@ Metsuki Sutemi не имеет специфических символов, но
 
 ### Кинематографическое воплощение
 
-Концепция ярко показана в фильмах Акиры Куросавы:
-
-![Black and white promotional image for the movie "Seven Samurai" showing seven samurai warriors with traditional weapons.](https://pplx-res.cloudinary.com/image/upload/v1755542605/pplx_project_search_images/411692d6d5f09455d55dfbf4a0f75e317ba68843.png)
-
-Black and white promotional image for the movie "Seven Samurai" showing seven samurai warriors with traditional weapons.
-
+Концепция ярко показана в фильмах Акиры Куросавы.
 
 **"Семь самураев" (1954)** — классический пример демонстрации Metsuki Sutemi:
 
@@ -131,16 +126,9 @@ Black and white promotional image for the movie "Seven Samurai" showing seven sa
 - Готовность к самопожертвованию ради защиты деревни
 - Психологическое воздействие через интенсивный взгляд
 
-![A samurai warrior running with a sword, illustrating intense focus and combat readiness in traditional Japanese martial culture.](https://pplx-res.cloudinary.com/image/upload/v1758548421/pplx_project_search_images/fb77eeb17aeea083dac3e1b1a1b801305d573f19.png)
+![Самурай, бегущий с мечом, демонстрирует сосредоточенность и боевую готовность в традиционной японской военной культуре.](https://pplx-res.cloudinary.com/image/upload/v1758548421/pplx_project_search_images/fb77eeb17aeea083dac3e1b1a1b801305d573f19.png)
 
-A samurai warrior running with a sword, illustrating intense focus and combat readiness in traditional Japanese martial culture.
-
-
-**Другие произведения**:
-
-- Фильмы о самураях периода Эдо
-- Современные аниме о боевых искусствах
-- Документальные фильмы о традиционном будо
+Самурай, бегущий с мечом, демонстрирует сосредоточенность и боевую готовность в традиционной японской военной культуре
 
 
 ## Аутентичность понятия
