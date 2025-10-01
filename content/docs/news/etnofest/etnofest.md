@@ -1,5 +1,5 @@
 ---
-title: "Выступление на мероприятии Этно-Фест"
+title: "Выступление на мероприятии Этно-Фест (2025г.)"
 weight: 10
 # bookFlatSection: false
 bookToc: true

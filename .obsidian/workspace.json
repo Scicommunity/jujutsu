@@ -11,10 +11,14 @@
             "id": "b013bebf8ae88b05",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "content/docs/news/2022_mmfbi/2022_mmfbi_show.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Новая вкладка"
+              "title": "2022_mmfbi_show"
             }
           }
         ]
@@ -147,12 +151,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "content/docs/news/2022_mmfbi/2022_mmfbi_show.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура"
+              "title": "Структура 2022_mmfbi_show"
             }
           }
         ],
@@ -184,6 +189,10 @@
   "active": "b013bebf8ae88b05",
   "lastOpenFiles": [
     "content/docs/posts/metsuki_sutemi/metsuki_sutemi.md",
+    "static/2022_mmfbi.jpg",
+    "content/docs/news/2022_mmfbi/2022_mmfbi_show.md",
+    "content/docs/news/2022_mmfbi/Показательное выступление дзю-дзюцу на Московском.md",
+    "content/docs/news/2022_mmfbi",
     "static/post_1_01.png",
     "static/post_1_02.png",
     "static/post_1_03.png",
@@ -212,7 +221,6 @@
     "content/docs/guides/contribute/knowledgemachine.svg",
     "content/docs/guides/contribute/seafknowledge.md",
     "content/docs/guides/contribute/models/knowledgeformsout.svg",
-    "content/docs/guides/contribute/Вопросы к рассмотрению (разобрать).svg",
     "content/docs/guides/contribute/models",
     "content/docs/guides/contribute/Темы для проработки Рабочей группой SEAF.md",
     "content/docs/guides/contribute/tags.md",
@@ -225,9 +233,6 @@
     "content/ObsidianVault/СООБЩЕСТВО SEAF/что-то про стратегию со старого холста 11.54.34.excalidraw.md",
     "content/ObsidianVault/SEAF.sci.community/Drawing 2025-03-17 13.31.23.excalidraw.md",
     "content/ObsidianVault/СООБЩЕСТВО SEAF/ЧЕГО МЫ ХОТИМ ОТ SEAF.md",
-    "content/ObsidianVault/СООБЩЕСТВО SEAF/Сообщество SEAF tobe v2.excalidraw.md",
-    "content/ObsidianVault/СООБЩЕСТВО SEAF/Рекомендации Андрея Блинова по развитию SEAF в части управления знаниями, формирования базы знаний.md",
-    "content/docs/guides/contribute/SEAF TAGS.drawio",
     "Без названия 1.canvas",
     "Без названия.canvas",
     "Без названия 3.canvas",
