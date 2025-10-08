@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "content/docs/news/2022_mmfbi/2022_mmfbi_show.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -188,8 +188,11 @@
   },
   "active": "b013bebf8ae88b05",
   "lastOpenFiles": [
-    "content/docs/posts/metsuki_sutemi/metsuki_sutemi.md",
     "static/2022_mmfbi.jpg",
+    "static/2022_mmfbi.jpg.jpg",
+    "static/5300799481278742282-COLLAGE.jpg",
+    "static/2022_mmfbi1.jpg",
+    "content/docs/posts/metsuki_sutemi/metsuki_sutemi.md",
     "content/docs/news/2022_mmfbi/2022_mmfbi_show.md",
     "content/docs/news/2022_mmfbi/Показательное выступление дзю-дзюцу на Московском.md",
     "content/docs/news/2022_mmfbi",
@@ -218,9 +221,7 @@
     "content/docs/backlog/План работ_2.excalidraw.md",
     "content/docs/backlog",
     "content/docs/contacts/instructors/instructors.md",
-    "content/docs/guides/contribute/knowledgemachine.svg",
     "content/docs/guides/contribute/seafknowledge.md",
-    "content/docs/guides/contribute/models/knowledgeformsout.svg",
     "content/docs/guides/contribute/models",
     "content/docs/guides/contribute/Темы для проработки Рабочей группой SEAF.md",
     "content/docs/guides/contribute/tags.md",
