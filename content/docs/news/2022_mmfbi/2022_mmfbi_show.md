@@ -1,6 +1,6 @@
 ---
 title: "Выступление на Московском международном Фестивале боевых искусств (2022г.)"
-weight: 5
+weight: 999
 # bookFlatSection: false
 bookToc: true
 # bookHidden: false

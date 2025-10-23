@@ -1,6 +1,6 @@
 ---
 title: "Выступление на мероприятии Этно-Фест (2025г.)"
-weight: 10
+weight: 998
 # bookFlatSection: false
 bookToc: true
 # bookHidden: false
