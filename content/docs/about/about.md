@@ -1,5 +1,5 @@
 ---
-title: "О японском джиу-джитсу"
+title: "О японском дзю-дзюцу"
 weight: 1
 # bookFlatSection: false
 bookToc: true
