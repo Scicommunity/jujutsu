@@ -1,6 +1,6 @@
 ---
 title: "Выступление на фестивале Hinode Japan (2025г.)"
-weight: 997
+weight: 996
 # bookFlatSection: false
 bookToc: true
 # bookHidden: false
