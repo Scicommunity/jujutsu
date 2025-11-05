@@ -11,10 +11,14 @@
             "id": "183dd2e5c33f0253",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "content/docs/about/about.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Новая вкладка"
+              "title": "about"
             }
           }
         ]
@@ -100,6 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "content/docs/about/about.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +114,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки"
+              "title": "Обратные ссылки для about"
             }
           },
           {
@@ -147,12 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "content/docs/about/about.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура"
+              "title": "Структура about"
             }
           }
         ],
@@ -181,8 +187,14 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "fddab1e91421cf81",
+  "active": "183dd2e5c33f0253",
   "lastOpenFiles": [
+    "content/docs/news/2024_hinode/2024_hinode.md~",
+    "static/2024_hinode_3.png",
+    "static/2024_hinode_2.png",
+    "static/2024_hinode_1.png",
+    "content/docs/news/2024_hinode/2024_hinode.md",
+    "content/docs/news/2024_hinode",
     "content/docs/legends/legend_1/legend_1.md",
     "content/docs/about/about.md",
     "content/docs/news/2025_hinode/2025_hinode.md",
@@ -206,16 +218,11 @@
     "themes/hugo-book/layouts/shortcodes/rawhtml.html",
     "themes/hugo-book/layouts/shortcodes/video.html",
     "static/videos",
-    "static/video/2025_hinode_5.mp4",
-    "static/video",
     "content/docs/news/2022_mmfbi/2022_mmfbi_show.md",
     "static/2025_hinode_6.png",
     "static/2025_hinode_5.png",
     "content/docs/posts/shiho_nage/shiho_nage.md",
     "static/2022_mmfbi.jpg",
-    "static/2022_mmfbi.jpg.jpg",
-    "static/5300799481278742282-COLLAGE.jpg",
-    "static/2022_mmfbi1.jpg",
     "content/docs/posts/metsuki_sutemi/metsuki_sutemi.md",
     "content/docs/news/2022_mmfbi/Показательное выступление дзю-дзюцу на Московском.md",
     "content/docs/posts/metsuki_sutemi/etnofest.md",
@@ -227,8 +234,6 @@
     "Clippings/Обучающая онлайн-платформа Skillbox.md",
     "content/docs/backlog/План работ.excalidraw.md",
     "content/docs/backlog/План работ_2.excalidraw.md",
-    "content/docs/contacts/instructors/instructors.md",
-    "content/docs/guides/contribute/seafknowledge.md",
     "Без названия 1.canvas",
     "Без названия.canvas",
     "Без названия 3.canvas",
