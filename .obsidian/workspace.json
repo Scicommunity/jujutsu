@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/docs/news/2025_hinode/2025_hinode.md",
-                "mode": "preview",
-                "source": false
+                "file": "content/docs/legends/legend_1/legend_1.md",
+                "mode": "source",
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "2025_hinode"
+              "title": "legend_1"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 449.5
+    "width": 249.5
   },
   "right": {
     "id": "2dace323d37d6b22",
@@ -104,6 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "content/docs/legends/legend_1/legend_1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +114,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки"
+              "title": "Обратные ссылки для legend_1"
             }
           },
           {
@@ -151,17 +152,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/docs/news/2025_hinode/2025_hinode.md",
+                "file": "content/docs/legends/legend_1/legend_1.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура 2025_hinode"
+              "title": "Структура legend_1"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -188,13 +189,14 @@
   },
   "active": "b013bebf8ae88b05",
   "lastOpenFiles": [
+    "content/docs/about/about.md",
+    "content/docs/news/2025_hinode/2025_hinode.md",
     "content/docs/legends/legend_1/legend_1.md",
     "content/docs/legends/legend_1/legen_1.md",
     "content/docs/legends/legend_1",
     "content/docs/legends/_index.md",
     "content/docs/legends",
     "content/docs/local_base/dagz.md",
-    "content/docs/about/about.md",
     "content/docs/about",
     "content/docs/local_base/file_345.md",
     "content/docs/local_base/kgjhlkhjn.md",
@@ -215,7 +217,6 @@
     "content/docs/news/2022_mmfbi/2022_mmfbi_show.md",
     "static/2025_hinode_6.png",
     "static/2025_hinode_5.png",
-    "content/docs/news/2025_hinode/2025_hinode.md",
     "content/docs/posts/shiho_nage/shiho_nage.md",
     "static/2022_mmfbi.jpg",
     "static/2022_mmfbi.jpg.jpg",
