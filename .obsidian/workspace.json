@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "72d21f64891ff893",
+        "id": "8674c8fdc009d351",
         "type": "tabs",
         "children": [
           {
-            "id": "b013bebf8ae88b05",
+            "id": "183dd2e5c33f0253",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/docs/legends/legend_1/legend_1.md",
-                "mode": "source",
-                "source": true
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "legend_1"
+              "title": "Новая вкладка"
             }
           }
         ]
@@ -78,7 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 249.5
+    "width": 407.5
   },
   "right": {
     "id": "2dace323d37d6b22",
@@ -104,7 +100,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/docs/legends/legend_1/legend_1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +109,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для legend_1"
+              "title": "Обратные ссылки"
             }
           },
           {
@@ -152,13 +147,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/docs/legends/legend_1/legend_1.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура legend_1"
+              "title": "Структура"
             }
           }
         ],
@@ -187,11 +181,11 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "b013bebf8ae88b05",
+  "active": "fddab1e91421cf81",
   "lastOpenFiles": [
+    "content/docs/legends/legend_1/legend_1.md",
     "content/docs/about/about.md",
     "content/docs/news/2025_hinode/2025_hinode.md",
-    "content/docs/legends/legend_1/legend_1.md",
     "content/docs/legends/legend_1/legen_1.md",
     "content/docs/legends/legend_1",
     "content/docs/legends/_index.md",
