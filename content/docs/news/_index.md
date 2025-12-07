@@ -1,5 +1,5 @@
 ---
-title: "Новости"
+title: "Мероприятия"
 weight: 20
 # bookFlatSection: false
 # bookToc: true
