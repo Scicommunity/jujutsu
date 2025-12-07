@@ -1,6 +1,6 @@
 ---
-title: "Мифы и легенды"
-weight: 40
+title: "Анонсы"
+weight: 10
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false
