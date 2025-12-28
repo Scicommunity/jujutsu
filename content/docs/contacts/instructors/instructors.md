@@ -7,16 +7,7 @@ weight: 1
 # bookCollapseSection: false
 # bookComments: false
 # bookSearchExclude: false
+draft: true
 ---
 
-#  Инструкторы
 
-## Шаблон. Инструктор 1
-📧 Email: 111@gmail.com  
-📱 Телефон: +7 (111) 111-11-11  
-📨 Telegram: [@11111](https://t.me/11111)
-
-## Шаблон. Инструктор 2
-📧 Email: 222@gmail.com  
-📱 Телефон: +7 (222) 222-22-22  
-📨 Telegram: [@2222](https://t.me/2222)
