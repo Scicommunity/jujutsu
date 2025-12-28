@@ -1,5 +1,5 @@
 ---
-title: "Контакты"
+title: "Контакты и запись на тренировки"
 weight: 110
 # bookFlatSection: false
 bookToc: true
