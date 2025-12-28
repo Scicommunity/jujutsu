@@ -7,6 +7,7 @@ weight: 1
 bookCollapseSection: true
 # bookComments: false
 # bookSearchExclude: false
+url: "/ru/legend_1"
 ---
 
 
