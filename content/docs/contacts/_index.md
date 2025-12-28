@@ -1,14 +1,49 @@
 ---
 title: "Контакты"
-weight: 5
+weight: 110
 # bookFlatSection: false
-# bookToc: true
+bookToc: true
 # bookHidden: false
-bookCollapseSection: true
+bookCollapseSection: false
 # bookComments: false
 # bookSearchExclude: false
-draft: true
+draft: false
+url: "/ru/contacts"
 ---
 
-# Контакты
+# Свяжитесь с нами
+
+Мы всегда рады ответить на ваши вопросы о дзю-дзюцу, боевых искусствах и пригласить на тренировки.
+Мы так же рады сотрудничеству в области создания контента этого ресурса и продвижения каналов коммуникаций.
+
+
+## Канал сообщества в Telegram
+
+
+Подпишитесь на канал [@japanjujutsu](https://t.me/japanjujutsu), QR-код ниже:                   
+
+
+![qr_jujutsu_canal_S.png](/qr_jujutsu_canal_S.png)
+---
+
+## Оперативные коммуникации и запись на тренировки
+
+Запись на тренировки, участие в создании контента:  
+[@zhdanig](https://t.me/zhdanig)  
+[@JujutsuCommunity](https://t.me/JujutsuCommunity)
+
+![QR_1](/qr_zhdanig.png)
+
+
+---
+
+
+![QR_community](/qr_jujutsucommunity.png)
+
+Для официальных запросов и предложений:
+
+
+📧 Email: jujutsu@sci.community
+
+
 
