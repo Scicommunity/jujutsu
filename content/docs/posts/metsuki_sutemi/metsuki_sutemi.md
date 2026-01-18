@@ -1,5 +1,5 @@
 ---
-title: "Metsuki Sutemi в японских боевых искусствах"
+title: "Metsuki Sutemi: взгляд самурая"
 weight: 1
 # bookFlatSection: false
 bookToc: true

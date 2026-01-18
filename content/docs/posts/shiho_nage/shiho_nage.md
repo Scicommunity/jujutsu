@@ -1,5 +1,5 @@
 ---
-title: "Шихо-наге: Искусство броска на четыре стороны"
+title: "Шихо-наге: искусство броска на четыре стороны"
 weight: 2
 # bookFlatSection: false
 bookToc: true
