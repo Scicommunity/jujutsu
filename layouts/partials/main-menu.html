@@ -1,0 +1,22 @@
+{{ with site.Menus.main }}
+<nav class="top-main-menu" role="navigation">
+    <ul class="top-main-menu__list">
+        {{ range . }}
+        {{/* активный пункт */}}
+        {{ if $.IsMenuCurrent "main" . }}
+        <li class="top-main-menu__item top-main-menu__item--active">
+            <a href="{{ .URL }}" aria-current="page">
+                {{ .Name }}
+            </a>
+        </li>
+        {{ else }}
+        <li class="top-main-menu__item">
+            <a href="{{ .URL }}">
+                {{ .Name }}
+            </a>
+        </li>
+        {{ end }}
+        {{ end }}
+    </ul>
+</nav>
+{{ end }}

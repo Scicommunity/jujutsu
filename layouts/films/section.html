@@ -1,0 +1,35 @@
+{{ define "main" }}
+<main class="films-catalog">
+    <header class="films-catalog__header">
+        <h1>{{ .Title }}</h1>
+        {{ with .Content }}
+        <div class="films-catalog__intro">
+            {{ . }}
+        </div>
+        {{ end }}
+    </header>
+
+    <section class="films-catalog__list">
+        {{ range .Pages.ByTitle }}
+        <article class="films-card">
+            <a href="{{ .RelPermalink }}" class="films-card__link">
+                {{ with .Resources.GetMatch "poster.*" }}
+                <div class="films-card__poster">
+                    <img src="{{ .RelPermalink }}" alt="Постер: {{ $.Title }}">
+                </div>
+                {{ end }}
+                <div class="films-card__body">
+                    <h2 class="films-card__title">{{ .Title }}</h2>
+                    {{ with .Params.genre }}
+                    <div class="films-card__meta">{{ . }}</div>
+                    {{ end }}
+                    {{ with .Params.abstractNote }}
+                    <p class="films-card__abstract">{{ . }}</p>
+                    {{ end }}
+                </div>
+            </a>
+        </article>
+        {{ end }}
+    </section>
+</main>
+{{ end }}

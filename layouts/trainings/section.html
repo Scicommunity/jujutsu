@@ -1,0 +1,28 @@
+{{ define "main" }}
+<main class="trainings-catalog">
+    <header class="trainings-catalog__header">
+        <h1>{{ .Title }}</h1>
+        {{ with .Content }}
+        <div class="trainings-catalog__intro">
+            {{ . }}
+        </div>
+        {{ end }}
+    </header>
+
+    <section class="trainings-catalog__list">
+        {{ range .Pages.ByTitle }}
+        <article class="trainings-card">
+            <a href="{{ .RelPermalink }}" class="trainings-card__link">
+                <h2 class="trainings-card__title">{{ .Title }}</h2>
+                {{ with .Params.location }}
+                <div class="trainings-card__meta">{{ . }}</div>
+                {{ end }}
+                {{ with .Params.abstractNote }}
+                <p class="trainings-card__abstract">{{ . }}</p>
+                {{ end }}
+            </a>
+        </article>
+        {{ end }}
+    </section>
+</main>
+{{ end }}

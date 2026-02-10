@@ -1,0 +1,13 @@
+<nav class="sidebar-books">
+    <h2 class="sidebar-books__title">Книги</h2>
+    <ul class="sidebar-books__list">
+        {{/* список всех книг в разделе */}}
+        {{ range (where .Site.RegularPages "Section" "books") }}
+        <li class="sidebar-books__item">
+            <a href="{{ .RelPermalink }}">
+                {{ .Title }}
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+</nav>

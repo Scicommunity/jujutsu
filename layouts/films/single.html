@@ -1,0 +1,38 @@
+{{ define "main" }}
+<main class="film-page">
+    <article class="film">
+        <header class="film__header">
+            <div class="film__poster">
+                {{ with .Resources.GetMatch "poster.*" }}
+                <img src="{{ .RelPermalink }}" alt="Постер: {{ $.Title }}">
+                {{ end }}
+            </div>
+            <div class="film__meta">
+                <h1 class="film__title">{{ .Title }}</h1>
+                {{ with .Params.genre }}
+                <div class="film__genre">{{ . }}</div>
+                {{ end }}
+                {{ with .Params.date }}
+                <div class="film__year">{{ . }}</div>
+                {{ end }}
+                {{ with .Params.tags }}
+                <div class="film__tags">
+                    {{ range . }}<span class="film__tag">{{ . }}</span>{{ end }}
+                </div>
+                {{ end }}
+            </div>
+        </header>
+
+        <section class="film__abstract">
+            <h2>Описание</h2>
+            {{ with .Params.abstractNote }}<p>{{ . }}</p>{{ end }}
+        </section>
+
+        <section class="film__content">
+            <div class="film__body">
+                {{ .Content }}
+            </div>
+        </section>
+    </article>
+</main>
+{{ end }}

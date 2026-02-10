@@ -103,15 +103,18 @@ a .book-icon {
 }
 
 .book-menu {
+  position: relative;   /* гарантируем, что он не fixed/absolute */
+  margin-top: -0.25rem; /* подбери величину по вкусу */
   flex: 0 0 $menu-width;
   font-size: $font-size-14;
+  z-index: auto;
 
   .book-menu-content {
     width: $menu-width;
     padding: $padding-16;
     background: var(--body-background);
 
-    @include fixed;
+    /*@include fixed; */
   }
 
   a,
@@ -304,9 +307,11 @@ body[dir="rtl"] .book-menu {
   }
 
   .book-menu {
+    position: relative;
     visibility: hidden;
     margin-inline-start: -$menu-width;
-    z-index: 1;
+    /* z-index: 1;*/
+    z-index: auto;
   }
 
   .book-toc {
@@ -370,4 +375,98 @@ body[dir="rtl"] .book-menu {
   .book-toc .book-toc-content {
     padding: $padding-16 * 2 $padding-16;
   }
+}
+
+/* наш контейнер меню */
+.top-main-menu {
+  margin: 0 0 0.5rem 0;
+  padding: 0.5rem 1rem 0.5rem 0.75rem;
+  border-bottom: 1px solid #ddd;
+}
+
+/* делаем ul горизонтальным рядом */
+.top-main-menu__list {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between; /* или space-around / space-between, если нужно растянуть */
+}
+
+/* элементы без маркеров и внутренних отступов */
+.top-main-menu__item {
+  margin: 0;
+  padding: 0;
+}
+
+/* ссылки как «кнопки» без подчёркивания */
+.top-main-menu__item a {
+  text-decoration: none;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid transparent;
+}
+
+/* активный раздел — подчёркнут чёрной линией */
+.top-main-menu__item--active a {
+  border-bottom-color: #000;
+}
+
+
+/* Далее - Минимальные стили для растяжения меню */
+/* верхняя полоса с главным меню */
+.book-topbar {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+}
+
+/* контейнер внутри topbar */
+.book-topbar .container {
+  margin: 0 auto;
+  padding: 0 0rem; /* подберите под те же отступы, что и у основного container */
+}
+
+/* уже существующие стили, слегка уточнённые */
+.top-main-menu {
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
+.top-main-menu__list {
+  display: flex;
+  justify-content: space-between; /* или flex-start + gap, если не хотите растягивать полностью */
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* вертикальный блок (сайдбар + контент) под главным горизонтальным меню */
+
+
+
+/* верхняя полоса с главным меню */
+.book-topbar {
+  display: block;
+  width: 100%;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;  // высота полосы
+  margin-bottom: 0rem;   /* явный зазор ПОД полосой */
+  position: relative;      /* убираем фикс/абсолют, если вдруг был */
+  z-index: 1;              /* поверх фона, но не критично */
+}
+
+/* контейнер внутри полосы */
+.book-topbar .container {
+  margin: 0 auto;
+  padding: 0 1.5rem;       // подбирай под отступы темы
+}
+
+/* горизонтальное меню внутри полосы */
+.top-main-menu {
+  margin: 0;
+  padding: 0;
+  border: none;   /* если раньше было border-bottom, отключаем */
 }

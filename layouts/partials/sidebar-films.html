@@ -1,0 +1,10 @@
+<nav class="sidebar-films">
+    <h2 class="sidebar-films__title">Фильмы и эпизоды</h2>
+    <ul class="sidebar-films__list">
+        {{ range (where .Site.RegularPages "Section" "films") }}
+        <li class="sidebar-films__item">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+    </ul>
+</nav>

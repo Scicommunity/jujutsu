@@ -1,0 +1,55 @@
+{{ define "main" }}
+<main class="books-catalog">
+    <header class="books-catalog__header">
+        <h1>{{ .Title }}</h1>
+        {{ with .Content }}
+        <div class="books-catalog__intro">
+            {{ . }}
+        </div>
+        {{ end }}
+    </header>
+
+    <section class="books-catalog__grid">
+        {{ range .Pages.ByTitle }}
+        <article class="books-card">
+            <a href="{{ .RelPermalink }}" class="books-card__link">
+                {{ with .Resources.GetMatch "cover.*" }}
+                <div class="books-card__cover">
+                    <img src="{{ .RelPermalink }}" alt="Обложка: {{ $.Title }}">
+                </div>
+                {{ end }}
+                <div class="books-card__body">
+                    <h2 class="books-card__title">{{ .Title }}</h2>
+
+                    {{ with .Params.creators }}
+                    <div class="books-card__authors">
+                        {{ range $i, $c := . }}
+                        {{ if $i }}, {{ end }}{{ $c.given }} {{ $c.family }}
+                        {{ end }}
+                    </div>
+                    {{ end }}
+
+                    {{ with .Params.date }}
+                    <div class="books-card__meta">
+                        <span class="books-card__year">{{ . }}</span>
+                    </div>
+                    {{ end }}
+
+                    {{ with .Params.abstractNote }}
+                    <p class="books-card__abstract">
+                        {{ . }}
+                    </p>
+                    {{ else }}
+                    {{ with .Summary }}
+                    <p class="books-card__abstract">
+                        {{ . }}
+                    </p>
+                    {{ end }}
+                    {{ end }}
+                </div>
+            </a>
+        </article>
+        {{ end }}
+    </section>
+</main>
+{{ end }}

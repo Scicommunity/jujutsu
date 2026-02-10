@@ -1,0 +1,28 @@
+{{ define "main" }}
+<main class="training-page">
+    <article class="training">
+        <header class="training__header">
+            <h1 class="training__title">{{ .Title }}</h1>
+            <div class="training__meta">
+                {{ with .Params.date }}
+                <div class="training__date">{{ . }}</div>
+                {{ end }}
+                {{ with .Params.location }}
+                <div class="training__location">{{ . }}</div>
+                {{ end }}
+                {{ with .Params.tags }}
+                <div class="training__tags">
+                    {{ range . }}<span class="training__tag">{{ . }}</span>{{ end }}
+                </div>
+                {{ end }}
+            </div>
+        </header>
+
+        <section class="training__content">
+            <div class="training__body">
+                {{ .Content }}
+            </div>
+        </section>
+    </article>
+</main>
+{{ end }}

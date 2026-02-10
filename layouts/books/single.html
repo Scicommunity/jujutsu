@@ -1,0 +1,119 @@
+{{ define "main" }}
+<main class="book-page">
+    <article class="book">
+        <header class="book__header">
+            <div class="book__cover">
+                {{ with .Resources.GetMatch "cover.*" }}
+                <img src="{{ .RelPermalink }}" alt="Обложка: {{ $.Title }}">
+                {{ end }}
+            </div>
+            <div class="book__meta">
+                <h1 class="book__title">{{ .Title }}</h1>
+
+                {{ with .Params.creators }}
+                <div class="book__authors">
+                    {{ range $index, $c := . }}
+                    {{ if $index }}, {{ end }}{{ $c.given }} {{ $c.family }}
+                    {{ end }}
+                </div>
+                {{ end }}
+
+                <dl class="book__details">
+                    {{ with .Params.date }}
+                    <div class="book__detail">
+                        <dt>Год</dt>
+                        <dd>{{ . }}</dd>
+                    </div>
+                    {{ end }}
+
+                    {{ with .Params.publisher }}
+                    <div class="book__detail">
+                        <dt>Издательство</dt>
+                        <dd>{{ . }}</dd>
+                    </div>
+                    {{ end }}
+
+                    {{ with .Params.place }}
+                    <div class="book__detail">
+                        <dt>Город</dt>
+                        <dd>{{ . }}</dd>
+                    </div>
+                    {{ end }}
+
+                    {{ with .Params.ISBN }}
+                    <div class="book__detail">
+                        <dt>ISBN</dt>
+                        <dd>{{ . }}</dd>
+                    </div>
+                    {{ end }}
+
+                    {{ with .Params.language }}
+                    <div class="book__detail">
+                        <dt>Язык</dt>
+                        <dd>{{ . }}</dd>
+                    </div>
+                    {{ end }}
+                </dl>
+
+                {{ with .Params.tags }}
+                <div class="book__tags">
+                    {{ range . }}
+                    <span class="book__tag">{{ . }}</span>
+                    {{ end }}
+                </div>
+                {{ end }}
+
+                {{ with .Params.url }}
+                <div class="book__link">
+                    <a href="{{ . }}" target="_blank" rel="noopener">Ссылка на книгу</a>
+                </div>
+                {{ end }}
+
+                {{ with .Params.zotero }}
+                {{ with .key }}
+                <div class="book__zotero">
+                    Zotero key: {{ . }}
+                </div>
+                {{ end }}
+                {{ end }}
+            </div>
+        </header>
+
+        <section class="book__abstract">
+            <h2>Краткий пересказ</h2>
+            {{ with .Params.abstractNote }}
+            <p>{{ . }}</p>
+            {{ else }}
+            {{ with .Summary }}
+            <p>{{ . }}</p>
+            {{ end }}
+            {{ end }}
+        </section>
+
+        <section class="book__content">
+            <h2>Подробное описание и материалы</h2>
+            <div class="book__body">
+                {{ .Content }}
+            </div>
+        </section>
+
+        {{ with .Params.attachments }}
+        <section class="book__attachments">
+            <h2>Материалы</h2>
+            <ul>
+                {{ range . }}
+                <li>
+                    {{ .title }}:
+                    {{ with $.Resources.GetMatch .file }}
+                    <a href="{{ .RelPermalink }}">{{ .Name }}</a>
+                    {{ else }}
+                    {{ .file }}
+                    {{ end }}
+                </li>
+                {{ end }}
+            </ul>
+        </section>
+        {{ end }}
+    </article>
+</main>
+{{ end }}

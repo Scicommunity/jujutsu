@@ -1,0 +1,10 @@
+<nav class="sidebar-trainings">
+    <h2 class="sidebar-trainings__title">Тренировки</h2>
+    <ul class="sidebar-trainings__list">
+        {{ range (where .Site.RegularPages "Section" "trainings") }}
+        <li class="sidebar-trainings__item">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+    </ul>
+</nav>
