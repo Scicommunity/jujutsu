@@ -1,5 +1,5 @@
 ---
-title: "Тренировки"
+title: ""
 menu:
   main:
     name: "Тренировки"

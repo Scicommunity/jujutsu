@@ -1,12 +1,13 @@
 ---
 title: "Контакты и запись на тренировки"
-weight: 110
+type: "trainings"
+weight: 2
 # bookFlatSection: false
 bookToc: true
 # bookHidden: false
 bookCollapseSection: false
-# bookComments: false
-# bookSearchExclude: false
+bookComments: true
+bookSearchExclude: false
 draft: false
 url: "/ru/contacts"
 ---

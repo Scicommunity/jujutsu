@@ -1,12 +1,14 @@
 ---
 title: "Адреса и расписание тренировок"
-weight: 100
+type: "trainings"
+weight: 1
 # bookFlatSection: false
 bookToc: true
 # bookHidden: false
 bookCollapseSection: false
 bookComments: true
 bookSearchExclude: false
+draft: false
 ---
 
 ## Тренировки джиу-джитсу в Москве
