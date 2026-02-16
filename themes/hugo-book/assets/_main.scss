@@ -470,3 +470,35 @@ body[dir="rtl"] .book-menu {
   padding: 0;
   border: none;   /* если раньше было border-bottom, отключаем */
 }
+
+@media (max-width: 768px) {
+  .book-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    z-index: 1000; /* выше, чем .book-page */
+    /* фон, скролл и т.п. по вкусу */
+  }
+
+  .book-page {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+/*
+@media (max-width: 768px) {
+  .book-menu {
+    width: 260px;
+    flex: 0 0 260px;
+  }
+
+  .book-page {
+    margin-left: 260px;
+  }
+}
+*/
+
+
