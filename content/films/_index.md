@@ -1,5 +1,10 @@
 ---
-title: "Фильмы и эпизоды"
+title: "Фильмы"
+menu:
+  main:
+    name: "Фильмы"
+    identifier: "films"
+    weight: 2
 type: "films"
 weight: 120
 # bookFlatSection: false

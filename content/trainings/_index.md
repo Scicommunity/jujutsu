@@ -1,5 +1,10 @@
 ---
 title: "Тренировки"
+menu:
+  main:
+    name: "Тренировки"
+    identifier: "trainings"
+    weight: 4
 type: "trainings"
 weight: 150
 # bookFlatSection: false

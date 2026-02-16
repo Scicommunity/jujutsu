@@ -1,5 +1,10 @@
 ---
-title: "docs"
+title: "Публикации"
+menu:
+  main:
+    name: "Публикации"
+    identifier: "publications"
+    weight: 1
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false
@@ -18,8 +23,3 @@ title: "docs"
 
 
 ---
-
-# test999
-
-dajdflajdflasdflaksdfasdfasdfasdfsadadfasdfasdfafd
-hkknknnnknknknkjnknknknkjnkjnn
