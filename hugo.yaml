@@ -5,11 +5,11 @@ theme: hugo-book
 
 menu:
   main:
-    - name: "↓Публикации"
+    - name: "Публикации"
       url: "/"
       identifier: "publications"
       weight: 1
-    - name: "Фильмы и эпизоды"
+    - name: "Фильмы"
       url: "/films/"
       identifier: "films"
       weight: 2
