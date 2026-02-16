@@ -6,7 +6,7 @@ menu:
     identifier: "films"
     weight: 2
 type: "films"
-weight: 120
+# weight: 2
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false

@@ -6,7 +6,7 @@ menu:
     identifier: "trainings"
     weight: 4
 type: "trainings"
-weight: 150
+# weight: 150
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false

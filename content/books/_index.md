@@ -6,7 +6,7 @@ menu:
     identifier: "books"
     weight: 3
 type: "books"
-weight: 400
+# weight: 3
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false
