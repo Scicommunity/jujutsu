@@ -7,12 +7,11 @@ menu:
     weight: 3
 type: "books"
 # weight: 3
-# bookFlatSection: false
+# bookFlatSection: true
 # bookToc: true
-# bookHidden: false
-# bookCollapseSection: false
+# bookHidden: true
+# bookCollapseSection: true
 # bookComments: false
 # bookSearchExclude: false
 ---
 
-# Каталог книг

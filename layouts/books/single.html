@@ -1,80 +1,116 @@
 {{ define "main" }}
 <main class="book-page">
     <article class="book">
+
         <header class="book__header">
             <div class="book__cover">
                 {{ with .Resources.GetMatch "cover.*" }}
                 <img src="{{ .RelPermalink }}" alt="Обложка: {{ $.Title }}">
                 {{ end }}
             </div>
-            <div class="book__meta">
-                <h1 class="book__title">{{ .Title }}</h1>
 
-                {{ with .Params.creators }}
-                <div class="book__authors">
-                    {{ range $index, $c := . }}
-                    {{ if $index }}, {{ end }}{{ $c.given }} {{ $c.family }}
-                    {{ end }}
-                </div>
+            <div class="book__meta">
+                <h1 class="book__title">
+                    {{ .Title }}
+                </h1>
+
+                {{ with .Params.subTitle }}
+                <p class="book__subtitle">
+                    {{ . }}
+                </p>
                 {{ end }}
 
-                <dl class="book__details">
-                    {{ with .Params.date }}
-                    <div class="book__detail">
-                        <dt>Год</dt>
-                        <dd>{{ . }}</dd>
-                    </div>
+                {{ with .Params.creators }}
+                <p class="book__authors-line">
+                    Автор{{ if gt (len .) 1 }}ы{{ end }}:
+                    {{ range $i, $c := . }}
+                    {{ if $i }}, {{ end }}
+                    {{ with $c.given }}{{ . }} {{ end }}{{ $c.family }}
+                    {{ end }}
+                </p>
+                {{ end }}
+
+                {{/* Рейтинг 0–10, целый */}}
+                {{ with .Params.rating }}
+                {{ $rating := int . }}
+                {{ $max := 10 }}
+                <p class="book__rating">
+                    <strong>Рейтинг:</strong>
+                    {{ range seq 1 $max }}
+                    {{ if le . $rating }}
+                    ★
+                    {{ else }}
+                    ☆
+                    {{ end }}
+                    {{ end }}
+                    <span class="book__rating-value">({{ $rating }}/10)</span>
+                </p>
+                {{ end }}
+
+                <div class="book__facts">
+                    {{ with .Params.year }}
+                    <p><strong>Год издания:</strong> {{ . }}</p>
                     {{ end }}
 
                     {{ with .Params.publisher }}
-                    <div class="book__detail">
-                        <dt>Издательство</dt>
-                        <dd>{{ . }}</dd>
-                    </div>
+                    <p><strong>Издательство:</strong> {{ . }}</p>
                     {{ end }}
 
                     {{ with .Params.place }}
-                    <div class="book__detail">
-                        <dt>Город</dt>
-                        <dd>{{ . }}</dd>
-                    </div>
+                    <p><strong>Город:</strong> {{ . }}</p>
                     {{ end }}
 
                     {{ with .Params.ISBN }}
-                    <div class="book__detail">
-                        <dt>ISBN</dt>
-                        <dd>{{ . }}</dd>
-                    </div>
+                    <p><strong>ISBN:</strong> {{ . }}</p>
+                    {{ end }}
+
+                    {{ with .Params.pages }}
+                    <p><strong>Страницы:</strong> {{ . }}</p>
                     {{ end }}
 
                     {{ with .Params.language }}
-                    <div class="book__detail">
-                        <dt>Язык</dt>
-                        <dd>{{ . }}</dd>
-                    </div>
+                    <p><strong>Язык:</strong> {{ . }}</p>
                     {{ end }}
-                </dl>
+
+                    {{ with .Params.series }}
+                    <p>
+                        <strong>Серия / подборка:</strong>
+                        {{ . }}
+                        {{ with $.Params.series_number }} (№ {{ . }}){{ end }}
+                    </p>
+                    {{ end }}
+                </div>
 
                 {{ with .Params.tags }}
                 <div class="book__tags">
-                    {{ range . }}
-                    <span class="book__tag">{{ . }}</span>
+                    <strong>Теги:</strong>
+                    {{ range $i, $tag := . }}
+                    {{ if $i }}, {{ end }}{{ $tag }}
                     {{ end }}
                 </div>
                 {{ end }}
 
                 {{ with .Params.url }}
-                <div class="book__link">
-                    <a href="{{ . }}" target="_blank" rel="noopener">Ссылка на книгу</a>
-                </div>
+                <p class="book__link">
+                    <strong>Ссылка:</strong>
+                    <a href="{{ . }}" target="_blank" rel="noopener noreferrer">
+                        открыть ресурс
+                    </a>
+                </p>
                 {{ end }}
 
                 {{ with .Params.zotero }}
-                {{ with .key }}
                 <div class="book__zotero">
-                    Zotero key: {{ . }}
+                    <strong>Zotero:</strong>
+                    {{ with .key }} ключ {{ . }}{{ end }}
+                    {{ with .collection }}, коллекция {{ . }}{{ end }}
+                    {{ with .zotero_item_type }}, тип {{ . }}{{ end }}
                 </div>
                 {{ end }}
+
+                {{ with .Params.rights }}
+                <p class="book__rights">
+                    <strong>Права:</strong> {{ . }}</p>
                 {{ end }}
             </div>
         </header>
@@ -99,7 +135,7 @@
 
         {{ with .Params.attachments }}
         <section class="book__attachments">
-            <h2>Материалы</h2>
+            <h2>Дополнительные материалы</h2>
             <ul>
                 {{ range . }}
                 <li>
@@ -114,6 +150,7 @@
             </ul>
         </section>
         {{ end }}
+
     </article>
 </main>
 {{ end }}
