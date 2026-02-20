@@ -25,11 +25,14 @@ rights: "© Иванов И., 2022"
 type: "books"
 tags: ["дзюдзюцу", "история"]
 
+booktags: ["Боевые искусства"]
+bookgenres: ["Боевые искусства"]
+bookshelves: ["Другие стили"]
 # Атрибуты Zotero
 zotero:
-  key: "ABCD1289" # возможный ключ Zotero
-  collection: "jujutsu" # Коллекция в библиотеке Zotero
-  zotero_item_type: "book" # Тип карточки в библиотеке Zotero
+  key: "ABCD1289" # возможный ключ Zotero
+  collection: "jujutsu" # Коллекция в библиотеке Zotero
+  zotero_item_type: "book" # Тип карточки в библиотеке Zotero
 
 ---
 Основной текст описания, ссылки на видео, презентации и т.п.

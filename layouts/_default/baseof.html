@@ -29,7 +29,7 @@
             {{ partial "docs/menu" . }}
 
             {{/* 3. Книги */}}
-            {{ else if eq .Section "books" }}
+            {{ else if or (eq .Section "books") (eq .Data.Plural "bookgenres") (eq .Data.Plural "bookshelves") (eq .Data.Plural "booktags") }}
             {{ partial "sidebar-books.html" . }}
 
             {{/* 4. Фильмы */}}

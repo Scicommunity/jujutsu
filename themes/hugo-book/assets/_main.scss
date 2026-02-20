@@ -502,3 +502,85 @@ body[dir="rtl"] .book-menu {
 */
 
 
+/* Сетка карточек книг */
+.books-catalog__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Карточка книги */
+.books-card {
+  background: var(--body-bg, #fff);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.books-card__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Обложка фиксированного размера */
+.books-card__cover {
+  width: 100%;
+  padding-top: 225px; /* соотношение сторон, можно 140–160 */
+  position: relative;
+  overflow: hidden;
+  background: inherit; /* фон как у карточки/страницы */
+}
+
+.books-card__cover img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: auto;
+}
+
+/* Текстовая часть */
+.books-card__body {
+  padding: 0.75rem 0.9rem 1rem;
+}
+
+.books-card__title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+}
+
+.books-card__subtitle {
+  font-size: 0.85rem;
+  font-style: italic;
+  font-weight: 400;
+}
+
+
+.books-card__authors,
+.books-card__year,
+.books-card__genres,
+.books-card__shelves {
+  font-size: 0.8rem;
+  margin: 0 0 0.15rem;
+  color: #666;
+}
+
+.books-card__abstract {
+  font-size: 0.8rem;
+  margin: 0.35rem 0 0;
+  color: #555;
+}
+
+/* Hover на десктопе */
+@media (hover: hover) {
+  .books-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+}

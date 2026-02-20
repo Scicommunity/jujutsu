@@ -1,0 +1,70 @@
+{{ define "main" }}
+<main class="books-layout">
+    <section class="books-catalog">
+        <header class="books-catalog__header">
+            <h1>Жанр: {{ .Title }}</h1>
+        </header>
+
+        {{ $pages := where .Pages "Section" "books" }}
+
+        {{ if not $pages }}
+        <p>Книг для этого жанра пока нет.</p>
+        {{ else }}
+        {{ $pages = sort $pages ".Params.year" "desc" }}
+
+        <div class="books-catalog__grid">
+            {{ range $pages }}
+            <article class="books-card">
+                <a href="{{ .RelPermalink }}" class="books-card__link">
+                    {{ with .Resources.GetMatch "cover.*" }}
+                    <div class="books-card__cover">
+                        <img src="{{ .RelPermalink }}" alt="Обложка: {{ $.Title }}">
+                    </div>
+                    {{ end }}
+
+                    <div class="books-card__body">
+                        <h2 class="books-card__title">{{ .Title }}</h2>
+
+                        {{ with .Params.subTitle }}
+                        <p class="books-card__subtitle">
+                            {{ . }}
+                        </p>
+                        {{ end }}
+
+                        {{ with .Params.creators }}
+                        <div class="books-card__authors">
+                            {{ range $i, $c := . }}
+                            {{ if $i }}, {{ end }}
+                            {{ with $c.given }}{{ . }} {{ end }}{{ $c.family }}
+                            {{ end }}
+                        </div>
+                        {{ end }}
+
+                        <div class="books-card__meta">
+                            {{ with .Params.year }}
+                            <span class="books-card__year">
+                  {{ . }}
+                </span>
+                            {{ end }}
+                        </div>
+
+                        {{ with .Params.abstractNote }}
+                        <p class="books-card__abstract">
+                            {{ . }}
+                        </p>
+                        {{ else }}
+                        {{ with .Summary }}
+                        <p class="books-card__abstract">
+                            {{ . }}
+                        </p>
+                        {{ end }}
+                        {{ end }}
+                    </div>
+                </a>
+            </article>
+            {{ end }}
+        </div>
+        {{ end }}
+    </section>
+</main>
+{{ end }}

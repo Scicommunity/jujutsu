@@ -2,6 +2,16 @@ baseURL: https://jujutsu.sci.community/
 languageCode: ru-RU
 title: Дзю-дзюцу
 theme: hugo-book
+taxonomies:
+  # глобальные, если они уже есть:
+  category: categories
+  tag: tags
+
+  # книжные:
+  booktag: booktags          # интересы / ключевые слова книг
+  bookgenre: bookgenres      # жанры / тематики книг
+  bookshelf: bookshelves     # полки / подборки для сообщества
+
 # sectionPagesMenu: main
 #menu:
 #  main:

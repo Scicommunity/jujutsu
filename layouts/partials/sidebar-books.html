@@ -13,5 +13,65 @@
 </nav>-->
 
 <div class="books-sidebar">
-    <p>Место для левого сайдбара книг. В разработке.</p>
+    {{/* Блок фокуса: Читаем сейчас / В фокусе */}}
+    {{ $focusShelf := "Читаем сейчас" }}
+    {{ $focusBooks := where (where .Site.RegularPages "Section" "books") "Params.bookshelves" "intersect" (slice $focusShelf) }}
+
+    {{ if $focusBooks }}
+    <div class="books-sidebar__section books-sidebar__section--focus">
+        <h2 class="books-sidebar__title">Читаем сейчас:</h2>
+        <ul class="books-sidebar__list books-sidebar__list--focus">
+            {{ range first 5 (sort $focusBooks ".Params.year" "desc") }}
+            <li>
+                <a href="{{ .RelPermalink }}">
+                    {{ if .Params.shortTitle }}
+                    {{ .Params.shortTitle }}
+                    {{ else }}
+                    {{ .Title }}
+                    {{ end }}
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+    {{ end }}
+
+    <div class="books-sidebar__section">
+        <h2 class="books-sidebar__title">Фильтры</h2>
+        <p class="books-sidebar__note">
+            <!--            Темы, подборки.-->
+        </p>
+    </div>
+
+    {{/* Заготовка под будущие фильтры */}}
+    <div class="books-sidebar__section">
+        <h3 class="books-sidebar__subtitle">Темы</h3>
+        <ul class="books-sidebar__list">
+            {{ range $term, $taxonomy := .Site.Taxonomies.bookgenres }}
+            <li>
+                <!--<a href="{{ (index $taxonomy.Pages 0).CurrentSection.RelPermalink }}bookgenres/{{ $term | urlize }}/">-->
+                <!--<a href="{{ "/books/bookgenres/" | relURL }}{{ $term | urlize }}/"> -->
+                <a href="{{ (printf "/bookgenres/%s/" ($term | urlize)) | relURL }}">
+                    {{ $term }}
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+
+    <div class="books-sidebar__section">
+        <h3 class="books-sidebar__subtitle">Подборки</h3>
+        <ul class="books-sidebar__list">
+            {{ range $term, $taxonomy := .Site.Taxonomies.bookshelves }}
+            <li>
+<!--                <a href="{{ (index $taxonomy.Pages 0).CurrentSection.RelPermalink }}bookshelves/{{ $term | urlize }}/">-->
+                <!--<a href="{{ "/books/bookshelves/" | relURL }}{{ $term | urlize }}/">-->
+                <a href="{{ (printf "/bookshelves/%s/" ($term | urlize)) | relURL }}">
+                  {{ $term }}
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+
 </div>

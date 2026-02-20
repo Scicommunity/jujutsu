@@ -1,0 +1,109 @@
+{{ define "main" }}
+<main class="books-layout">
+    <section class="books-catalog">
+        <header class="books-catalog__header">
+            <h1>
+                {{- if eq .Data.Plural "bookgenres" -}}
+                Жанр: {{ .Title }}
+                {{- else if eq .Data.Plural "booktags" -}}
+                Тема: {{ .Title }}
+                {{- else if eq .Data.Plural "bookshelves" -}}
+                Полка: {{ .Title }}
+                {{- else -}}
+                {{ .Title }}
+                {{- end -}}
+            </h1>
+            {{ with .Content }}
+            <div class="books-catalog__intro">
+                {{ . }}
+            </div>
+            {{ end }}
+        </header>
+
+        {{/* Берём только книги из этой таксономии (секция books) */}}
+        {{ $pages := where .Pages "Section" "books" }}
+
+        {{ if not $pages }}
+        <p>Книг для этого термина пока нет.</p>
+        {{ else }}
+        {{ $pages = sort $pages ".Params.year" "desc" }}
+
+        <div class="books-catalog__grid">
+            {{ range $pages }}
+            <article class="books-card">
+                <a href="{{ .RelPermalink }}" class="books-card__link">
+
+                    {{ with .Resources.GetMatch "cover.*" }}
+                    <div class="books-card__cover">
+                        <img src="{{ .RelPermalink }}" alt="Обложка: {{ $.Title }}">
+                    </div>
+                    {{ end }}
+
+                    <div class="books-card__body">
+                        <h2 class="books-card__title">{{ .Title }}</h2>
+
+                        {{ with .Params.subTitle }}
+                        <p class="books-card__subtitle">
+                            {{ . }}
+                        </p>
+                        {{ end }}
+
+                        {{ with .Params.creators }}
+                        <div class="books-card__authors">
+                            {{ range $i, $c := . }}
+                            {{ if $i }}, {{ end }}
+                            {{ with $c.given }}{{ . }} {{ end }}{{ $c.family }}
+                            {{ end }}
+                        </div>
+                        {{ end }}
+
+                        {{ with .Params.series }}
+                        <div class="books-card__series">
+                            {{ . }}
+                        </div>
+                        {{ end }}
+
+                        <div class="books-card__meta">
+                            {{ with .Params.year }}
+                            <span class="books-card__year">
+                  {{ . }}
+                </span>
+                            {{ end }}
+
+                            {{ with .Params.bookgenres }}
+                            <span class="books-card__genres">
+                  {{ range $i, $g := . }}
+                    {{ if $i }}, {{ end }}{{ $g }}
+                  {{ end }}
+                </span>
+                            {{ end }}
+
+                            {{ with .Params.bookshelves }}
+                            <span class="books-card__shelves">
+                  {{ range $i, $s := . }}
+                    {{ if $i }}, {{ end }}{{ $s }}
+                  {{ end }}
+                </span>
+                            {{ end }}
+                        </div>
+
+                        {{ with .Params.abstractNote }}
+                        <p class="books-card__abstract">
+                            {{ . }}
+                        </p>
+                        {{ else }}
+                        {{ with .Summary }}
+                        <p class="books-card__abstract">
+                            {{ . }}
+                        </p>
+                        {{ end }}
+                        {{ end }}
+                    </div>
+                </a>
+            </article>
+            {{ end }}
+        </div>
+        {{ end }}
+    </section>
+</main>
+{{ end }}

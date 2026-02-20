@@ -1,0 +1,22 @@
+{{ define "main" }}
+<main class="books-layout">
+    <section class="books-catalog">
+        <header class="books-catalog__header">
+            <h1>Жанр: {{ .Title }}</h1>
+        </header>
+
+        {{ $pages := where .Pages "Section" "books" }}
+        {{ if not $pages }}
+        <p>Книг для этого жанра пока нет.</p>
+        {{ else }}
+        {{ $pages = sort $pages ".Params.year" "desc" }}
+
+        <div class="books-catalog__grid">
+            {{ range $pages }}
+            <!-- сюда вставь ту же разметку карточки, что в layouts/books/list.html -->
+            {{ end }}
+        </div>
+        {{ end }}
+    </section>
+</main>
+{{ end }}
