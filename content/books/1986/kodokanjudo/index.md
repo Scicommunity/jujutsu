@@ -29,7 +29,7 @@ type: "books"
 tags: []
 
 booktags: ["judo", "Kodokan", "throws", "kata", "grappling", "martial arts"]
-bookgenres: ["История боевых искусств", "Техника и методика", "Базовая техника"]
+bookgenres: ["История боевых искусств", "Техника и методика", "Основы JJ"]
 bookshelves: []
 
 zotero:

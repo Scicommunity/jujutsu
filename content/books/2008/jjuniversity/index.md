@@ -32,7 +32,7 @@ type: "books"
 tags: []
 
 booktags: ["BJJ", "grappling", "white belt", "black belt", "technique", "Saulo Ribeiro"]
-bookgenres: ["Техника и методика", "Базовая техника", "Самооборона и прикладные аспекты"]
+bookgenres: ["Техника и методика", "Основы JJ", "Самооборона и прикладные аспекты"]
 bookshelves: []
 
 zotero:

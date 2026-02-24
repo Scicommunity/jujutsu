@@ -29,7 +29,7 @@ type: "books"
 tags: []
 
 booktags: ["judo", "martial arts", "history of judo", "memoir", "Japan", "Olympic judo", "women in judo"]
-bookgenres: ["История боевых искусств", "Истории и биографии", "Боевые истории"]
+bookgenres: ["История боевых искусств", "Истории и биографии", "Истории"]
 bookshelves: []
 
 zotero:

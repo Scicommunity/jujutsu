@@ -29,7 +29,7 @@ type: "books"
 tags: []
 
 booktags: ["Brazilian jiu-jitsu", "grappling", "memoir", "BJ Penn", "Hilo", "Hawaii", "travel"]
-bookgenres: ["Истории и биографии", "Боевые истории", "История самообороны"]
+bookgenres: ["Истории и биографии", "Истории", "История самообороны"]
 bookshelves: []
 
 zotero:
