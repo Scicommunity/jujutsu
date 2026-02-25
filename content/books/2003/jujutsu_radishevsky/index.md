@@ -22,7 +22,8 @@ summary: ""
 rights: ""
 
 rating: 6
-copy_owners: "Fifty_One"
+copy_owners:
+  - "Fifty_One"
 
 date: 2026-02-23
 type: "books"
@@ -38,5 +39,3 @@ zotero:
   zotero_item_type: "book"
 
 ---
-
-Основной текст описания, ссылки на видео, презентации и т.п.

@@ -775,3 +775,120 @@ body[dir="rtl"] .book-menu {
 .books-chip * {
   text-transform: none !important;
 }
+
+
+
+
+.book-single__header {
+  display: grid;
+  grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.book-single__cover img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.book-single__title {
+  font-size: 1.6rem;
+  margin: 0 0 0.3rem;
+}
+
+.book-single__subtitle {
+  margin: 0 0 0.6rem;
+  font-style: italic;
+  color: #555;
+}
+
+.book-single__authors {
+  margin: 0 0 0.8rem;
+  font-weight: 500;
+}
+
+.book-single__details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.4rem 1.5rem;
+  margin: 0 0 1rem;
+}
+
+.book-single__details dt {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #777;
+}
+
+.book-single__details dd {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.book-single__summary {
+  margin-bottom: 1.5rem;
+}
+
+.book-single__summary h2,
+.book-single__content h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+
+
+.book-single__cover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.book-single__cover img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.book-rating {
+  display: inline-flex;
+  gap: 0.1rem;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.book-rating__star {
+  color: #ddd;
+}
+
+.book-rating__star--filled {
+  color: #f4b000; /* тёплый жёлтый для заполненных звёзд */
+}
+
+/* на маленьких экранах звёзды чуть крупнее */
+@media (max-width: 720px) {
+  .book-rating {
+    font-size: 1.1rem;
+  }
+}
+
+.book-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.book-rating__stars {
+  display: inline-flex;
+  gap: 0.1rem;
+}
+
+.book-rating__text {
+  font-size: 0.8rem;
+  color: #666;
+}

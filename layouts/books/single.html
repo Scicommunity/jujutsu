@@ -1,156 +1,185 @@
 {{ define "main" }}
-<main class="book-page">
-    <article class="book">
+<article class="book-single">
 
-        <header class="book__header">
-            <div class="book__cover">
-                {{ with .Resources.GetMatch "cover.*" }}
-                <img src="{{ .RelPermalink }}" alt="Обложка: {{ $.Title }}">
-                {{ end }}
-            </div>
+    <header class="book-single__header">
+        <div class="book-single__cover">
+            {{ with .Resources.GetMatch "cover.*" }}
+            <img src="{{ .RelPermalink }}" alt="Обложка: {{ $.Title }}">
+            {{ end }}
 
-            <div class="book__meta">
-                <h1 class="book__title">
-                    {{ .Title }}
-                </h1>
-
-                {{ with .Params.subTitle }}
-                <p class="book__subtitle">
-                    {{ . }}
-                </p>
-                {{ end }}
-
-                {{ with .Params.creators }}
-                <p class="book__authors-line">
-                    Автор{{ if gt (len .) 1 }}ы{{ end }}:
-                    {{ range $i, $c := . }}
-                    {{ if $i }}, {{ end }}
-                    {{ with $c.given }}{{ . }} {{ end }}{{ $c.family }}
-                    {{ end }}
-                </p>
-                {{ end }}
-
-                {{/* Рейтинг 0–10, целый */}}
-                {{ with .Params.rating }}
-                {{ $rating := int . }}
-                {{ $max := 10 }}
-                <p class="book__rating">
-                    <strong>Рейтинг:</strong>
-                    {{ range seq 1 $max }}
-                    {{ if le . $rating }}
-                    ★
+            {{ with .Params.rating }}
+            <div class="book-rating">
+                <div class="book-rating__stars" aria-label="Рейтинг {{ . }} из 10">
+                    {{ $r := int . }}
+                    {{ range $i := seq 1 10 }}
+                    {{ if le $i $r }}
+                    <span class="book-rating__star book-rating__star--filled">★</span>
                     {{ else }}
-                    ☆
+                    <span class="book-rating__star">★</span>
                     {{ end }}
-                    {{ end }}
-                    <span class="book__rating-value">({{ $rating }}/10)</span>
-                </p>
-                {{ end }}
-
-                <div class="book__facts">
-                    {{ with .Params.year }}
-                    <p><strong>Год издания:</strong> {{ . }}</p>
-                    {{ end }}
-
-                    {{ with .Params.publisher }}
-                    <p><strong>Издательство:</strong> {{ . }}</p>
-                    {{ end }}
-
-                    {{ with .Params.place }}
-                    <p><strong>Город:</strong> {{ . }}</p>
-                    {{ end }}
-
-                    {{ with .Params.ISBN }}
-                    <p><strong>ISBN:</strong> {{ . }}</p>
-                    {{ end }}
-
-                    {{ with .Params.pages }}
-                    <p><strong>Страницы:</strong> {{ . }}</p>
-                    {{ end }}
-
-                    {{ with .Params.language }}
-                    <p><strong>Язык:</strong> {{ . }}</p>
-                    {{ end }}
-
-                    {{ with .Params.series }}
-                    <p>
-                        <strong>Серия / подборка:</strong>
-                        {{ . }}
-                        {{ with $.Params.series_number }} (№ {{ . }}){{ end }}
-                    </p>
                     {{ end }}
                 </div>
-
-                {{ with .Params.tags }}
-                <div class="book__tags">
-                    <strong>Теги:</strong>
-                    {{ range $i, $tag := . }}
-                    {{ if $i }}, {{ end }}{{ $tag }}
-                    {{ end }}
+                <div class="book-rating__text">
+                    Рейтинг {{ . }} из 10
                 </div>
-                {{ end }}
-
-                {{ with .Params.url }}
-                <p class="book__link">
-                    <strong>Ссылка:</strong>
-                    <a href="{{ . }}" target="_blank" rel="noopener noreferrer">
-                        открыть ресурс
-                    </a>
-                </p>
-                {{ end }}
-
-                {{ with .Params.zotero }}
-                <div class="book__zotero">
-                    <strong>Zotero:</strong>
-                    {{ with .key }} ключ {{ . }}{{ end }}
-                    {{ with .collection }}, коллекция {{ . }}{{ end }}
-                    {{ with .zotero_item_type }}, тип {{ . }}{{ end }}
-                </div>
-                {{ end }}
-
-                {{ with .Params.rights }}
-                <p class="book__rights">
-                    <strong>Права:</strong> {{ . }}</p>
-                {{ end }}
             </div>
-        </header>
-
-        <section class="book__abstract">
-            <h2>Краткий пересказ</h2>
-            {{ with .Params.abstractNote }}
-            <p>{{ . }}</p>
-            {{ else }}
-            {{ with .Summary }}
-            <p>{{ . }}</p>
             {{ end }}
+        </div>
+        <div class="book-single__meta">
+            <h1 class="book-single__title">"{{ .Title }}"</h1>
+
+            {{ with .Params.subTitle }}
+            <p class="book-single__subtitle">{{ . }}</p>
             {{ end }}
-        </section>
 
-        <section class="book__content">
-            <h2>Подробное описание и материалы</h2>
-            <div class="book__body">
-                {{ .Content }}
-            </div>
-        </section>
+            {{ if .Params.creators }}
+            <p class="book-single__authors">
+                Автор: {{ range $i, $c := .Params.creators }}
+                {{- if gt $i 0 }}, {{ end -}}
+                {{ with $c.given }}{{ . }} {{ end }}{{ $c.family }}
+                {{ end }}
+            </p>
+            {{ end }}
 
-        {{ with .Params.attachments }}
-        <section class="book__attachments">
-            <h2>Дополнительные материалы</h2>
-            <ul>
+            <dl class="book-single__details">
+                {{ with .Params.year }}
+                <div>
+                    <dt>Год издания</dt>
+                    <dd>{{ . }}</dd>
+                </div>
+                {{ end }}
+
+                {{ with .Params.publisher }}
+                <div>
+                    <dt>Издательство</dt>
+                    <dd>{{ . }}</dd>
+                </div>
+                {{ end }}
+
+                {{ with .Params.place }}
+                <div>
+                    <dt>Место издания</dt>
+                    <dd>{{ . }}</dd>
+                </div>
+                {{ end }}
+
+                {{ with .Params.ISBN }}
+                <div>
+                    <dt>ISBN</dt>
+                    <dd>{{ . }}</dd>
+                </div>
+                {{ end }}
+
+                {{ with .Params.pages }}
+                <div>
+                    <dt>Страницы</dt>
+                    <dd>{{ . }}</dd>
+                </div>
+                {{ end }}
+
+                {{ with .Params.language }}
+                <div>
+                    <dt>Язык</dt>
+                    <dd>{{ . }}</dd>
+                </div>
+                {{ end }}
+
+                {{ with .Params.series }}
+                <div>
+                    <dt>Серия</dt>
+                    <dd>{{ . }}</dd>
+                </div>
+                {{ end }}
+
+                {{ with .Params.series_number }}
+                <div>
+                    <dt>Номер в серии</dt>
+                    <dd>{{ . }}</dd>
+                </div>
+                {{ end }}
+
+<!--                {{ with .Params.rating }}-->
+<!--                <div>-->
+<!--                    <dt>Рейтинг</dt>-->
+<!--                    <dd>{{ . }}/10</dd>-->
+<!--                </div>-->
+<!--                {{ end }}-->
+
+                {{ with .Params.copy_owners }}
+                <div>
+                    <dt>Владельцы экземпляров (у кого спросить):</dt>
+                    <dd>
+                        {{ range $i, $o := . }}
+                        {{ if gt $i 0 }}, {{ end }}{{ $o }}
+                        {{ end }}
+                    </dd>
+                </div>
+                {{ end }}
+            </dl>
+
+            {{ with .Params.url }}
+            <p class="book-single__external">
+                <a href="{{ . }}" target="_blank" rel="noopener">Перейти к книге</a>
+            </p>
+            {{ end }}
+
+            {{ with .Params.booktags }}
+            <p class="book-single__tags">
+                <span>Ключевые слова:</span>
                 {{ range . }}
-                <li>
-                    {{ .title }}:
-                    {{ with $.Resources.GetMatch .file }}
-                    <a href="{{ .RelPermalink }}">{{ .Name }}</a>
-                    {{ else }}
-                    {{ .file }}
-                    {{ end }}
-                </li>
+                <span class="books-chip">{{ . }}</span>
                 {{ end }}
-            </ul>
-        </section>
-        {{ end }}
+            </p>
+            {{ end }}
 
-    </article>
-</main>
+            {{ with .Params.bookgenres }}
+            <p class="book-single__tags">
+                <span>Теги:</span>
+                {{ range . }}
+                <span class="books-chip books-chip--soft">{{ . }}</span>
+                {{ end }}
+            </p>
+            {{ end }}
+
+            {{ with .Params.bookshelves }}
+            <p class="book-single__tags">
+                <span>Полки:</span>
+                {{ range . }}
+                <span class="books-chip books-chip--shelf">{{ . }}</span>
+                {{ end }}
+            </p>
+            {{ end }}
+        </div>
+    </header>
+
+    {{ with (or .Params.summary .Params.abstractNote) }}
+    <section class="book-single__summary">
+        <h1>Краткое содержание</h1>
+        <p>{{ . }}</p>
+    </section>
+    {{ end }}
+
+    <section class="book-single__content">
+        {{ .Content }}
+    </section>
+
+    {{ with .Params.zotero }}
+    {{ if or .key .collection }}
+    <section class="book-single__zotero">
+        <h2>Карточка в электронной библиотеке</h2>
+        <dl>
+            {{ with .key }}
+            <div><dt>Ключ:</dt><dd>{{ . }}</dd></div>
+            {{ end }}
+            {{ with .collection }}
+            <div><dt>Коллекция: {{ . }}</dt></div>
+            {{ end }}
+            {{ with .zotero_item_type }}
+            <div><dt>Тип карточки в библиотеке: {{ . }}</dt></div>
+            {{ end }}
+        </dl>
+    </section>
+    {{ end }}
+    {{ end }}
+</article>
 {{ end }}
