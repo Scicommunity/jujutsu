@@ -1,0 +1,17 @@
+{{ define "main" }}
+<article class="book-page books-terms">
+    <header class="books-terms__header">
+        <h1>Общая страница для подборок по ситуации("Полок")</h1>
+    </header>
+
+    <ul class="books-terms__list">
+        {{ range .Data.Terms.Alphabetical }}
+        <li>
+            <a href="{{ .Page.RelPermalink }}">
+                {{ .Page.Title }} ({{ .Count }})
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+</article>
+{{ end }}
