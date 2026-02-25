@@ -529,10 +529,11 @@ body[dir="rtl"] .book-menu {
 /* Обложка фиксированного размера */
 .books-card__cover {
   width: 100%;
-  padding-top: 225px; /* соотношение сторон, можно 140–160 */
+  padding-top: 360px; /* соотношение сторон, можно 140–160 */
   position: relative;
   overflow: hidden;
   background: inherit; /* фон как у карточки/страницы */
+  border-radius: 8px;
 }
 
 .books-card__cover img {
@@ -542,6 +543,8 @@ body[dir="rtl"] .book-menu {
   transform: translateX(-50%);
   height: 100%;
   width: auto;
+  object-fit: cover;             /* чуть «подрезает» края, но держит заполнение */
+  border-radius: 8px;
 }
 
 /* Текстовая часть */
