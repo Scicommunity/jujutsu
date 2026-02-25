@@ -31,8 +31,8 @@ date: 2026-02-23
 type: "books"
 tags: []
 
-booktags: ["Brazilian jiu-jitsu", "BJJ", "grappling", "strategy", "self-defense", "Renzo Gracie", "John Danaher"]
-bookgenres: ["История боевых искусств", "Техника и методика", "Самооборона и прикладные аспекты"]
+booktags: []
+bookgenres: ["Бразильское джиу-джитсу"]
 bookshelves: []
 
 zotero:

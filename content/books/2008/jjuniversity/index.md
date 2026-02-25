@@ -31,8 +31,8 @@ date: 2026-02-23
 type: "books"
 tags: []
 
-booktags: ["BJJ", "grappling", "white belt", "black belt", "technique", "Saulo Ribeiro"]
-bookgenres: ["Техника и методика", "Основы JJ", "Самооборона и прикладные аспекты"]
+booktags: []
+bookgenres: ["Бразильское джиу-джитсу"]
 bookshelves: []
 
 zotero:

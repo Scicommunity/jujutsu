@@ -28,8 +28,8 @@ date: 2026-02-23
 type: "books"
 tags: []
 
-booktags: ["Brazilian jiu-jitsu", "grappling", "memoir", "BJ Penn", "Hilo", "Hawaii", "travel"]
-bookgenres: ["Истории и биографии", "Истории", "История самообороны"]
+booktags: []
+bookgenres: ["Бразильское джиу-джитсу"]
 bookshelves: []
 
 zotero:

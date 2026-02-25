@@ -50,10 +50,26 @@
     </div>
     {{ end }}
 
+{{/* Собираем все уникальные жанры из книг секции books */}}
+{{ $books := where .Site.RegularPages "Section" "books" }}
+{{ $allGenres := slice }}
+
+{{ range $books }}
+{{ with .Params.bookgenres }}
+{{ range . }}
+{{ $allGenres = $allGenres | append . }}
+{{ end }}
+{{ end }}
+{{ end }}
+
+{{/* Удаляем дубли */}}
+{{ $allGenres = uniq $allGenres }}
+
 <div class="books-sidebar__section">
-    <h3 class="books-sidebar__subtitle">Теги: жанры и темы</h3>
+    <h2 class="books-sidebar__subtitle">Теги</h2>
     <div class="books-sidebar__chips">
-        {{ range $term, $_ := .Site.Taxonomies.bookgenres }}
+        {{ range $allGenres }}
+        {{ $term := . }}
         <a href="{{ (printf "/bookgenres/%s/" ($term | urlize)) | relURL }}"
         class="books-chip">
         {{ $term }}
@@ -62,10 +78,24 @@
     </div>
 </div>
 
+{{/* Аналогично для полок */}}
+{{ $allShelves := slice }}
+
+{{ range $books }}
+{{ with .Params.bookshelves }}
+{{ range . }}
+{{ $allShelves = $allShelves | append . }}
+{{ end }}
+{{ end }}
+{{ end }}
+
+{{ $allShelves = uniq $allShelves }}
+
 <div class="books-sidebar__section">
-    <h3 class="books-sidebar__subtitle">Подборки</h3>
+    <h3 class="books-sidebar__subtitle">Полки</h3>
     <div class="books-sidebar__chips">
-        {{ range $term, $_ := .Site.Taxonomies.bookshelves }}
+        {{ range $allShelves }}
+        {{ $term := . }}
         <a href="{{ (printf "/bookshelves/%s/" ($term | urlize)) | relURL }}"
         class="books-chip books-chip--shelf">
         {{ $term }}
@@ -80,5 +110,3 @@
 
 
 
-
-</div>

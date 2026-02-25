@@ -28,8 +28,8 @@ date: 2026-02-23
 type: "books"
 tags: []
 
-booktags: ["judo", "Kodokan", "throws", "kata", "grappling", "martial arts"]
-bookgenres: ["История боевых искусств", "Техника и методика", "Основы JJ"]
+booktags: []
+bookgenres: ["Дзюдо"]
 bookshelves: []
 
 zotero:
