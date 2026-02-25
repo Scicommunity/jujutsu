@@ -28,8 +28,8 @@ date: 2026-02-23
 type: "books"
 tags: []
 
-booktags: []
-bookgenres: ["Дзюдо"]
+booktags: ["Дзюдо"]
+bookgenres: []
 bookshelves: []
 
 zotero:

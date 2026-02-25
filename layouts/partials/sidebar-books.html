@@ -66,11 +66,40 @@
 {{ $allGenres = uniq $allGenres }}
 
 <div class="books-sidebar__section">
-    <h2 class="books-sidebar__subtitle">Теги</h2>
+    <h2 class="books-sidebar__subtitle">Форматы и жанры</h2>
     <div class="books-sidebar__chips">
         {{ range $allGenres }}
         {{ $term := . }}
         <a href="{{ (printf "/bookgenres/%s/" ($term | urlize)) | relURL }}"
+        class="books-chip">
+        {{ $term }}
+        </a>
+        {{ end }}
+    </div>
+</div>
+
+
+{{/* Собираем все уникальные теги книг секции books */}}
+{{ $books := where .Site.RegularPages "Section" "books" }}
+{{ $allGenres := slice }}
+
+{{ range $books }}
+{{ with .Params.booktags }}
+{{ range . }}
+{{ $allGenres = $allGenres | append . }}
+{{ end }}
+{{ end }}
+{{ end }}
+
+{{/* Удаляем дубли */}}
+{{ $allGenres = uniq $allGenres }}
+
+<div class="books-sidebar__section">
+    <h2 class="books-sidebar__subtitle">Теги и стили</h2>
+    <div class="books-sidebar__chips">
+        {{ range $allGenres }}
+        {{ $term := . }}
+        <a href="{{ (printf "/booktags/%s/" ($term | urlize)) | relURL }}"
         class="books-chip">
         {{ $term }}
         </a>
@@ -92,7 +121,7 @@
 {{ $allShelves = uniq $allShelves }}
 
 <div class="books-sidebar__section">
-    <h3 class="books-sidebar__subtitle">Полки</h3>
+    <h3 class="books-sidebar__subtitle">Подборки по ситуациям</h3>
     <div class="books-sidebar__chips">
         {{ range $allShelves }}
         {{ $term := . }}

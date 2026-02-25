@@ -29,9 +29,9 @@ type: "books"
 tags: []
 
 # Книжные таксономии
-booktags: []
-bookgenres: ["Дзю-дзюцу / джиу-джитсу"]
-bookshelves: ["Учебник"]
+booktags: ["Дзю-дзюцу / джиу-джитсу"]
+bookgenres: ["Учебник / пособие"]
+bookshelves: []
 
 # Атрибуты Zotero
 zotero:
