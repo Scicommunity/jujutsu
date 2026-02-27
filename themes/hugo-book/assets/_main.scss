@@ -1064,17 +1064,47 @@ body[dir="rtl"] .book-menu {
 .theme-dark .theme-toggle:hover {
   background-color: rgba(255, 255, 255, 0.08);
 }
-/* Поведение на узких экранах */
+
+
+
+/* нулевая СТУПЕНЬ: условно «шире планшета» — до 1100px. Жёсткая тройка (3 в ряд):*/
+@media (max-width: 1100px) and (min-width: 901px) {
+  .top-main-menu__item { flex: 0 0 30%; } /* примерно 3 в строке */
+}
+
+
+/* ПЕРВАЯ СТУПЕНЬ: условно «планшет» — до 900px.
+   Разрешаем меню мягко переноситься (обычно получится 3 + 1). */
+@media (max-width: 900px) {
+  .book-topbar__inner {
+    align-items: center;
+  }
+
+  .top-main-menu__item {
+    /* не жёстко, даём браузеру самому решать, но чуть ограничиваем ширину */
+    flex: 0 1 auto;
+  }
+
+  .top-main-menu__item a {
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+}
+
+/* ВТОРАЯ СТУПЕНЬ: более узкие экраны — до 640px.
+   Делаем двухколоночную сетку (2 × 2). */
 @media (max-width: 640px) {
   .book-topbar__inner {
-    display: flex;
     align-items: flex-start;
-    /* ключевой момент: позволяем ребёнку «упереться» в низ */
+    display: flex;
   }
 
   .top-main-menu__list {
-    /* на очень узких — два ряда «ступенькой» */
     gap: 0.4rem 0.8rem;
+  }
+
+  .top-main-menu__item {
+    flex: 0 0 48%; /* два пункта в строку */
   }
 
   .top-main-menu__item a {
@@ -1082,18 +1112,30 @@ body[dir="rtl"] .book-menu {
     font-size: 0.9rem;
     white-space: nowrap; /* чтобы сами слова не ломались по буквам */
   }
-  /* каждый пункт меню занимает примерно половину ширины —
-       получаем два столбца, максимум две строки для 4 пунктов */
-  .top-main-menu__item {
-    flex: 0 0 48%;
-  }
-  /* кнопка стиля остаётся справа и не занимает всю строку */
+
   .theme-toggle {
+    margin-top: auto;
     align-self: flex-start;
     margin-top: auto; /* прижать к нижнему краю .book-topbar__inner */
   }
-
-
 }
 
+/* ТРЕТЬЯ СТУПЕНЬ: совсем узкие экраны — до 400px.
+   Уходим в одну колонку (1 × 4). */
+@media (max-width: 400px) {
+  .top-main-menu__item {
+    flex: 0 0 100%;
+  }
 
+  .top-main-menu__list {
+    gap: 0.3rem 0;
+  }
+
+  .book-topbar__inner {
+    align-items: flex-start;
+  }
+
+  .theme-toggle {
+    margin-top: 0.5rem; /* немного отступить от меню */
+  }
+}
