@@ -21,15 +21,15 @@ abstractNote: "Книга Игоря Борисовича Линдера соч�
 summary: ""
 rights: ""
 
-rating: 0
+rating: 7
 copy_owners:
 
 date: 2026-02-23
 type: "books"
 tags: []
 
+bookgenres: ["Современное дзю-дзюцу / джиу-джитсу"]
 booktags: ["Дзю-дзюцу / джиу-джитсу"]
-bookgenres: []
 bookshelves: []
 
 zotero:

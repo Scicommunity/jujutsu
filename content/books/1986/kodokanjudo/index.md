@@ -27,9 +27,8 @@ copy_owners:
 date: 2026-02-23
 type: "books"
 tags: []
-
+bookgenres: ["Букинистика"]
 booktags: ["Дзюдо"]
-bookgenres: []
 bookshelves: []
 
 zotero:

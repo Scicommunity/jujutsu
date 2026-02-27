@@ -1,27 +1,36 @@
 {{ define "main" }}
-<main class="books-layout">
-    <section class="books-catalog">
-        <header class="books-catalog__header">
-            <h1>Общая страница таксономии {{ .Title }}</h1>
-            <h2>Классификация bookgenres — «что это за книга по типу содержания»
-            Сюда логично отнести устойчивые жанры и типы издания.
-            Примеры значений: история,            философия,             биография,            мемуары
-            учебник,             учебное пособие,             руководство,             справочник
-            монография,             художественная литература, роман, рассказ и т.п.
-            Где указывать: в front matter книги в массиве bookgenres</h2>
-        </header>
+<article class="book-page books-terms books-terms--genres">
+    <header class="books-terms__header">
+        <h1>Жанры и типы книг</h1>
+        <p>Здесь — крупные, общеизвестные и устойчивые жанры и типы издания.</p>
+        <p>Примеры значений: история, философия, биография, мемуары, учебник, учебное пособие, руководство, справочник, монография, художественная литература, роман, рассказ и т.п.</p>
+    </header>
 
-        {{ $pages := where .Pages "Section" "books" }}
-        {{ if not $pages }}
-        <!--<p>TBD</p>-->
-        {{ else }}
-        {{ $pages = sort $pages ".Params.year" "desc" }}
-        <div class="books-catalog__grid">
-            {{ range $pages }}
-            <!-- сюда вставь ту же разметку карточки, что в layouts/books/list.html -->
+    <section class="books-terms__grid">
+        <table class="books-terms__table">
+            <thead>
+            <tr>
+                <th>Тип книги или тег</th>
+                <th>Количество книг</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{ range .Data.Terms.Alphabetical }}
+            <tr>
+                <td>
+                    <a href="{{ .Page.RelPermalink }}">
+                        {{ .Page.Title }}
+                    </a>
+                </td>
+                <td>{{ .Count }}</td>
+            </tr>
             {{ end }}
-        </div>
-        {{ end }}
+            </tbody>
+        </table>
+
     </section>
-</main>
+</article>
 {{ end }}
+
+
+

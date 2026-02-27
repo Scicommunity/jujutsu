@@ -892,3 +892,83 @@ body[dir="rtl"] .book-menu {
   font-size: 0.8rem;
   color: #666;
 }
+
+.books-terms__header {
+  margin-bottom: 1rem;
+}
+
+.books-terms__header p {
+  margin: 0.2rem 0 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.books-terms__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+.books-terms__item {
+  display: block;
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.06);
+  background: rgba(0,0,0,0.01);
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.12s ease, transform 0.08s ease, box-shadow 0.12s ease;
+}
+
+.books-terms__item:hover {
+  background-color: rgba(0,0,0,0.03);
+  transform: translateY(-1px);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.books-terms__item-title {
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+.books-terms__item-count {
+  font-size: 0.8rem;
+  color: #777;
+}
+.books-terms__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.books-terms__table th,
+.books-terms__table td {
+  padding: 0.4rem 0.6rem;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.books-terms__table th {
+  text-align: left;
+  font-weight: 600;
+  color: #555;
+}
+
+.books-terms__table a {
+  text-decoration: none;
+}
+.books-terms__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.books-chip--tagcloud {
+  font-size: 0.85rem;
+  padding: 0.2rem 0.5rem;
+}
+
+/* optional: чуть крупнее для самых популярных */
+.books-terms--tags .books-chip--tagcloud:nth-child(-n+10) {
+  font-weight: 600;
+}

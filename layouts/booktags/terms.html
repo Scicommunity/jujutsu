@@ -1,56 +1,39 @@
 {{ define "main" }}
-<main class="books-layout">
-    <section class="books-catalog">
-        <header class="books-catalog__header">
-            <h1>Общая страница таксономии {{ .Title }}</h1>
-            Booktags — «о чём внутри, ключевые темы и вопросы»
-            Это гибкие темы и интересы, которые могут быть очень конкретными, часто много штук на одну книгу.
+<article class="book-page books-terms books-terms--tags">
+    <header class="books-terms__header">
+        <h1>Книжные теги</h1>
+        <p>Темы, сюжеты и конкретные вопросы, которые встречаются в наших книгах.</p>
+        <p> Booktags — это «о чём внутри, ключевые и конкретные темы, вопросы, мотивы» раскрываются в книге или статье.
+        Это гибкие темы и интересы, которые могут быть очень конкретными, часто много штук на одну книгу.
+        Примеры значений:
+        кимоно
+        катана
+        традиции
+        ритуалы с катаной
+        этикет додзё
+        страховка в бросках
+        травмы и восстановление
+        психология поединка
+        подготовка детей
+        силовая подготовка, мобилити и т.п.
+    </header>
 
-            Примеры значений:
-
-            кимоно
-
-            катана
-
-            традиции
-
-            ритуалы с катаной
-
-            этикет додзё
-
-            страховка в бросках
-
-            травмы и восстановление
-
-            психология поединка
-
-            подготовка детей
-
-            силовая подготовка, мобилити и т.п.
-
-            Где указывать: в booktags:
-
-            text
-            booktags:
-            - "кимоно"
-            - "катана"
-            - "традиции"
-            - "ритуалы с катаной"
-            Это отвечает на вопрос «какие конкретные темы и мотивы раскрываются в книге».
-        </header>
-
-        {{ $pages := where .Pages "Section" "books" }}
-        {{ if not $pages }}
-        <!--<p>TBD</p>-->
-        {{ else }}
-        {{ $pages = sort $pages ".Params.year" "desc" }}
-
-        <div class="books-catalog__grid">
-            {{ range $pages }}
-            <!-- сюда вставь ту же разметку карточки, что в layouts/books/list.html -->
-            {{ end }}
-        </div>
+    <section class="books-terms__tags">
+        {{ range .Data.Terms.ByCount }}
+        <a href="{{ .Page.RelPermalink }}"
+           class="books-chip books-chip--soft books-chip--tagcloud">
+            {{ .Page.Title }}
+            <span class="books-chip__count">{{ .Count }}</span>
+        </a>
         {{ end }}
     </section>
-</main>
+</article>
 {{ end }}
+
+
+
+
+
+
+
+

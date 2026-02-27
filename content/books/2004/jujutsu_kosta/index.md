@@ -29,8 +29,8 @@ date: 2026-02-23
 type: "books"
 tags: []
 
-booktags: ["Дзю-дзюцу / джиу-джитсу"]
 bookgenres: []
+booktags: ["Дзю-дзюцу / джиу-джитсу"]
 bookshelves: []
 
 zotero:
