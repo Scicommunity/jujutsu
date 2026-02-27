@@ -1,3 +1,57 @@
+:root {
+  /* базовая светлая тема */
+  --body-background: #ffffff;
+  --body-font-color: #222222;
+
+  --color-link: #1a5fb4;
+  --color-link-hover: #0d3c7a;
+
+  --card-background: #ffffff;
+  --card-border: rgba(0, 0, 0, 0.06);
+
+  --sidebar-background: #f7f7f7;
+  --sidebar-border: rgba(0, 0, 0, 0.08);
+
+  --chip-bg: rgba(0, 0, 0, 0.04);
+  --chip-bg-soft: rgba(0, 0, 0, 0.02);
+  --chip-border: rgba(0, 0, 0, 0.12);
+  /* ... цвета пустой и заполненной звезд рейтинга в светлом стиле ... */
+  --rating-star-empty: #dddddd;
+  --rating-star-filled: #c89b3c; /* тёплый золотистый */
+  /* ... цвета символа луны в кнопке переключения стиля в светлом стиле ... */
+  --theme-toggle-icon-color: #444444;      /* темно‑серый на светлом фоне */
+  --theme-toggle-icon-shadow: transparent; /* тонкая «подложка» по желанию */
+  /* фильтр для иконок (в т.ч. бургер) в светлом стиле */
+  --icon-filter: none;
+}
+
+/* тёмная тема */
+.theme-dark {
+  --body-background: #111318;
+  --body-font-color: #e5e5e5;
+
+  --color-link: #8db5ff;
+  --color-link-hover: #c3d6ff;
+
+  --card-background: #191b22;
+  --card-border: rgba(255, 255, 255, 0.08);
+
+  --sidebar-background: #151720;
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+
+  --chip-bg: rgba(255, 255, 255, 0.08);
+  --chip-bg-soft: rgba(255, 255, 255, 0.04);
+  --chip-border: rgba(255, 255, 255, 0.18);
+  /* ... цвета пустой и заполненной звезд рейтинга в темном стиле ... */
+  --rating-star-empty: #555555;
+  --rating-star-filled: #f0c75e; /* более яркий золото-жёлтый на тёмном фоне */
+  /* ... цвета солнца в кнопке переключения стиля в темном стиле ... */
+  --theme-toggle-icon-color: #f0c75e;      /* тёплый золото‑жёлтый на тёмном */
+  --theme-toggle-icon-shadow: rgba(0, 0, 0, 0.4);
+  /* инвертируем иконки в тёмном стиле */
+  --icon-filter: invert(1);
+}
+
 html {
   font-size: $font-size-base;
   scroll-behavior: smooth;
@@ -174,6 +228,7 @@ body[dir="rtl"] .book-menu {
   min-width: $body-min-width;
   flex-grow: 1;
   padding: $padding-16;
+  background: var(--body-background);
 }
 
 .book-post {
@@ -381,15 +436,26 @@ body[dir="rtl"] .book-menu {
 .top-main-menu {
   margin: 0 0 0.5rem 0;
   padding: 0.5rem 1rem 0.5rem 0.75rem;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--sidebar-border);
+}
+.book-topbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+/* чтобы меню занимало максимум ширины, а кнопка «прилипала» вправо */
+.book-topbar__inner .top-main-menu {
+  flex: 1 1 auto;
 }
 
 /* делаем ul горизонтальным рядом */
 .top-main-menu__list {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 1.5rem;
+  gap: 0.75rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -411,7 +477,7 @@ body[dir="rtl"] .book-menu {
 
 /* активный раздел — подчёркнут чёрной линией */
 .top-main-menu__item--active a {
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid var(--body-font-color);
 }
 
 
@@ -419,7 +485,7 @@ body[dir="rtl"] .book-menu {
 /* верхняя полоса с главным меню */
 .book-topbar {
   width: 100%;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--sidebar-border);
 }
 
 /* контейнер внутри topbar */
@@ -511,7 +577,7 @@ body[dir="rtl"] .book-menu {
 
 /* Карточка книги */
 .books-card {
-  background: var(--body-bg, #fff);
+  background: var(--card-background);
   border-radius: 6px;
   overflow: hidden;
   box-shadow: 0 1px 4px rgba(0,0,0,0.06);
@@ -658,8 +724,8 @@ body[dir="rtl"] .book-menu {
   text-decoration: none;
   cursor: pointer;
 
-  border: 1px solid rgba(0,0,0,0.08);
-  background-color: rgba(0,0,0,0.02);
+  border: 1px solid var(--chip-border);
+  background-color: var(--chip-bg);
   color: inherit;
   transition: background-color 0.12s ease, border-color 0.12s ease,
   transform 0.08s ease;
@@ -862,11 +928,11 @@ body[dir="rtl"] .book-menu {
 }
 
 .book-rating__star {
-  color: #ddd;
+  color: var(--rating-star-empty);
 }
 
 .book-rating__star--filled {
-  color: #f4b000; /* тёплый жёлтый для заполненных звёзд */
+  color: var(--rating-star-filled);
 }
 
 /* на маленьких экранах звёзды чуть крупнее */
@@ -972,3 +1038,62 @@ body[dir="rtl"] .book-menu {
 .books-terms--tags .books-chip--tagcloud:nth-child(-n+10) {
   font-weight: 600;
 }
+
+.theme-toggle {
+  flex: 0 0 auto;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.35rem;      /* чуть увеличили размер символа смены стиля */
+  line-height: 1;
+  padding: 0.15rem 0.45rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--theme-toggle-icon-color);
+  text-shadow: 0 0 2px var(--theme-toggle-icon-shadow);
+  transition: background-color 0.12s ease, transform 0.08s ease, color 0.12s ease;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  transform: translateY(-1px);
+}
+
+.theme-dark .theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+/* Поведение на узких экранах */
+@media (max-width: 640px) {
+  .book-topbar__inner {
+    display: flex;
+    align-items: flex-start;
+    /* ключевой момент: позволяем ребёнку «упереться» в низ */
+  }
+
+  .top-main-menu__list {
+    /* на очень узких — два ряда «ступенькой» */
+    gap: 0.4rem 0.8rem;
+  }
+
+  .top-main-menu__item a {
+    display: inline-block;
+    font-size: 0.9rem;
+    white-space: nowrap; /* чтобы сами слова не ломались по буквам */
+  }
+  /* каждый пункт меню занимает примерно половину ширины —
+       получаем два столбца, максимум две строки для 4 пунктов */
+  .top-main-menu__item {
+    flex: 0 0 48%;
+  }
+  /* кнопка стиля остаётся справа и не занимает всю строку */
+  .theme-toggle {
+    align-self: flex-start;
+    margin-top: auto; /* прижать к нижнему краю .book-topbar__inner */
+  }
+
+
+}
+
+

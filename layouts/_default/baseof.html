@@ -7,11 +7,18 @@
 <body dir="{{ default "ltr" .Site.Language.LanguageDirection }}">
 <input type="checkbox" class="hidden toggle" id="menu-control" />
 <input type="checkbox" class="hidden toggle" id="toc-control" />
-
 {{/* ВЕРХНИЙ БЛОК: ГЛАВНОЕ МЕНЮ В СОБСТВЕННОМ КОНТЕЙНЕРЕ */}}
 <div class="book-topbar">
     <div class="container">
-        {{ partial "main-menu.html" . }}
+        <div class="book-topbar__inner">
+            {{ partial "main-menu.html" . }}
+            <button id="theme-toggle"
+                    class="theme-toggle"
+                    type="button"
+                    aria-label="Переключить тему">
+                🌙
+            </button>
+        </div>
     </div>
 </div>
 
@@ -81,6 +88,15 @@
 </main>
 
 {{ partial "docs/inject/body" . }}
+
+{{ with resources.Get "js/theme-toggle.js" }}
+{{ $themeJS := . | minify | fingerprint }}
+<script src="{{ $themeJS.RelPermalink }}" integrity="{{ $themeJS.Data.Integrity }}" defer></script>
+{{ end }}
+
+</body>
+</html>
+
 </body>
 </html>
 
