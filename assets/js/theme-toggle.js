@@ -20,12 +20,13 @@ console.log('theme-toggle JS loaded');
     function getInitialTheme() {
         const saved = localStorage.getItem(STORAGE_KEY);
         if (saved === 'light' || saved === 'dark') return saved;
-
-        if (window.matchMedia &&
-            window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            return 'dark';
-        }
-        return 'light';
+        // если ничего не сохранено — по умолчанию тёмный
+        const prefersDark = window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches;
+        // можно оставить уважение к системным настройкам,
+        // но с явным приоритетом тёмного, например:
+        if (prefersDark) return 'dark';
+        return 'dark';
     }
 
     const initial = getInitialTheme();
