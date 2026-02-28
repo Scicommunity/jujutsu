@@ -442,7 +442,7 @@ body[dir="rtl"] .book-menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.5rem;
+  gap: 0rem; /* было 0.5rem или 0.75rem — ставим 0 */
 }
 
 /* чтобы меню занимало максимум ширины, а кнопка «прилипала» вправо */
@@ -1124,7 +1124,7 @@ body[dir="rtl"] .book-menu {
 
 /* ТРЕТЬЯ СТУПЕНЬ: совсем узкие экраны — до 400px.
    Уходим в одну колонку (1 × 4). */
-@media (max-width: 400px) {
+@media (max-width: 340px) {
   .top-main-menu__item {
     flex: 0 0 100%;
   }
