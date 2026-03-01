@@ -10,7 +10,7 @@ console.log('theme-toggle JS loaded');
     function applyTheme(theme) {
         const isDark = theme === 'dark';
         root.classList.toggle(CLASS_DARK, isDark);
-        toggle.textContent = isDark ? '☉' : '☾';
+        toggle.textContent = isDark ? '☀' : '☾';
         toggle.setAttribute(
             'aria-label',
             isDark ? 'Переключить на светлый стиль' : 'Переключить на тёмный стиль'
