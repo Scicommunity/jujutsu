@@ -1069,7 +1069,7 @@ body[dir="rtl"] .book-menu {
 
 /* нулевая СТУПЕНЬ: условно «шире планшета» — до 1100px. Жёсткая тройка (3 в ряд):*/
 @media (max-width: 1100px) and (min-width: 901px) {
-  .top-main-menu__item { flex: 0 0 30%; } /* примерно 3 в строке */
+  .top-main-menu__item { flex: 0 0 20%; } /* примерно 4-5 в строке */
 }
 
 
