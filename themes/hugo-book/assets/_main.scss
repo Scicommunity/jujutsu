@@ -1135,7 +1135,7 @@ body[dir="rtl"] .book-menu {
 
 /* ВТОРАЯ СТУПЕНЬ: более узкие экраны — до 640px.
    Делаем двухколоночную сетку (2 × 2). */
-@media (max-width: 640px) {
+@media (max-width: 540px) {
   .book-topbar__inner {
     align-items: flex-start;
     display: flex;
@@ -1145,10 +1145,13 @@ body[dir="rtl"] .book-menu {
   .top-main-menu__list {
     gap: 0.4rem 0.8rem;
     flex: 1 1 100%;
+    /* важно: сбросить растягивание */
+    justify-content: flex-start;
   }
 
   .top-main-menu__item {
     flex: 0 0 48%; /* два пункта в строку */
+    text-align: center;
   }
 
   .top-main-menu__item a {
@@ -1171,7 +1174,7 @@ body[dir="rtl"] .book-menu {
 
 /* ТРЕТЬЯ СТУПЕНЬ: совсем узкие экраны — до 400px.
    Уходим в одну колонку (1 × 4). */
-@media (max-width: 340px) {
+@media (max-width: 280px) {
   .top-main-menu__item {
     flex: 0 0 100%;
   }
