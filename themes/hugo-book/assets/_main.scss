@@ -1162,6 +1162,11 @@ body[dir="rtl"] .book-menu {
     align-self: flex-start;
     margin-top: auto; /* прижать к нижнему краю .book-topbar__inner */
   }
+
+  .topbar-home,
+  .theme-toggle {
+    align-self: flex-end;
+  }
 }
 
 /* ТРЕТЬЯ СТУПЕНЬ: совсем узкие экраны — до 400px.
@@ -1182,6 +1187,11 @@ body[dir="rtl"] .book-menu {
   .theme-toggle {
     margin-top: auto;; /* немного отступить от меню */
   }
+
+  .topbar-home,
+  .theme-toggle {
+    align-self: flex-end;
+  }
 }
 
 .topbar-home {
@@ -1195,13 +1205,12 @@ body[dir="rtl"] .book-menu {
   padding: 0.1rem 0rem;
   text-decoration: none;
   /* убираем влияние темы на отступ сверху */
-  margin-top: 0;
+  margin-top: auto;  /* вот этот параметр опускает кнопку к нижней границе блока */
   /*color: var(--theme-toggle-icon-color);*/
   text-shadow: 0 0 2px var(--theme-toggle-icon-shadow);
   transition: background-color 0.12s ease, transform 0.08s ease, color 0.12s ease;
   /* единый горизонтальный отступ слева от меню */
   margin-inline-end: clamp(0.4rem, 1.5vw, 0.9rem);
-  margin-top: auto;  /* вот этот параметр опускает кнопку к нижней границе блока */
   color: var(--home-icon-color);
 }
 
