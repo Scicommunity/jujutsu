@@ -11,12 +11,17 @@
 <div class="book-topbar">
     <div class="container">
         <div class="book-topbar__inner">
+            <!-- ЛЕВАЯ ЗОНА: Домой -->
+            <a href="{{ .Site.BaseURL }}" class="topbar-home" aria-label="На главную">
+                <span class="book-icon topbar-home__icon">⌂</span>
+                <!-- можно позже заменить на SVG-иконку -->
+            </a>
             {{ partial "main-menu.html" . }}
             <button id="theme-toggle"
                     class="theme-toggle"
                     type="button"
                     aria-label="Переключить тему">
-                🌙
+                ☀
             </button>
         </div>
     </div>

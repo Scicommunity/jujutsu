@@ -3,6 +3,55 @@ console.log('theme-toggle JS loaded');
 (function () {
     const STORAGE_KEY = 'theme';
     const CLASS_DARK = 'theme-dark';
+    const CLASS_LIGHT = 'theme-light';
+    const root = document.documentElement;
+    const toggle = document.getElementById('theme-toggle');
+    if (!toggle) return;
+
+    function applyTheme(theme) {
+        const isDark = theme === 'dark';
+
+        // снимаем оба класса и ставим только актуальный
+        root.classList.remove(CLASS_DARK, CLASS_LIGHT);
+        root.classList.add(isDark ? CLASS_DARK : CLASS_LIGHT);
+
+        toggle.textContent = isDark ? '☀' : '☾';
+        toggle.setAttribute(
+            'aria-label',
+            isDark ? 'Переключить на светлый стиль' : 'Переключить на тёмный стиль'
+        );
+    }
+
+    function getInitialTheme() {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved === 'light' || saved === 'dark') return saved;
+
+        // если ничего не сохранено — по умолчанию тёмный
+        const prefersDark = window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (prefersDark) return 'dark';
+        return 'dark';
+    }
+
+    const initial = getInitialTheme();
+    applyTheme(initial);
+
+    toggle.addEventListener('click', function () {
+        console.log('theme-toggle clicked');
+        const current = root.classList.contains(CLASS_DARK) ? 'dark' : 'light';
+        const next = current === 'dark' ? 'light' : 'dark';
+        localStorage.setItem(STORAGE_KEY, next);
+        applyTheme(next);
+    });
+})();
+
+
+/* старый вариант
+console.log('theme-toggle JS loaded');
+
+(function () {
+    const STORAGE_KEY = 'theme';
+    const CLASS_DARK = 'theme-dark';
     const root = document.documentElement;
     const toggle = document.getElementById('theme-toggle');
     if (!toggle) return;
@@ -10,7 +59,7 @@ console.log('theme-toggle JS loaded');
     function applyTheme(theme) {
         const isDark = theme === 'dark';
         root.classList.toggle(CLASS_DARK, isDark);
-        toggle.textContent = isDark ? '☀' : '☾';
+        toggle.textContent = isDark ? '☀' : '☾'; //☀
         toggle.setAttribute(
             'aria-label',
             isDark ? 'Переключить на светлый стиль' : 'Переключить на тёмный стиль'
@@ -40,3 +89,4 @@ console.log('theme-toggle JS loaded');
         applyTheme(next);
     });
 })();
+*/

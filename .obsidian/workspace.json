@@ -4,39 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "8674c8fdc009d351",
+        "id": "5f057d43603518bf",
         "type": "tabs",
         "children": [
           {
-            "id": "183dd2e5c33f0253",
+            "id": "3479181805f469ee",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/docs/about/about.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "about"
-            }
-          },
-          {
-            "id": "46e28be14db527a8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/docs/announcements/hinode_2025/hinode_2025.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "hinode_2025"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -59,7 +40,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Файловый менеджер"
+              "title": "Files"
             }
           },
           {
@@ -119,7 +100,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/docs/announcements/hinode_2025/hinode_2025.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +109,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для hinode_2025"
+              "title": "Backlinks"
             }
           },
           {
@@ -185,51 +165,52 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:Создать новую базу": false,
-      "switcher:Меню быстрого перехода": false,
-      "graph:Граф": false,
-      "canvas:Создать новый холст": false,
-      "daily-notes:Сегодняшняя заметка": false,
-      "templates:Вставить шаблон": false,
-      "command-palette:Открыть палитру команд": false,
-      "zk-prefixer:Создать заметку с уникальным идентификатором": false,
-      "publish:Публикация изменений": false,
-      "markdown-importer:Импорт Markdown-файлов": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false,
+      "zk-prefixer:Create new unique note": false,
+      "publish:Publish changes...": false,
+      "bases:Create new base": false,
       "templater-obsidian:Templater": false,
-      "obsidian-excalidraw-plugin:Создать новый чертеж": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
       "mermaid-tools:Open Mermaid Toolbar": false,
       "github-sync:Sync with Remote": false,
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "46e28be14db527a8",
+  "active": "3479181805f469ee",
   "lastOpenFiles": [
-    "Clippings/Программа HINODE JAPAN 1.md",
+    "content/docs/backlog/План работ.excalidraw.md",
+    "public/book.min.7aca5fb8f4063c905006ebbefee55e02c319c87b6054273c92667e5e130a2ca5.css",
+    "public/book.min.18fac8ae0ee2bb9e59666ecae8c76d151833d05c5aa71b3b041a835171db938a.css",
+    "public/book.min.f5e9f93d491b9097044f4f0c83bbbbb9dbab1873fee18d12f353612b6ca7802c.css",
+    "public/book.min.33686b292cef820d8f22845abdc638ea795534791ea4993d466fc4d351e0be07.css",
+    "themes/hugo-book/assets/_main.scss~",
+    "public/book.min.97981637241d37486aaf85c9b8910f92dbabf7688bbf8f5a036123a578bd1a8a.css",
+    "public/book.min.4be63e018b80edcac7f945a758dd6d7a2d8bad9cdc5f1952fa155b37b630aa51.css",
+    "public/book.min.aa48757cd073ff5395eb680ff1a8441b8fe87920032b2627b288743cba80e1a8.css",
+    "public/book.min.53d3ed425a2dfdf70bcd5509932c00483b9087127a6726fb1d3411734cc88e29.css",
+    "public/book.min.6e556c097f37e0b5e09251fd83b0a8884787519a45f835c296d4209212bc0206.css",
+    "content/docs/about/about.md",
     "content/docs/announcements/hinode_2025/hinode_2025.md",
+    "Clippings/Программа HINODE JAPAN 1.md",
     "Clippings/Программа HINODE JAPAN.md",
     "Clippings/Программа HINODE JAPAN 2.md",
     "Clippings/Программа HINODE JAPAN 3.md",
-    "content/docs/announcements/hinode_2025/hinode_2025",
-    "content/docs/announcements/hinode_2025",
     "content/docs/announcements/_index.md",
-    "content/docs/announcements",
-    "Clippings",
-    "content/docs/posts/kote_gaeshi/kote_gaeshi.md.md~",
     "content/docs/posts/kote_gaeshi/kote_gaeshi.md.md",
-    "content/docs/posts/kote_gaeshi",
-    "content/docs/news/2024_hinode/2024_hinode.md~",
     "static/2024_hinode_3.png",
     "static/2024_hinode_2.png",
     "static/2024_hinode_1.png",
     "content/docs/news/2024_hinode/2024_hinode.md",
-    "content/docs/news/2024_hinode",
     "content/docs/legends/legend_1/legend_1.md",
-    "content/docs/about/about.md",
     "content/docs/news/2025_hinode/2025_hinode.md",
     "content/docs/legends/legend_1/legen_1.md",
-    "content/docs/legends/legend_1",
     "content/docs/legends/_index.md",
-    "content/docs/legends",
     "content/docs/local_base/dagz.md",
     "content/docs/local_base/file_345.md",
     "content/docs/local_base/kgjhlkhjn.md",
@@ -248,8 +229,6 @@
     "content/docs/posts/metsuki_sutemi/metsuki_sutemi.md",
     "content/docs/news/2022_mmfbi/Показательное выступление дзю-дзюцу на Московском.md",
     "content/docs/posts/metsuki_sutemi/etnofest.md",
-    "content/docs/posts/etnofest/etnofest.md",
-    "content/docs/posts/_index.md",
     "Без названия 1.canvas",
     "Без названия.canvas",
     "Без названия 3.canvas",

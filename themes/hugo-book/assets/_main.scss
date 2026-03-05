@@ -1,10 +1,17 @@
 :root {
-  /* базовая светлая тема */
+  /* светлая тема */
   --body-background: #ffffff;
   --body-font-color: #222222;
 
   --color-link: #1a5fb4;
   --color-link-hover: #0d3c7a;
+
+  --home-icon-color: var(--body-font-color); /* дом как обычный текст в светлом стиле
+
+  /* цвет разделов главного меню */
+  --top-menu-link-color: var(--body-font-color); /* обычный */
+  --top-menu-link-hover: #5865a8; /* мягкий, менее насыщенный было: var(--color-link); */
+  --top-menu-link-active: #303477;                 /* более насыщенный для активного
 
   --card-background: #ffffff;
   --card-border: rgba(0, 0, 0, 0.06);
@@ -19,19 +26,28 @@
   --rating-star-empty: #dddddd;
   --rating-star-filled: #c89b3c; /* тёплый золотистый */
   /* ... цвета символа луны в кнопке переключения стиля в светлом стиле ... */
-  --theme-toggle-icon-color: #444444;      /* темно‑серый на светлом фоне */
-  --theme-toggle-icon-shadow: transparent; /* тонкая «подложка» по желанию */
+  --theme-toggle-icon-color: #1f2937; /* #253047; немного холоднее и темнее, чем #303446 */     /* темный сине‑серый для ☾ в светлой теме  */
+  --theme-toggle-icon-shadow: rgba(255, 255, 255, 0.6); /* очень мягкий ореол */
+
   /* фильтр для иконок (в т.ч. бургер) в светлом стиле */
   --icon-filter: none;
 }
 
-/* тёмная тема */
+/* тёмная тема (по умолчанию)*/
 .theme-dark {
   --body-background: #111318;
   --body-font-color: #e5e5e5;
 
   --color-link: #8db5ff;
   --color-link-hover: #c3d6ff;
+
+  --home-icon-color: #f0c75e; /* тот же тёплый золото‑жёлтый, что и солнце/акценты */
+
+  /* пункт меню в тёмной теме по умолчанию беловатый,
+     при ховере — голубой */
+  --top-menu-link-color: #cfd2dc;          /* обычный пункт меню: светло‑серый */
+  --top-menu-link-hover: #e4e7f2;          /* hover: чуть светлее, но без сильного цвета */
+  --top-menu-link-active: #f0c75e;          /* активный: тот же тёплый золото‑жёлтый, что и звёзды/солнце */
 
   --card-background: #191b22;
   --card-border: rgba(255, 255, 255, 0.08);
@@ -46,7 +62,7 @@
   --rating-star-empty: #555555;
   --rating-star-filled: #f0c75e; /* более яркий золото-жёлтый на тёмном фоне */
   /* ... цвета солнца в кнопке переключения стиля в темном стиле ... */
-  --theme-toggle-icon-color: #f0c75e;      /* тёплый золото‑жёлтый на тёмном */
+  --theme-toggle-icon-color: #f0c75e; /* тёплый золото‑жёлтый на тёмном */
   --theme-toggle-icon-shadow: rgba(0, 0, 0, 0.4);
   /* инвертируем иконки в тёмном стиле */
   --icon-filter: invert(1);
@@ -448,6 +464,7 @@ body[dir="rtl"] .book-menu {
 /* чтобы меню занимало максимум ширины, а кнопка «прилипала» вправо */
 .book-topbar__inner .top-main-menu {
   flex: 1 1 auto;
+  margin: 0;        // на всякий случай
 }
 
 /* делаем ul горизонтальным рядом */
@@ -466,20 +483,27 @@ body[dir="rtl"] .book-menu {
 .top-main-menu__item {
   margin: 0;
   padding: 0;
-}
+  /* центрируем содержимое внутри блока пункта меню */
+  text-align: center;}
 
 /* ссылки как «кнопки» без подчёркивания */
 .top-main-menu__item a {
   text-decoration: none;
   padding-bottom: 0.25rem;
   border-bottom: 2px solid transparent;
+  color: var(--top-menu-link-color);
 }
 
-/* активный раздел — подчёркнут чёрной линией */
+/* активный раздел — подчёркнут линией и может быть цветным */
 .top-main-menu__item--active a {
-  border-bottom: 2px solid var(--body-font-color);
+  border-bottom: 2px solid var(--top-menu-link-active);
+  color: var(--top-menu-link-active);
 }
 
+/* по желанию лёгкий hover */
+.top-main-menu__item a:hover {
+  color: var(--top-menu-link-hover);
+}
 
 /* Далее - Минимальные стили для растяжения меню */
 /* верхняя полоса с главным меню */
@@ -1052,13 +1076,31 @@ body[dir="rtl"] .book-menu {
   align-items: center;
   justify-content: center;
   color: var(--theme-toggle-icon-color);
-  text-shadow: 0 0 2px var(--theme-toggle-icon-shadow);
+  text-shadow: 0 0 0.5px var(--theme-toggle-icon-shadow);
   transition: background-color 0.12s ease, transform 0.08s ease, color 0.12s ease;
+  margin-inline-start: clamp(0.4rem, 1.5vw, 0.9rem);
+}
+
+/* сразу после определения .theme-toggle */
+.theme-toggle:focus,
+.theme-toggle:focus-visible,
+.theme-toggle:active {
+  outline: none;
+  box-shadow: none;
+}
+
+
+.theme-light .theme-toggle {
+  font-size: 1.75rem; /* чуть больше луны только в светлой теме */
 }
 
 .theme-toggle:hover {
   background-color: rgba(0, 0, 0, 0.04);
   transform: translateY(-1px);
+}
+
+.theme-light .theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.03); /* на чуть‑чуть слабее, чем сейчас */
 }
 
 .theme-dark .theme-toggle:hover {
@@ -1141,3 +1183,37 @@ body[dir="rtl"] .book-menu {
     margin-top: auto;; /* немного отступить от меню */
   }
 }
+
+.topbar-home {
+  flex: 0 0 auto;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.1rem 0rem;
+  text-decoration: none;
+  /* убираем влияние темы на отступ сверху */
+  margin-top: 0;
+  /*color: var(--theme-toggle-icon-color);*/
+  text-shadow: 0 0 2px var(--theme-toggle-icon-shadow);
+  transition: background-color 0.12s ease, transform 0.08s ease, color 0.12s ease;
+  /* единый горизонтальный отступ слева от меню */
+  margin-inline-end: clamp(0.4rem, 1.5vw, 0.9rem);
+  margin-top: auto;  /* вот этот параметр опускает кнопку к нижней границе блока */
+  color: var(--home-icon-color);
+}
+
+.topbar-home__icon {
+  margin-inline-end: 0;
+  font-size: 1.6rem;                 /* больше, чем текст меню */
+  line-height: 1;
+  color: var(--home-icon-color); /* сильнее, чем общий a { color: ... } */
+  text-shadow: 0 0 0.5px currentColor;/* лёгкое «утолщение» за счёт тени */
+}
+
+
+
+
+
