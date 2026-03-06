@@ -41,13 +41,13 @@
   --color-link: #8db5ff;
   --color-link-hover: #c3d6ff;
 
-  --home-icon-color: #f0c75e; /* тот же тёплый золото‑жёлтый, что и солнце/акценты */
+  --home-icon-color: #7E7E8C; /*  */
 
   /* пункт меню в тёмной теме по умолчанию беловатый,
      при ховере — голубой */
   --top-menu-link-color: #cfd2dc;          /* обычный пункт меню: светло‑серый */
   --top-menu-link-hover: #e4e7f2;          /* hover: чуть светлее, но без сильного цвета */
-  --top-menu-link-active: #f0c75e;          /* активный: тот же тёплый золото‑жёлтый, что и звёзды/солнце */
+  --top-menu-link-active: #6C3BAA;          /* #7851A9 #6C3BAA - хороший вариант активный: тот же тёплый золото‑жёлтый, что и звёзды/солнце */
 
   --card-background: #191b22;
   --card-border: rgba(255, 255, 255, 0.08);
@@ -1223,7 +1223,7 @@ body[dir="rtl"] .book-menu {
 
 .topbar-home__icon {
   margin-inline-end: 0;
-  font-size: 1.6rem;                 /* больше, чем текст меню */
+  font-size: 1.15rem;                 /* больше, чем текст меню */
   line-height: 1;
   color: var(--home-icon-color); /* сильнее, чем общий a { color: ... } */
   text-shadow: 0 0 0.5px currentColor;/* лёгкое «утолщение» за счёт тени */
