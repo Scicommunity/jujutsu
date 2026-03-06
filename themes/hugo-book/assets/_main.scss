@@ -1151,14 +1151,16 @@ body[dir="rtl"] .book-menu {
   }
 
   .top-main-menu__item {
-    flex: 0 0 48%; /* два пункта в строку */
+    flex: 0 0 45%; /* два пункта в строку */
     text-align: center;
   }
 
   .top-main-menu__item a {
     display: inline-block;
     font-size: 0.9rem;
-    white-space: nowrap; /* чтобы сами слова не ломались по буквам */
+    /* white-space: nowrap;  старая версия, в которой не переносились на следующую строку, чтобы сами слова не ломались по буквам */
+    white-space: normal;   /* разрешаем перенос строк */
+    word-break: keep-all;  /* переносим только по пробелам, слова не рвём */
   }
 
   .theme-toggle {
