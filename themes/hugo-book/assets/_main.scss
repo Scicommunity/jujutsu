@@ -158,7 +158,7 @@ ul.pagination {
 a .book-icon {
   height: 1em;
   width: 1em;
-  margin-inline-end: .5em;
+  margin-inline-end: 0;
 }
 
 .book-brand {
@@ -551,7 +551,7 @@ body[dir="rtl"] .book-menu {
 /* контейнер внутри полосы */
 .book-topbar .container {
   margin: 0 auto;
-  padding: 0 1.5rem;       // подбирай под отступы темы
+  padding: 0 1.20rem;       // подбирай под отступы темы.
 }
 
 /* горизонтальное меню внутри полосы */
@@ -1070,7 +1070,7 @@ body[dir="rtl"] .book-menu {
   cursor: pointer;
   font-size: 1.60rem;      /* чуть увеличили размер символа смены стиля */
   line-height: 1;
-  padding: 0.1rem 0rem;
+  padding: 0;
   border-radius: 999px;
   display: inline-flex;
   align-items: center;
@@ -1078,7 +1078,7 @@ body[dir="rtl"] .book-menu {
   color: var(--theme-toggle-icon-color);
   text-shadow: 0 0 0.5px var(--theme-toggle-icon-shadow);
   transition: background-color 0.12s ease, transform 0.08s ease, color 0.12s ease;
-  margin-inline-start: clamp(0.4rem, 1.5vw, 0.9rem);
+  margin-inline-start: clamp(0.4rem, 1.5vw, 0.9rem);  /*только внешний зазор слева от меню */
 }
 
 /* сразу после определения .theme-toggle */
@@ -1205,15 +1205,15 @@ body[dir="rtl"] .book-menu {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.1rem 0rem;
+  padding: 0;
   text-decoration: none;
   /* убираем влияние темы на отступ сверху */
   margin-top: auto;  /* вот этот параметр опускает кнопку к нижней границе блока */
   /*color: var(--theme-toggle-icon-color);*/
-  text-shadow: 0 0 2px var(--theme-toggle-icon-shadow);
+  text-shadow: 0 0 0.5px var(--theme-toggle-icon-shadow);
   transition: background-color 0.12s ease, transform 0.08s ease, color 0.12s ease;
   /* единый горизонтальный отступ слева от меню */
-  margin-inline-end: clamp(0.4rem, 1.5vw, 0.9rem);
+  margin-inline-end: clamp(0.4rem, 1.5vw, 0.9rem);  /*margin-inline-start: clamp(0.4rem, 1.5vw, 0.9rem); */ /*только внешний зазор слева от меню */
   color: var(--home-icon-color);
 }
 

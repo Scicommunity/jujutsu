@@ -13,7 +13,7 @@
         <div class="book-topbar__inner">
             <!-- ЛЕВАЯ ЗОНА: Домой -->
             <a href="{{ .Site.BaseURL }}" class="topbar-home" aria-label="На главную">
-                <span class="book-icon topbar-home__icon">⌂</span>
+                <span class="topbar-home__icon">⌂</span> <!-- раньше было <span class="book-icon topbar-home__icon">⌂</span> -->
                 <!-- можно позже заменить на SVG-иконку -->
             </a>
             {{ partial "main-menu.html" . }}
