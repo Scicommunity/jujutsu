@@ -11,12 +11,10 @@
             "id": "fd8010486584aa1d",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "content/docs/backlog/План работ.excalidraw.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "План работ.excalidraw"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Новая вкладка"
             }
           }
         ]
@@ -102,7 +100,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/docs/backlog/План работ.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +109,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для План работ.excalidraw"
+              "title": "Обратные ссылки"
             }
           },
           {
@@ -187,20 +184,19 @@
   },
   "active": "fd8010486584aa1d",
   "lastOpenFiles": [
-    "public/book.min.5d52d4f0e6d280b4404aa209d278e4cb3a9a7cf7cfe411e7c3966635ee8c9d12.css",
-    "public/book.min.d426e5a07eef21c03129d72eb3142a1c0b32d9102dd56747400f979b7a3e7b90.css",
-    "public/book.min.b947ad2da50742a6e72e6e08672e2d13765c5032941a99fab317970b4cb2e7b0.css",
-    "public/book.min.8dbe4902c294fcbe76cf2d6dc99d425480d508798d9e8718bf14a8889646e7d9.css",
-    "public/book.min.a2e605e834d589e0aa2fb9094f840e4c1d16b64582806787cb0b71a5f164ade8.css",
-    "public/book.min.b76bb744738476bb8dd5b00830365f806224c675abd0e14cddaf244ccbae47cb.css",
-    "public/book.min.ae3068930979611e2b4be812a3595497fde5c8eaec8d638dbb4263fbead0e6d0.css",
-    "public/book.min.83a3a9ede0c420466364727cd47f9212967b6e3e87c3e5326ada54229cc6c4e7.css",
-    "public/book.min.1d7e289c63e9cad749a2bcd19587d4fbb8cb358713eaef921764883bcac7c853.css",
-    "themes/hugo-book/assets/_main.scss~",
-    "public/book.min.fffec7e4b76e7b66d5de4cefd6a9fccbac1b23fdff4d7d14e9b8046e649c5e29.css",
     "content/docs/backlog/План работ.excalidraw.md",
+    "public/docs/philosophy/metsuki_sutemi/metsuki_sutemi/index.html",
+    "public/docs/philosophy/metsuki_sutemi/metsuki_sutemi",
+    "public/docs/philosophy/metsuki_sutemi",
+    "public/en.search.min.871cd11fef3a4329a58db4dd0fde77091478ba0c064b72d1617e0eb075022686.js",
+    "public/en.search-data.min.e144b85151a5ec8e610febca60923ff970af8d9cadcff565a499f4464be450f5.json",
     "content/docs/philosophy/metsuki_sutemi/metsuki_sutemi.md",
+    "content/docs/philosophy/metsuki_sutemi",
+    "public/docs/philosophy/index.xml",
+    "public/docs/philosophy/index.html",
+    "public/docs/philosophy",
     "content/docs/philosophy/_index.md",
+    "content/docs/philosophy",
     "content/docs/about/about.md",
     "content/docs/announcements/hinode_2025/hinode_2025.md",
     "Clippings/Программа HINODE JAPAN 1.md",
