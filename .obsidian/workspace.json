@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "5f057d43603518bf",
+        "id": "fc2d2b5c8c895c25",
         "type": "tabs",
         "children": [
           {
-            "id": "3479181805f469ee",
+            "id": "fd8010486584aa1d",
             "type": "leaf",
             "state": {
               "type": "empty",
               "state": {},
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Новая вкладка"
             }
           }
         ]
@@ -40,7 +40,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Файловый менеджер"
             }
           },
           {
@@ -109,7 +109,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Обратные ссылки"
             }
           },
           {
@@ -165,16 +165,16 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "markdown-importer:Open format converter": false,
-      "zk-prefixer:Create new unique note": false,
-      "publish:Publish changes...": false,
-      "bases:Create new base": false,
+      "switcher:Меню быстрого перехода": false,
+      "graph:Граф": false,
+      "canvas:Создать новый холст": false,
+      "daily-notes:Сегодняшняя заметка": false,
+      "templates:Вставить шаблон": false,
+      "command-palette:Открыть палитру команд": false,
+      "markdown-importer:Импорт Markdown-файлов": false,
+      "zk-prefixer:Создать заметку с уникальным идентификатором": false,
+      "publish:Публикация изменений": false,
+      "bases:Создать новую базу": false,
       "templater-obsidian:Templater": false,
       "obsidian-excalidraw-plugin:New drawing": false,
       "mermaid-tools:Open Mermaid Toolbar": false,
@@ -182,19 +182,21 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "3479181805f469ee",
+  "active": "fd8010486584aa1d",
   "lastOpenFiles": [
     "content/docs/backlog/План работ.excalidraw.md",
-    "public/book.min.7aca5fb8f4063c905006ebbefee55e02c319c87b6054273c92667e5e130a2ca5.css",
-    "public/book.min.18fac8ae0ee2bb9e59666ecae8c76d151833d05c5aa71b3b041a835171db938a.css",
-    "public/book.min.f5e9f93d491b9097044f4f0c83bbbbb9dbab1873fee18d12f353612b6ca7802c.css",
-    "public/book.min.33686b292cef820d8f22845abdc638ea795534791ea4993d466fc4d351e0be07.css",
-    "themes/hugo-book/assets/_main.scss~",
-    "public/book.min.97981637241d37486aaf85c9b8910f92dbabf7688bbf8f5a036123a578bd1a8a.css",
-    "public/book.min.4be63e018b80edcac7f945a758dd6d7a2d8bad9cdc5f1952fa155b37b630aa51.css",
-    "public/book.min.aa48757cd073ff5395eb680ff1a8441b8fe87920032b2627b288743cba80e1a8.css",
-    "public/book.min.53d3ed425a2dfdf70bcd5509932c00483b9087127a6726fb1d3411734cc88e29.css",
-    "public/book.min.6e556c097f37e0b5e09251fd83b0a8884787519a45f835c296d4209212bc0206.css",
+    "public/docs/philosophy/metsuki_sutemi/metsuki_sutemi/index.html",
+    "public/docs/philosophy/metsuki_sutemi/metsuki_sutemi",
+    "public/docs/philosophy/metsuki_sutemi",
+    "public/en.search.min.871cd11fef3a4329a58db4dd0fde77091478ba0c064b72d1617e0eb075022686.js",
+    "public/en.search-data.min.e144b85151a5ec8e610febca60923ff970af8d9cadcff565a499f4464be450f5.json",
+    "content/docs/philosophy/metsuki_sutemi/metsuki_sutemi.md",
+    "content/docs/philosophy/metsuki_sutemi",
+    "public/docs/philosophy/index.xml",
+    "public/docs/philosophy/index.html",
+    "public/docs/philosophy",
+    "content/docs/philosophy/_index.md",
+    "content/docs/philosophy",
     "content/docs/about/about.md",
     "content/docs/announcements/hinode_2025/hinode_2025.md",
     "Clippings/Программа HINODE JAPAN 1.md",
@@ -227,8 +229,6 @@
     "content/docs/posts/shiho_nage/shiho_nage.md",
     "static/2022_mmfbi.jpg",
     "content/docs/posts/metsuki_sutemi/metsuki_sutemi.md",
-    "content/docs/news/2022_mmfbi/Показательное выступление дзю-дзюцу на Московском.md",
-    "content/docs/posts/metsuki_sutemi/etnofest.md",
     "Без названия 1.canvas",
     "Без названия.canvas",
     "Без названия 3.canvas",

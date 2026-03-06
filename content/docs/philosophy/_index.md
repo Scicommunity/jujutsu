@@ -1,6 +1,6 @@
 ---
-title: "Броски"
-weight: 30
+title: "Философия"
+weight: 25
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false
