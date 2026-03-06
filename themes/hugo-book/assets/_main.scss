@@ -1147,7 +1147,7 @@ body[dir="rtl"] .book-menu {
     gap: 0.4rem 0.8rem;
     flex: 1 1 100%;
     /* важно: сбросить растягивание */
-    justify-content: flex-start;
+    justify-content: center; /* не тянем влево */
   }
 
   .top-main-menu__item {
@@ -1175,13 +1175,14 @@ body[dir="rtl"] .book-menu {
 
 /* ТРЕТЬЯ СТУПЕНЬ: совсем узкие экраны — до 400px.
    Уходим в одну колонку (1 × 4). */
-@media (max-width: 280px) {
+@media (max-width: 200px) {
   .top-main-menu__item {
     flex: 0 0 100%;
   }
 
   .top-main-menu__list {
     gap: 0.3rem 0;
+    justify-content: center; /* не тянем влево */
   }
 
   .book-topbar__inner {
