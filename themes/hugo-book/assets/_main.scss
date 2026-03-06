@@ -1223,7 +1223,7 @@ body[dir="rtl"] .book-menu {
 
 .topbar-home__icon {
   margin-inline-end: 0;
-  font-size: 1.15rem;                 /* больше, чем текст меню */
+  font-size: 1.6rem;                 /* больше, чем текст меню */
   line-height: 1;
   color: var(--home-icon-color); /* сильнее, чем общий a { color: ... } */
   text-shadow: 0 0 0.5px currentColor;/* лёгкое «утолщение» за счёт тени */
