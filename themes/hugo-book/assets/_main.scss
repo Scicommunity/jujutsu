@@ -459,6 +459,7 @@ body[dir="rtl"] .book-menu {
   align-items: center;
   justify-content: space-between;
   gap: 0rem; /* было 0.5rem или 0.75rem — ставим 0 */
+  flex-wrap: nowrap; /* важно: не переносим дом/меню/кнопку */
 }
 
 /* чтобы меню занимало максимум ширины, а кнопка «прилипала» вправо */
@@ -1139,7 +1140,7 @@ body[dir="rtl"] .book-menu {
   .book-topbar__inner {
     align-items: flex-start;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* важно: не переносим дом/меню/кнопку ни при каких ширинах экрана, всегда в одной строке*/
   }
 
   .top-main-menu__list {
