@@ -1,10 +1,5 @@
 ---
-title: "Публикации"
-menu:
-  main:
-    name: "Публикации"
-    identifier: "publications"
-    weight: 1
+title: "Приветствие"
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false
@@ -16,5 +11,4 @@ menu:
 # coverDark: /img/main-section/main_dark.png
 # h1: "Ресурс сообщества о джиу-джитсу"
 # description: "Ресурс сообщества о джиу-джитсу"
-
 ---

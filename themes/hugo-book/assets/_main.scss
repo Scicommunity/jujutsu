@@ -413,11 +413,6 @@ body[dir="rtl"] .book-menu {
 
     .book-menu-overlay {
       display: block;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
     }
   }
 
@@ -438,6 +433,19 @@ body[dir="rtl"] .book-menu {
     }
   }
 }
+/* Глобально делаем оверлей на весь экран, когда меню открыто */
+#menu-control:checked ~ * .book-menu-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 900;  /* ниже топбара, выше контента */
+  display: block;
+}
+
+
+
 
 // Extra space for big screens
 @media screen and (min-width: $container-max-width) {

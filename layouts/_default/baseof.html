@@ -87,7 +87,7 @@
 
         {{ template "comments" . }} <!-- Comments block -->
 
-        <label for="menu-control" class="hidden book-menu-overlay"></label>
+
     </div>
 
     {{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
@@ -97,6 +97,7 @@
         </div>
     </aside>
     {{ end }}
+    <label for="menu-control" class="hidden book-menu-overlay"></label>
 </main>
 
 {{ partial "docs/inject/body" . }}
