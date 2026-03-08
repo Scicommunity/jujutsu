@@ -9,4 +9,3 @@ bookCollapseSection: true
 # bookSearchExclude: false
 ---
 
-# Публикации
