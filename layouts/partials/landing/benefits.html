@@ -1,0 +1,8 @@
+<section id="benefits">
+    {{ range .Params.benefits }}
+    <div class="benefit-card">
+        <h3>{{ .title }}</h3>
+        <p>{{ .description }}</p>
+    </div>
+    {{ end }}
+</section>

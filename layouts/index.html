@@ -1,0 +1,12 @@
+{{ define "main" }}
+{{ $landingCSS := resources.Get "landing.scss" | css.Sass | postCSS | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $landingCSS.RelPermalink }}">
+
+<main id="top" class="jj-landing mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pt-10 sm:pt-16 pb-16 space-y-24">
+    {{ partial "landing/hero.html" . }}
+    {{ partial "landing/benefits.html" . }}
+    {{ partial "landing/books.html" . }}
+    {{ partial "landing/latest-news.html" . }}
+    {{ partial "landing/cta.html" . }}
+</main>
+{{ end }}

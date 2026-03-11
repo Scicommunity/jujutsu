@@ -1,0 +1,10 @@
+<section id="books">
+    <h2>Рекомендуемая литература</h2>
+    {{ $books := where .Site.RegularPages "Section" "books" }}
+    {{ range first 5 $books }}
+    <div class="book-tile">
+        <img src="{{ .Params.cover }}" alt="{{ .Title }}">
+        <h4>{{ .Title }}</h4>
+    </div>
+    {{ end }}
+</section>

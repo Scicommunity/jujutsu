@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ваши SCSS-правила и @apply ниже */
+
+.jj-landing {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", Inter, sans-serif;
+  color: #e5e7eb;
+  background-color: transparent; // фон уже задаётся темой
+
+  a {
+    text-decoration: none;
+  }
+}

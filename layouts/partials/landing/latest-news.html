@@ -1,0 +1,11 @@
+<section id="latest">
+    <h2>Что нового</h2>
+    {{ $news := where .Site.RegularPages "Section" "news" | first 3 }}
+    {{ range $news }}
+    <article>
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p>{{ .Summary }}</p>
+        <time>{{ .Date.Format "02.01.2006" }}</time>
+    </article>
+    {{ end }}
+</section>
