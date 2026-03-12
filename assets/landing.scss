@@ -13,3 +13,23 @@
     text-decoration: none;
   }
 }
+
+/* Лендинговые утилиты на базе CSS-переменных темы */
+.landing-accent-bg {
+  background-color: var(--landing-accent);
+}
+
+.landing-accent-text {
+  color: var(--landing-accent);
+}
+
+.landing-text-main {
+  color: var(--landing-text-main);
+}
+
+.landing-text-subtle {
+  color: var(--landing-text-subtle);
+}
+.landing-accent-border {
+  border-color: var(--landing-accent);
+}

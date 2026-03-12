@@ -1,5 +1,12 @@
 :root {
   /* светлая тема */
+  /* Лендинг / брендовые цвета (светлая тема) */
+    --landing-accent: #e11d48;           /* алый / rose-600 */
+    --landing-accent-soft: #fecaca;      /* мягкий розовый фон */
+    --landing-text-main: #111827;        /* основной текст в блоках лендинга */
+    --landing-text-subtle: #4b5563;      /* приглушённый текст */
+  /* Конец лендинга (светлая тема) */
+
   --body-background: #ffffff;
   --body-font-color: #222222;
 
@@ -35,6 +42,13 @@
 
 /* тёмная тема (по умолчанию)*/
 .theme-dark {
+  /* Лендинг / брендовые цвета (тёмная тема) */
+    --landing-accent: #e11d48;           /* алый на тёмном фоне */
+    --landing-accent-soft: #7f1d1d;      /* приглушённый тёмно-красный */
+    --landing-text-main: #f9fafb;        /* почти белый текст */
+    --landing-text-subtle: #9ca3af;      /* мягкий серый */
+  /* Конец лендинга (темная тема) */
+
   --body-background: #111318;
   --body-font-color: #e5e5e5;
 
