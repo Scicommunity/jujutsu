@@ -5,6 +5,15 @@
     --landing-accent-soft: #fecaca;      /* мягкий розовый фон */
     --landing-text-main: #111827;        /* основной текст в блоках лендинга */
     --landing-text-subtle: #4b5563;      /* приглушённый текст */
+    /* CTA primary bullet glow */
+    --jj-cta-bullet-color: #22c55e; /* было близко к emerald-400 */
+    --jj-cta-bullet-glow: 0 0 12px rgba(34, 197, 94, 1);
+    --jj-cta-bullet-glow-outer: rgba(34, 197, 94, 0.4);
+    /* CTA secondary bullet glow */
+    --jj-cta-secondary-bullet-color: #22c7d8; /* мягкий аквамариновый */
+    --jj-cta-secondary-bullet-glow: 0 0 10px rgba(34, 199, 216, 0.75);
+    --jj-cta-secondary-bullet-glow-outer: rgba(34, 199, 216, 0.35);
+
   /* Конец лендинга (светлая тема) */
 
   --body-background: #ffffff;
@@ -47,6 +56,15 @@
     --landing-accent-soft: #7f1d1d;      /* приглушённый тёмно-красный */
     --landing-text-main: #f9fafb;        /* почти белый текст */
     --landing-text-subtle: #9ca3af;      /* мягкий серый */
+    /* CTA primary bullet glow */
+    --jj-cta-bullet-color: #22c55e; /* было близко к emerald-400*/
+    --jj-cta-bullet-glow: 0 0 12px rgba(34, 197, 94, 1);
+    --jj-cta-bullet-glow-outer: rgba(34, 197, 94, 0.4);
+    /* CTA secondary bullet glow */
+    --jj-cta-secondary-bullet-color: #22c7d8; /* мягкий аквамариновый */
+    --jj-cta-secondary-bullet-glow: 0 0 10px rgba(34, 199, 216, 0.75);
+    --jj-cta-secondary-bullet-glow-outer: rgba(34, 199, 216, 0.35);
+
   /* Конец лендинга (темная тема) */
 
   --body-background: #111318;
@@ -81,6 +99,28 @@
   /* инвертируем иконки в тёмном стиле */
   --icon-filter: invert(1);
 }
+
+.jj-cta-glow-outer {
+  background-color: var(--jj-cta-bullet-glow-outer);
+  filter: blur(4px);
+  animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.jj-cta-glow-inner {
+  background-color: var(--jj-cta-bullet-color);
+  box-shadow: var(--jj-cta-bullet-glow);
+}
+.jj-cta-secondary-glow-outer {
+  background-color: var(--jj-cta-secondary-bullet-glow-outer);
+  filter: blur(3px);
+  animation: ping 1.7s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.jj-cta-secondary-glow-inner {
+  background-color: var(--jj-cta-secondary-bullet-color);
+  box-shadow: var(--jj-cta-secondary-bullet-glow);
+}
+
 
 html {
   font-size: $font-size-base;
