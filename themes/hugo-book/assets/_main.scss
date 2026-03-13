@@ -41,15 +41,17 @@
   --body-background: #ffffff;
   --body-font-color: #222222;
 
-  --color-link: #1a5fb4;
-  --color-link-hover: #0d3c7a;
+    --color-link: #1a5fb4;
+    --color-link-hover: #0d3c7a;
 
-  --home-icon-color: var(--body-font-color); /* дом как обычный текст в светлом стиле */
+    --home-icon-color: var(
+        --body-font-color
+    ); /* дом как обычный текст в светлом стиле
 
   /* цвет разделов главного меню */
-  --top-menu-link-color: var(--body-font-color); /* обычный */
-  --top-menu-link-hover: #5865a8; /* мягкий, менее насыщенный было: var(--color-link); */
-  --top-menu-link-active: #303477;                 /* более насыщенный для активного */
+    --top-menu-link-color: var(--body-font-color); /* обычный */
+    --top-menu-link-hover: #5865a8; /* мягкий, менее насыщенный было: var(--color-link); */
+    --top-menu-link-active: #303477; /* более насыщенный для активного
 
   --card-background: #ffffff;
   --card-border: rgba(0, 0, 0, 0.06);
@@ -61,14 +63,19 @@
   --chip-bg-soft: rgba(0, 0, 0, 0.02);
   --chip-border: rgba(0, 0, 0, 0.12);
   /* ... цвета пустой и заполненной звезд рейтинга в светлом стиле ... */
-  --rating-star-empty: #dddddd;
-  --rating-star-filled: #c89b3c; /* тёплый золотистый */
-  /* ... цвета символа луны в кнопке переключения стиля в светлом стиле ... */
-  --theme-toggle-icon-color: #1f2937; /* #253047; немного холоднее и темнее, чем #303446 */     /* темный сине‑серый для ☾ в светлой теме  */
-  --theme-toggle-icon-shadow: rgba(255, 255, 255, 0.6); /* очень мягкий ореол */
+    --rating-star-empty: #dddddd;
+    --rating-star-filled: #c89b3c; /* тёплый золотистый */
+    /* ... цвета символа луны в кнопке переключения стиля в светлом стиле ... */
+    --theme-toggle-icon-color: #1f2937; /* #253047; немного холоднее и темнее, чем #303446 */ /* темный сине‑серый для ☾ в светлой теме  */
+    --theme-toggle-icon-shadow: rgba(
+        255,
+        255,
+        255,
+        0.6
+    ); /* очень мягкий ореол */
 
-  /* фильтр для иконок (в т.ч. бургер) в светлом стиле */
-  --icon-filter: none;
+    /* фильтр для иконок (в т.ч. бургер) в светлом стиле */
+    --icon-filter: none;
 }
 
 /* тёмная тема (по умолчанию)*/
@@ -113,34 +120,34 @@
   --body-background: #111318;
   --body-font-color: #e5e5e5;
 
-  --color-link: #8db5ff;
-  --color-link-hover: #c3d6ff;
+    --color-link: #8db5ff;
+    --color-link-hover: #c3d6ff;
 
-  --home-icon-color: #7E7E8C; /*  */
+    --home-icon-color: #7e7e8c; /*  */
 
-  /* пункт меню в тёмной теме по умолчанию беловатый,
+    /* пункт меню в тёмной теме по умолчанию беловатый,
      при ховере — голубой */
-  --top-menu-link-color: #cfd2dc;          /* обычный пункт меню: светло‑серый */
-  --top-menu-link-hover: #e4e7f2;          /* hover: чуть светлее, но без сильного цвета */
-  --top-menu-link-active: #6C3BAA;          /* #7851A9 #6C3BAA - хороший вариант активный: тот же тёплый золото‑жёлтый, что и звёзды/солнце */
+    --top-menu-link-color: #cfd2dc; /* обычный пункт меню: светло‑серый */
+    --top-menu-link-hover: #e4e7f2; /* hover: чуть светлее, но без сильного цвета */
+    --top-menu-link-active: #6c3baa; /* #7851A9 #6C3BAA - хороший вариант активный: тот же тёплый золото‑жёлтый, что и звёзды/солнце */
 
-  --card-background: #191b22;
-  --card-border: rgba(255, 255, 255, 0.08);
+    --card-background: #191b22;
+    --card-border: rgba(255, 255, 255, 0.08);
 
-  --sidebar-background: #151720;
-  --sidebar-border: rgba(255, 255, 255, 0.08);
+    --sidebar-background: #151720;
+    --sidebar-border: rgba(255, 255, 255, 0.08);
 
-  --chip-bg: rgba(255, 255, 255, 0.08);
-  --chip-bg-soft: rgba(255, 255, 255, 0.04);
-  --chip-border: rgba(255, 255, 255, 0.18);
-  /* ... цвета пустой и заполненной звезд рейтинга в темном стиле ... */
-  --rating-star-empty: #555555;
-  --rating-star-filled: #f0c75e; /* более яркий золото-жёлтый на тёмном фоне */
-  /* ... цвета солнца в кнопке переключения стиля в темном стиле ... */
-  --theme-toggle-icon-color: #f0c75e; /* тёплый золото‑жёлтый на тёмном */
-  --theme-toggle-icon-shadow: rgba(0, 0, 0, 0.4);
-  /* инвертируем иконки в тёмном стиле */
-  --icon-filter: invert(1);
+    --chip-bg: rgba(255, 255, 255, 0.08);
+    --chip-bg-soft: rgba(255, 255, 255, 0.04);
+    --chip-border: rgba(255, 255, 255, 0.18);
+    /* ... цвета пустой и заполненной звезд рейтинга в темном стиле ... */
+    --rating-star-empty: #555555;
+    --rating-star-filled: #f0c75e; /* более яркий золото-жёлтый на тёмном фоне */
+    /* ... цвета солнца в кнопке переключения стиля в темном стиле ... */
+    --theme-toggle-icon-color: #f0c75e; /* тёплый золото‑жёлтый на тёмном */
+    --theme-toggle-icon-shadow: rgba(0, 0, 0, 0.4);
+    /* инвертируем иконки в тёмном стиле */
+    --icon-filter: invert(1);
 }
 
 .jj-cta-glow-outer {
@@ -206,26 +213,26 @@
 
 
 html {
-  font-size: $font-size-base;
-  scroll-behavior: smooth;
-  touch-action: manipulation;
+    font-size: $font-size-base;
+    scroll-behavior: smooth;
+    touch-action: manipulation;
 }
 
 body {
-  min-width: $body-min-width;
-  color: var(--body-font-color);
-  background: var(--body-background);
+    min-width: $body-min-width;
+    color: var(--body-font-color);
+    background: var(--body-background);
 
-  // letter-spacing: 0.33px;
-  font-weight: $body-font-weight;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    // letter-spacing: 0.33px;
+    font-weight: $body-font-weight;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
-  box-sizing: border-box;
-  * {
-    box-sizing: inherit;
-  }
+    box-sizing: border-box;
+    * {
+        box-sizing: inherit;
+    }
 }
 
 h1,
@@ -233,54 +240,54 @@ h2,
 h3,
 h4,
 h5 {
-  font-weight: $body-font-weight;
+    font-weight: $body-font-weight;
 }
 
 a {
-  text-decoration: none;
-  color: var(--color-link);
+    text-decoration: none;
+    color: var(--color-link);
 }
 
 img {
-  vertical-align: baseline;
+    vertical-align: baseline;
 }
 
 :focus {
-  @include outline;
+    @include outline;
 }
 
 aside nav ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 
-  li {
-    margin: 1em 0;
-    position: relative;
-  }
+    li {
+        margin: 1em 0;
+        position: relative;
+    }
 
-  a {
-    display: block;
-  }
+    a {
+        display: block;
+    }
 
-  a:hover {
-    opacity: 0.5;
-  }
+    a:hover {
+        opacity: 0.5;
+    }
 
-  ul {
-    padding-inline-start: $padding-16;
-  }
+    ul {
+        padding-inline-start: $padding-16;
+    }
 }
 
 ul.pagination {
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-  padding-inline-start: 0px;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding-inline-start: 0px;
 
-  .page-item a {
-    padding: $padding-16;
-  }
+    .page-item a {
+        padding: $padding-16;
+    }
 }
 
 .container {
