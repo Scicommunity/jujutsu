@@ -1,17 +1,19 @@
 :root {
-  /* светлая тема */
-  --body-background: #ffffff;
-  --body-font-color: #222222;
+    /* светлая тема */
+    --body-background: #ffffff;
+    --body-font-color: #222222;
 
-  --color-link: #1a5fb4;
-  --color-link-hover: #0d3c7a;
+    --color-link: #1a5fb4;
+    --color-link-hover: #0d3c7a;
 
-  --home-icon-color: var(--body-font-color); /* дом как обычный текст в светлом стиле
+    --home-icon-color: var(
+        --body-font-color
+    ); /* дом как обычный текст в светлом стиле
 
   /* цвет разделов главного меню */
-  --top-menu-link-color: var(--body-font-color); /* обычный */
-  --top-menu-link-hover: #5865a8; /* мягкий, менее насыщенный было: var(--color-link); */
-  --top-menu-link-active: #303477;                 /* более насыщенный для активного
+    --top-menu-link-color: var(--body-font-color); /* обычный */
+    --top-menu-link-hover: #5865a8; /* мягкий, менее насыщенный было: var(--color-link); */
+    --top-menu-link-active: #303477; /* более насыщенный для активного
 
   --card-background: #ffffff;
   --card-border: rgba(0, 0, 0, 0.06);
@@ -23,72 +25,77 @@
   --chip-bg-soft: rgba(0, 0, 0, 0.02);
   --chip-border: rgba(0, 0, 0, 0.12);
   /* ... цвета пустой и заполненной звезд рейтинга в светлом стиле ... */
-  --rating-star-empty: #dddddd;
-  --rating-star-filled: #c89b3c; /* тёплый золотистый */
-  /* ... цвета символа луны в кнопке переключения стиля в светлом стиле ... */
-  --theme-toggle-icon-color: #1f2937; /* #253047; немного холоднее и темнее, чем #303446 */     /* темный сине‑серый для ☾ в светлой теме  */
-  --theme-toggle-icon-shadow: rgba(255, 255, 255, 0.6); /* очень мягкий ореол */
+    --rating-star-empty: #dddddd;
+    --rating-star-filled: #c89b3c; /* тёплый золотистый */
+    /* ... цвета символа луны в кнопке переключения стиля в светлом стиле ... */
+    --theme-toggle-icon-color: #1f2937; /* #253047; немного холоднее и темнее, чем #303446 */ /* темный сине‑серый для ☾ в светлой теме  */
+    --theme-toggle-icon-shadow: rgba(
+        255,
+        255,
+        255,
+        0.6
+    ); /* очень мягкий ореол */
 
-  /* фильтр для иконок (в т.ч. бургер) в светлом стиле */
-  --icon-filter: none;
+    /* фильтр для иконок (в т.ч. бургер) в светлом стиле */
+    --icon-filter: none;
 }
 
 /* тёмная тема (по умолчанию)*/
 .theme-dark {
-  --body-background: #111318;
-  --body-font-color: #e5e5e5;
+    --body-background: #111318;
+    --body-font-color: #e5e5e5;
 
-  --color-link: #8db5ff;
-  --color-link-hover: #c3d6ff;
+    --color-link: #8db5ff;
+    --color-link-hover: #c3d6ff;
 
-  --home-icon-color: #7E7E8C; /*  */
+    --home-icon-color: #7e7e8c; /*  */
 
-  /* пункт меню в тёмной теме по умолчанию беловатый,
+    /* пункт меню в тёмной теме по умолчанию беловатый,
      при ховере — голубой */
-  --top-menu-link-color: #cfd2dc;          /* обычный пункт меню: светло‑серый */
-  --top-menu-link-hover: #e4e7f2;          /* hover: чуть светлее, но без сильного цвета */
-  --top-menu-link-active: #6C3BAA;          /* #7851A9 #6C3BAA - хороший вариант активный: тот же тёплый золото‑жёлтый, что и звёзды/солнце */
+    --top-menu-link-color: #cfd2dc; /* обычный пункт меню: светло‑серый */
+    --top-menu-link-hover: #e4e7f2; /* hover: чуть светлее, но без сильного цвета */
+    --top-menu-link-active: #6c3baa; /* #7851A9 #6C3BAA - хороший вариант активный: тот же тёплый золото‑жёлтый, что и звёзды/солнце */
 
-  --card-background: #191b22;
-  --card-border: rgba(255, 255, 255, 0.08);
+    --card-background: #191b22;
+    --card-border: rgba(255, 255, 255, 0.08);
 
-  --sidebar-background: #151720;
-  --sidebar-border: rgba(255, 255, 255, 0.08);
+    --sidebar-background: #151720;
+    --sidebar-border: rgba(255, 255, 255, 0.08);
 
-  --chip-bg: rgba(255, 255, 255, 0.08);
-  --chip-bg-soft: rgba(255, 255, 255, 0.04);
-  --chip-border: rgba(255, 255, 255, 0.18);
-  /* ... цвета пустой и заполненной звезд рейтинга в темном стиле ... */
-  --rating-star-empty: #555555;
-  --rating-star-filled: #f0c75e; /* более яркий золото-жёлтый на тёмном фоне */
-  /* ... цвета солнца в кнопке переключения стиля в темном стиле ... */
-  --theme-toggle-icon-color: #f0c75e; /* тёплый золото‑жёлтый на тёмном */
-  --theme-toggle-icon-shadow: rgba(0, 0, 0, 0.4);
-  /* инвертируем иконки в тёмном стиле */
-  --icon-filter: invert(1);
+    --chip-bg: rgba(255, 255, 255, 0.08);
+    --chip-bg-soft: rgba(255, 255, 255, 0.04);
+    --chip-border: rgba(255, 255, 255, 0.18);
+    /* ... цвета пустой и заполненной звезд рейтинга в темном стиле ... */
+    --rating-star-empty: #555555;
+    --rating-star-filled: #f0c75e; /* более яркий золото-жёлтый на тёмном фоне */
+    /* ... цвета солнца в кнопке переключения стиля в темном стиле ... */
+    --theme-toggle-icon-color: #f0c75e; /* тёплый золото‑жёлтый на тёмном */
+    --theme-toggle-icon-shadow: rgba(0, 0, 0, 0.4);
+    /* инвертируем иконки в тёмном стиле */
+    --icon-filter: invert(1);
 }
 
 html {
-  font-size: $font-size-base;
-  scroll-behavior: smooth;
-  touch-action: manipulation;
+    font-size: $font-size-base;
+    scroll-behavior: smooth;
+    touch-action: manipulation;
 }
 
 body {
-  min-width: $body-min-width;
-  color: var(--body-font-color);
-  background: var(--body-background);
+    min-width: $body-min-width;
+    color: var(--body-font-color);
+    background: var(--body-background);
 
-  // letter-spacing: 0.33px;
-  font-weight: $body-font-weight;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    // letter-spacing: 0.33px;
+    font-weight: $body-font-weight;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
-  box-sizing: border-box;
-  * {
-    box-sizing: inherit;
-  }
+    box-sizing: border-box;
+    * {
+        box-sizing: inherit;
+    }
 }
 
 h1,
@@ -96,268 +103,273 @@ h2,
 h3,
 h4,
 h5 {
-  font-weight: $body-font-weight;
+    font-weight: $body-font-weight;
 }
 
 a {
-  text-decoration: none;
-  color: var(--color-link);
+    text-decoration: none;
+    color: var(--color-link);
 }
 
 img {
-  vertical-align: baseline;
+    vertical-align: baseline;
 }
 
 :focus {
-  @include outline;
+    @include outline;
 }
 
 aside nav ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 
-  li {
-    margin: 1em 0;
-    position: relative;
-  }
+    li {
+        margin: 1em 0;
+        position: relative;
+    }
 
-  a {
-    display: block;
-  }
+    a {
+        display: block;
+    }
 
-  a:hover {
-    opacity: 0.5;
-  }
+    a:hover {
+        opacity: 0.5;
+    }
 
-  ul {
-    padding-inline-start: $padding-16;
-  }
+    ul {
+        padding-inline-start: $padding-16;
+    }
 }
 
 ul.pagination {
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-  padding-inline-start: 0px;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding-inline-start: 0px;
 
-  .page-item a {
-    padding: $padding-16;
-  }
+    .page-item a {
+        padding: $padding-16;
+    }
 }
 
 .container {
-  max-width: $container-max-width;
-  margin: 0 auto;
+    max-width: $container-max-width;
+    margin: 0 auto;
 }
 
 .book-icon {
-  filter: var(--icon-filter);
+    filter: var(--icon-filter);
 }
 
 a .book-icon {
-  height: 1em;
-  width: 1em;
-  margin-inline-end: 0;
+    height: 1em;
+    width: 1em;
+    margin-inline-end: 0;
 }
 
 .book-brand {
-  margin-top: 0;
-  margin-bottom: $padding-16;
+    margin-top: 0;
+    margin-bottom: $padding-16;
 
-  img {
-    height: 1.5em;
-    width: 1.5em;
-    margin-inline-end: $padding-8;
-  }
+    img {
+        height: 1.5em;
+        width: 1.5em;
+        margin-inline-end: $padding-8;
+    }
 }
 
 .book-menu {
-  position: relative;   /* гарантируем, что он не fixed/absolute */
-  margin-top: -0.25rem; /* подбери величину по вкусу */
-  flex: 0 0 $menu-width;
-  font-size: $font-size-14;
-  z-index: auto;
+    position: relative; /* гарантируем, что он не fixed/absolute */
+    margin-top: -0.25rem; /* подбери величину по вкусу */
+    flex: 0 0 $menu-width;
+    font-size: $font-size-14;
+    z-index: auto;
 
-  .book-menu-content {
-    width: $menu-width;
-    padding: $padding-16;
-    background: var(--body-background);
+    .book-menu-content {
+        width: $menu-width;
+        padding: $padding-16;
+        background: var(--body-background);
 
-    /*@include fixed; */
-  }
+        /*@include fixed; */
+    }
 
-  a,
-  label {
-    color: inherit;
-    cursor: pointer;
-    word-wrap: break-word;
-  }
+    a,
+    label {
+        color: inherit;
+        cursor: pointer;
+        word-wrap: break-word;
+    }
 
-  a.active {
-    color: var(--color-link);
-  }
+    a.active {
+        color: var(--color-link);
+    }
 
-  input.toggle + label + ul {
-    display: none;
-  }
+    input.toggle + label + ul {
+        display: none;
+    }
 
-  input.toggle:checked + label + ul {
-    display: block;
-  }
+    input.toggle:checked + label + ul {
+        display: block;
+    }
 
-  input.toggle + label::after {
-    content: "▸";
-  }
+    input.toggle + label::after {
+        content: "▸";
+    }
 
-  input.toggle:checked + label::after {
-    content: "▾";
-  }
+    input.toggle:checked + label::after {
+        content: "▾";
+    }
 }
 
 // for RTL support
 body[dir="rtl"] .book-menu {
-  input.toggle + label::after {
-    content: "◂";
-  }
+    input.toggle + label::after {
+        content: "◂";
+    }
 
-  input.toggle:checked + label::after {
-    content: "▾";
-  }
+    input.toggle:checked + label::after {
+        content: "▾";
+    }
 }
 
 .book-section-flat {
-  margin: $padding-16 * 2 0;
+    margin: $padding-16 * 2 0;
 
-  > a,
-  > span,
-  > label {
-    font-weight: bolder;
-  }
+    > a,
+    > span,
+    > label {
+        font-weight: bolder;
+    }
 
-  > ul {
-    padding-inline-start: 0;
-  }
+    > ul {
+        padding-inline-start: 0;
+    }
 }
 
 .book-page {
-  min-width: $body-min-width;
-  flex-grow: 1;
-  padding: $padding-16;
-  background: var(--body-background);
+    min-width: $body-min-width;
+    flex-grow: 1;
+    padding: $padding-16;
+    background: var(--body-background);
 }
 
 .book-post {
-  margin-bottom: $padding-16 * 2;
+    margin-bottom: $padding-16 * 2;
 
-  .book-post-date img {
-    height: 1em;
-    width: 1em;
-    margin-inline-end: .5em;
-  }
+    .book-post-date img {
+        height: 1em;
+        width: 1em;
+        margin-inline-end: 0.5em;
+    }
 
-  .book-post-content > :first-child {
-    margin-top: $padding-16;
-  }
+    .book-post-content > :first-child {
+        margin-top: $padding-16;
+    }
 }
 
 .book-header {
-  display: none;
-  margin-bottom: $padding-16;
+    display: none;
+    margin-bottom: $padding-16;
 
-  label {
-    line-height: 0;
-  }
+    label {
+        line-height: 0;
+    }
 
-  h3 {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin: 0 $padding-16;
-  }
+    h3 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0 $padding-16;
+    }
 
-  img.book-icon {
-    height: 1.5em;
-    width: 1.5em;
-  }
+    img.book-icon {
+        height: 1.5em;
+        width: 1.5em;
+    }
 }
 
 .book-search {
-  position: relative;
-  margin: $padding-16 0;
-  border-bottom: 1px solid transparent;
+    position: relative;
+    margin: $padding-16 0;
+    border-bottom: 1px solid transparent;
 
-  input {
-    width: 100%;
-    padding: $padding-8;
+    input {
+        width: 100%;
+        padding: $padding-8;
 
-    border: 0;
-    border-radius: $border-radius;
+        border: 0;
+        border-radius: $border-radius;
 
-    background: var(--gray-100);
-    color: var(--body-font-color);
+        background: var(--gray-100);
+        color: var(--body-font-color);
 
-    &:required + .book-search-spinner {
-      display: block;
+        &:required + .book-search-spinner {
+            display: block;
+        }
     }
-  }
 
-  .book-search-spinner {
-    position: absolute;
-    top: 0;
-    margin: $padding-8;
-    margin-inline-start: calc(100% - #{$padding-16 + $padding-8});
+    .book-search-spinner {
+        position: absolute;
+        top: 0;
+        margin: $padding-8;
+        margin-inline-start: calc(100% - #{$padding-16 + $padding-8});
 
-    width: $padding-16;
-    height: $padding-16;
+        width: $padding-16;
+        height: $padding-16;
 
-    border: $padding-1 solid transparent;
-    border-top-color: var(--body-font-color);
-    border-radius: 50%;
+        border: $padding-1 solid transparent;
+        border-top-color: var(--body-font-color);
+        border-radius: 50%;
 
-    @include spin(1s);
-  }
+        @include spin(1s);
+    }
 
-  small {
-    opacity: 0.5;
-  }
+    small {
+        opacity: 0.5;
+    }
 }
 
 .book-toc {
-  flex: 0 0 $toc-width;
-  font-size: $font-size-12;
+    flex: 0 0 $toc-width;
+    font-size: $font-size-12;
 
-  .book-toc-content {
-    width: $toc-width;
-    padding: $padding-16;
+    .book-toc-content {
+        width: $toc-width;
+        padding: $padding-16;
 
-    @include fixed;
-  }
+        //@include fixed; убираем fixed, пусть живёт внутри aside
+        //position: static;
+        max-height: 100vh;
+        overflow-y: auto;
+        position: sticky;
+        top: 0; // или под высоту топбара, если нужно
+    }
 
-  img {
-    height: 1em;
-    width: 1em;
-  }
+    img {
+        height: 1em;
+        width: 1em;
+    }
 
-  nav > ul > li:first-child {
-    margin-top: 0;
-  }
+    nav > ul > li:first-child {
+        margin-top: 0;
+    }
 }
 
 .book-footer {
-  padding-top: $padding-16;
-  font-size: $font-size-14;
+    padding-top: $padding-16;
+    font-size: $font-size-14;
 }
 
 .book-comments {
-  margin-top: $padding-16;
+    margin-top: $padding-16;
 }
 
 .book-languages {
-  margin-block-end: $padding-16 * 2;
+    margin-block-end: $padding-16 * 2;
 
-  ul {
-    padding-inline-start: 1.5em;
-  }
+    ul {
+        padding-inline-start: 1.5em;
+    }
 }
 
 // Responsive styles
@@ -366,225 +378,221 @@ body[dir="rtl"] .book-menu {
 .book-page,
 .book-header aside,
 .markdown {
-  transition: 0.2s ease-in-out;
-  transition-property: transform, margin, opacity, visibility;
-  will-change: transform, margin, opacity;
+    transition: 0.2s ease-in-out;
+    transition-property: transform, margin, opacity, visibility;
+    will-change: transform, margin, opacity;
 }
 
 @media screen and (max-width: $mobile-breakpoint) {
-  #menu-control,
-  #toc-control {
-    display: inline;
-  }
+    #menu-control,
+    #toc-control {
+        display: inline;
+    }
 
-  .book-menu {
-    position: relative;
-    visibility: hidden;
-    margin-inline-start: -$menu-width;
-    /* z-index: 1;*/
-    z-index: auto;
-  }
-
-  .book-toc {
-    display: none;
-  }
-
-  .book-header {
-    display: block;
-  }
-
-  #menu-control:focus ~ main label[for="menu-control"] {
-    @include outline;
-  }
-
-  #menu-control:checked ~ main {
     .book-menu {
-      visibility: initial;
+        position: relative;
+        visibility: hidden;
+        margin-inline-start: -$menu-width;
+        /* z-index: 1;*/
+        z-index: auto;
     }
 
-    .book-menu .book-menu-content {
-      transform: translateX($menu-width);
-      box-shadow: 0 0 $padding-8 rgba(0, 0, 0, 0.1);
+    .book-toc {
+        display: none;
     }
 
-    .book-page {
-      opacity: 0.25;
+    .book-header {
+        display: block;
     }
 
-    .book-menu-overlay {
-      display: block;
+    #menu-control:focus ~ main label[for="menu-control"] {
+        @include outline;
     }
-  }
 
-  #toc-control:focus ~ main label[for="toc-control"] {
-    @include outline;
-  }
+    #menu-control:checked ~ main {
+        .book-menu {
+            visibility: initial;
+        }
 
-  #toc-control:checked ~ main {
-    .book-header aside {
-      display: block;
+        .book-menu .book-menu-content {
+            transform: translateX($menu-width);
+            box-shadow: 0 0 $padding-8 rgba(0, 0, 0, 0.1);
+        }
+
+        .book-page {
+            opacity: 0.25;
+        }
+
+        .book-menu-overlay {
+            display: block;
+        }
     }
-  }
 
-  // for RTL support
-  body[dir="rtl"] #menu-control:checked ~ main {
-    .book-menu .book-menu-content {
-      transform: translateX(-$menu-width);
+    #toc-control:focus ~ main label[for="toc-control"] {
+        @include outline;
     }
-  }
+
+    #toc-control:checked ~ main {
+        .book-header aside {
+            display: block;
+        }
+    }
+
+    // for RTL support
+    body[dir="rtl"] #menu-control:checked ~ main {
+        .book-menu .book-menu-content {
+            transform: translateX(-$menu-width);
+        }
+    }
 }
 /* Глобально делаем оверлей на весь экран, когда меню открыто */
 #menu-control:checked ~ * .book-menu-overlay {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 900;  /* ниже топбара, выше контента */
-  display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 900; /* ниже топбара, выше контента */
+    display: block;
 }
-
-
-
 
 // Extra space for big screens
 @media screen and (min-width: $container-max-width) {
-  .book-page,
-  .book-menu .book-menu-content,
-  .book-toc .book-toc-content {
-    padding: $padding-16 * 2 $padding-16;
-  }
+    .book-page,
+    .book-menu .book-menu-content,
+    .book-toc .book-toc-content {
+        padding: $padding-16 * 2 $padding-16;
+    }
 }
 
 /* наш контейнер меню */
 .top-main-menu {
-  margin: 0 0 0.5rem 0;
-  padding: 0.5rem 1rem 0.5rem 0.75rem;
-  border-bottom: 1px solid var(--sidebar-border);
+    margin: 0 0 0.5rem 0;
+    padding: 0.5rem 1rem 0.5rem 0.75rem;
+    border-bottom: 1px solid var(--sidebar-border);
 }
 .book-topbar__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0rem; /* было 0.5rem или 0.75rem — ставим 0 */
-  flex-wrap: nowrap; /* важно: не переносим дом/меню/кнопку */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0rem; /* было 0.5rem или 0.75rem — ставим 0 */
+    flex-wrap: nowrap; /* важно: не переносим дом/меню/кнопку */
 }
 
 /* чтобы меню занимало максимум ширины, а кнопка «прилипала» вправо */
 .book-topbar__inner .top-main-menu {
-  flex: 1 1 auto;
-  margin: 0;        // на всякий случай
+    flex: 1 1 auto;
+    margin: 0; // на всякий случай
 }
 
 /* делаем ul горизонтальным рядом */
 .top-main-menu__list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.75rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  justify-content: space-between; /* или space-around / space-between, если нужно растянуть */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between; /* или space-around / space-between, если нужно растянуть */
 }
 
 /* элементы без маркеров и внутренних отступов */
 .top-main-menu__item {
-  margin: 0;
-  padding: 0;
-  /* центрируем содержимое внутри блока пункта меню */
-  text-align: center;}
+    margin: 0;
+    padding: 0;
+    /* центрируем содержимое внутри блока пункта меню */
+    text-align: center;
+}
 
 /* ссылки как «кнопки» без подчёркивания */
 .top-main-menu__item a {
-  text-decoration: none;
-  padding-bottom: 0.25rem;
-  border-bottom: 2px solid transparent;
-  color: var(--top-menu-link-color);
+    text-decoration: none;
+    padding-bottom: 0.25rem;
+    border-bottom: 2px solid transparent;
+    color: var(--top-menu-link-color);
 }
 
 /* активный раздел — подчёркнут линией и может быть цветным */
 .top-main-menu__item--active a {
-  border-bottom: 2px solid var(--top-menu-link-active);
-  color: var(--top-menu-link-active);
+    border-bottom: 2px solid var(--top-menu-link-active);
+    color: var(--top-menu-link-active);
 }
 
 /* по желанию лёгкий hover */
 .top-main-menu__item a:hover {
-  color: var(--top-menu-link-hover);
+    color: var(--top-menu-link-hover);
 }
 
 /* Далее - Минимальные стили для растяжения меню */
 /* верхняя полоса с главным меню */
 .book-topbar {
-  width: 100%;
-  border-bottom: 1px solid var(--sidebar-border);
+    width: 100%;
+    border-bottom: 1px solid var(--sidebar-border);
 }
 
 /* контейнер внутри topbar */
 .book-topbar .container {
-  margin: 0 auto;
-  padding: 0 0rem; /* подберите под те же отступы, что и у основного container */
+    margin: 0 auto;
+    padding: 0 0rem; /* подберите под те же отступы, что и у основного container */
 }
 
 /* уже существующие стили, слегка уточнённые */
 .top-main-menu {
-  margin: 0;
-  padding: 0.5rem 0;
+    margin: 0;
+    padding: 0.5rem 0;
 }
 
 .top-main-menu__list {
-  display: flex;
-  justify-content: space-between; /* или flex-start + gap, если не хотите растягивать полностью */
-  align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    display: flex;
+    justify-content: space-between; /* или flex-start + gap, если не хотите растягивать полностью */
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 /* вертикальный блок (сайдбар + контент) под главным горизонтальным меню */
 
-
-
 /* верхняя полоса с главным меню */
 .book-topbar {
-  display: block;
-  width: 100%;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;  // высота полосы
-  margin-bottom: 0rem;   /* явный зазор ПОД полосой */
-  position: relative;      /* убираем фикс/абсолют, если вдруг был */
-  z-index: 1;              /* поверх фона, но не критично */
+    display: block;
+    width: 100%;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem; // высота полосы
+    margin-bottom: 0rem; /* явный зазор ПОД полосой */
+    position: relative; /* убираем фикс/абсолют, если вдруг был */
+    z-index: 1; /* поверх фона, но не критично */
 }
 
 /* контейнер внутри полосы */
 .book-topbar .container {
-  margin: 0 auto;
-  padding: 0 1.20rem;       // подбирай под отступы темы.
+    margin: 0 auto;
+    padding: 0 1.2rem; // подбирай под отступы темы.
 }
 
 /* горизонтальное меню внутри полосы */
 .top-main-menu {
-  margin: 0;
-  padding: 0;
-  border: none;   /* если раньше было border-bottom, отключаем */
+    margin: 0;
+    padding: 0;
+    border: none; /* если раньше было border-bottom, отключаем */
 }
 
 @media (max-width: 768px) {
-  .book-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 260px;
-    height: 100vh;
-    z-index: 1000; /* выше, чем .book-page */
-    /* фон, скролл и т.п. по вкусу */
-  }
+    .book-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 260px;
+        height: 100vh;
+        z-index: 1000; /* выше, чем .book-page */
+        /* фон, скролл и т.п. по вкусу */
+    }
 
-  .book-page {
-    position: relative;
-    z-index: 1;
-  }
+    .book-page {
+        position: relative;
+        z-index: 1;
+    }
 }
 
 /*
@@ -600,643 +608,643 @@ body[dir="rtl"] .book-menu {
 }
 */
 
-
 /* Сетка карточек книг */
 .books-catalog__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
 }
 
 /* Карточка книги */
 .books-card {
-  background: var(--card-background);
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
+    background: var(--card-background);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    transition:
+        transform 0.1s ease,
+        box-shadow 0.1s ease;
 }
 
 .books-card__link {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  color: inherit;
-  text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
 }
 
 /* Обложка фиксированного размера */
 .books-card__cover {
-  width: 100%;
-  padding-top: 360px; /* соотношение сторон, можно 140–160 */
-  position: relative;
-  overflow: hidden;
-  background: inherit; /* фон как у карточки/страницы */
-  border-radius: 8px;
+    width: 100%;
+    padding-top: 360px; /* соотношение сторон, можно 140–160 */
+    position: relative;
+    overflow: hidden;
+    background: inherit; /* фон как у карточки/страницы */
+    border-radius: 8px;
 }
 
 .books-card__cover img {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 100%;
-  width: auto;
-  object-fit: cover;             /* чуть «подрезает» края, но держит заполнение */
-  border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: auto;
+    object-fit: cover; /* чуть «подрезает» края, но держит заполнение */
+    border-radius: 8px;
 }
 
 /* Текстовая часть */
 .books-card__body {
-  padding: 0.75rem 0.9rem 1rem;
+    padding: 0.75rem 0.9rem 1rem;
 }
 
 .books-card__title {
-  font-size: 0.95rem;
-  font-weight: 600;
-  margin: 0 0 0.25rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0 0 0.25rem;
 }
 
 .books-card__subtitle {
-  font-size: 0.85rem;
-  font-style: italic;
-  font-weight: 400;
+    font-size: 0.85rem;
+    font-style: italic;
+    font-weight: 400;
 }
-
 
 .books-card__authors,
 .books-card__year,
 .books-card__genres,
 .books-card__shelves {
-  font-size: 0.8rem;
-  margin: 0 0 0.15rem;
-  color: #666;
+    font-size: 0.8rem;
+    margin: 0 0 0.15rem;
+    color: #666;
 }
 
 .books-card__abstract {
-  font-size: 0.8rem;
-  margin: 0.35rem 0 0;
-  color: #555;
+    font-size: 0.8rem;
+    margin: 0.35rem 0 0;
+    color: #555;
 }
 
 /* Hover на десктопе */
 @media (hover: hover) {
-  .books-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
+    .books-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
 }
-
 
 /* Общий вид секций сайдбара */
 .books-sidebar__section {
-  margin-bottom: 1.25rem;
+    margin-bottom: 1.25rem;
 }
 
 /* Заголовки блоков */
 .books-sidebar__title {
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin: 0 0 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
 }
 
 .books-sidebar__subtitle {
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin: 0 0 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 0 0 0.4rem;
 }
 
 /* Список ссылок в сайдбаре */
 .books-sidebar__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .books-sidebar__list li {
-  margin: 0 0 0.25rem;
+    margin: 0 0 0.25rem;
 }
 
 .books-sidebar__list a {
-  font-size: 0.8rem;
-  text-decoration: none;
-  color: inherit;
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Разделитель после блока "Читаем сейчас" */
 .books-sidebar__section--focus {
-  padding-bottom: 0.75rem;
-  margin-bottom: 0.75rem;
-  border-bottom: 1px solid rgba(0,0,0,0.1); /* толщину и цвет подбери под свою тему */
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* толщину и цвет подбери под свою тему */
 }
-
-
-
 
 /* Контейнер для чипов */
 
 .books-sidebar__chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.3rem;
-  padding-bottom: 0.4rem; /* добавили отступ вниз */
-  border-bottom: 1px solid rgba(0,0,0,0.1); /* толщину и цвет подбери под свою тему */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    padding-bottom: 0.4rem; /* добавили отступ вниз */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* толщину и цвет подбери под свою тему */
 }
 
 /* Базовый чип */
 .books-chip {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.25rem 0.7rem;      /* было 0.15rem 0.55rem – добавили высоту и ширину */
-  border-radius: 6px;
-  font-size: 0.78rem;
-  line-height: 1.3;             /* чуть больше для двух строк */
-  text-decoration: none;
-  cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.7rem; /* было 0.15rem 0.55rem – добавили высоту и ширину */
+    border-radius: 6px;
+    font-size: 0.78rem;
+    line-height: 1.3; /* чуть больше для двух строк */
+    text-decoration: none;
+    cursor: pointer;
 
-  border: 1px solid var(--chip-border);
-  background-color: var(--chip-bg);
-  color: inherit;
-  transition: background-color 0.12s ease, border-color 0.12s ease,
-  transform 0.08s ease;
+    border: 1px solid var(--chip-border);
+    background-color: var(--chip-bg);
+    color: inherit;
+    transition:
+        background-color 0.12s ease,
+        border-color 0.12s ease,
+        transform 0.08s ease;
 
-  max-width: 100%;
-  white-space: normal;          /* разрешаем перенос текста */
-  text-align: center;
-  text-transform: none !important;
+    max-width: 100%;
+    white-space: normal; /* разрешаем перенос текста */
+    text-align: center;
+    text-transform: none !important;
 }
 
 /* мобильный по умолчанию: один чип в строку */
 .books-sidebar__chips .books-chip {
-  flex: 1 1 100%;
-  text-transform: none !important;
+    flex: 1 1 100%;
+    text-transform: none !important;
 }
 
 /* средние и обычные десктопы: до двух чипов в строку */
 @media (min-width: 900px) {
-  .books-sidebar__chips .books-chip {
-    flex: 1 1 calc(50% - 0.3rem);
-    text-transform: none !important;
-  }
+    .books-sidebar__chips .books-chip {
+        flex: 1 1 calc(50% - 0.3rem);
+        text-transform: none !important;
+    }
 }
 
 /* очень широкие экраны: пробуем до трёх чипов в строку */
 @media (min-width: 1400px) {
-  .books-sidebar__chips .books-chip {
-    flex: 1 1 calc(33.333% - 0.3rem);
-    text-transform: none !important;
-  }
+    .books-sidebar__chips .books-chip {
+        flex: 1 1 calc(33.333% - 0.3rem);
+        text-transform: none !important;
+    }
 }
-
-
-
-
-
 
 /* Вариант для "Читаем сейчас" (можно чуть выделить) */
 .books-chip--focus {
-  font-weight: 500;
+    font-weight: 500;
 }
 
 /* Вариант для полок — при желании чуть другой стиль */
 .books-chip--shelf {
-  /* например, ничего не меняем сейчас */
+    /* например, ничего не меняем сейчас */
 }
 
 /* Hover (десктоп) */
 @media (hover: hover) {
-  .books-chip:hover {
-    background-color: rgba(0,0,0,0.06);
-    border-color: rgba(0,0,0,0.15);
-    transform: translateY(-1px);
-  }
+    .books-chip:hover {
+        background-color: rgba(0, 0, 0, 0.06);
+        border-color: rgba(0, 0, 0, 0.15);
+        transform: translateY(-1px);
+    }
 }
 
 /* Активное состояние (по желанию, если захочешь подсвечивать текущий термин) */
 
 .books-chip--active {
-  background-color: rgba(0,0,0,0.12);
-  border-color: rgba(0,0,0,0.3);
-  font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.12);
+    border-color: rgba(0, 0, 0, 0.3);
+    font-weight: 600;
 }
 
-
 .books-sidebar__focus-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
 }
 
 .books-focus-item {
-  display: block;
-  padding: 0.3rem 0.5rem;
-  border-radius: 6px;
-  text-decoration: none;
-  color: inherit;
-  background-color: rgba(0,0,0,0.02);
-  transition: background-color 0.12s ease, transform 0.08s ease;
+    display: block;
+    padding: 0.3rem 0.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    color: inherit;
+    background-color: rgba(0, 0, 0, 0.02);
+    transition:
+        background-color 0.12s ease,
+        transform 0.08s ease;
 }
 
 @media (hover: hover) {
-  .books-focus-item:hover {
-    background-color: rgba(0,0,0,0.06);
-    transform: translateY(-1px);
-  }
+    .books-focus-item:hover {
+        background-color: rgba(0, 0, 0, 0.06);
+        transform: translateY(-1px);
+    }
 }
 
 .books-focus-item__title-line {
-  font-size: 0.8rem;
-  font-weight: 600;
+    font-size: 0.8rem;
+    font-weight: 600;
 }
 
 .books-focus-item__subtitle {
-  font-size: 0.78rem;
-  font-style: italic;
-  font-weight: 400;
+    font-size: 0.78rem;
+    font-style: italic;
+    font-weight: 400;
 }
 
 .books-focus-item__meta {
-  margin-top: 0.1rem;
-  font-size: 0.75rem;
-  color: #666;
+    margin-top: 0.1rem;
+    font-size: 0.75rem;
+    color: #666;
 }
 
 .books-focus-item__year {
-  margin-right: 0.3rem;
+    margin-right: 0.3rem;
 }
 
 /* Жёстко запрещаем изменение регистра текста внутри книжных чипов */
 .books-sidebar__chips a,
 .books-chip,
 .books-chip * {
-  text-transform: none !important;
+    text-transform: none !important;
 }
 
-
-
-
 .book-single__header {
-  display: grid;
-  grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
-  gap: 1.5rem;
-  align-items: flex-start;
-  margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin-bottom: 2rem;
 }
 
 .book-single__cover img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 .book-single__title {
-  font-size: 1.6rem;
-  margin: 0 0 0.3rem;
+    font-size: 1.6rem;
+    margin: 0 0 0.3rem;
 }
 
 .book-single__subtitle {
-  margin: 0 0 0.6rem;
-  font-style: italic;
-  color: #555;
+    margin: 0 0 0.6rem;
+    font-style: italic;
+    color: #555;
 }
 
 .book-single__authors {
-  margin: 0 0 0.8rem;
-  font-weight: 500;
+    margin: 0 0 0.8rem;
+    font-weight: 500;
 }
 
 .book-single__details {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 0.4rem 1.5rem;
-  margin: 0 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.4rem 1.5rem;
+    margin: 0 0 1rem;
 }
 
 .book-single__details dt {
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: #777;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #777;
 }
 
 .book-single__details dd {
-  margin: 0;
-  font-size: 0.9rem;
+    margin: 0;
+    font-size: 0.9rem;
 }
 
 .book-single__summary {
-  margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .book-single__summary h2,
 .book-single__content h2 {
-  font-size: 1.1rem;
-  margin-bottom: 0.4rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
 }
 
-
-
 .book-single__cover {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
 }
 
 .book-single__cover img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
 }
 
 .book-rating {
-  display: inline-flex;
-  gap: 0.1rem;
-  font-size: 1rem;
-  line-height: 1;
+    display: inline-flex;
+    gap: 0.1rem;
+    font-size: 1rem;
+    line-height: 1;
 }
 
 .book-rating__star {
-  color: var(--rating-star-empty);
+    color: var(--rating-star-empty);
 }
 
 .book-rating__star--filled {
-  color: var(--rating-star-filled);
+    color: var(--rating-star-filled);
 }
 
 /* на маленьких экранах звёзды чуть крупнее */
 @media (max-width: 720px) {
-  .book-rating {
-    font-size: 1.1rem;
-  }
+    .book-rating {
+        font-size: 1.1rem;
+    }
 }
 
 .book-rating {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.15rem;
 }
 
 .book-rating__stars {
-  display: inline-flex;
-  gap: 0.1rem;
+    display: inline-flex;
+    gap: 0.1rem;
 }
 
 .book-rating__text {
-  font-size: 0.8rem;
-  color: #666;
+    font-size: 0.8rem;
+    color: #666;
 }
 
 .books-terms__header {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 .books-terms__header p {
-  margin: 0.2rem 0 0;
-  font-size: 0.9rem;
-  color: #666;
+    margin: 0.2rem 0 0;
+    font-size: 0.9rem;
+    color: #666;
 }
 
 .books-terms__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 0.75rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.75rem;
 }
 
 .books-terms__item {
-  display: block;
-  padding: 0.6rem 0.8rem;
-  border-radius: 6px;
-  border: 1px solid rgba(0,0,0,0.06);
-  background: rgba(0,0,0,0.01);
-  text-decoration: none;
-  color: inherit;
-  transition: background-color 0.12s ease, transform 0.08s ease, box-shadow 0.12s ease;
+    display: block;
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    background: rgba(0, 0, 0, 0.01);
+    text-decoration: none;
+    color: inherit;
+    transition:
+        background-color 0.12s ease,
+        transform 0.08s ease,
+        box-shadow 0.12s ease;
 }
 
 .books-terms__item:hover {
-  background-color: rgba(0,0,0,0.03);
-  transform: translateY(-1px);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    background-color: rgba(0, 0, 0, 0.03);
+    transform: translateY(-1px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 .books-terms__item-title {
-  font-weight: 600;
-  margin-bottom: 0.15rem;
+    font-weight: 600;
+    margin-bottom: 0.15rem;
 }
 
 .books-terms__item-count {
-  font-size: 0.8rem;
-  color: #777;
+    font-size: 0.8rem;
+    color: #777;
 }
 .books-terms__table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
 }
 
 .books-terms__table th,
 .books-terms__table td {
-  padding: 0.4rem 0.6rem;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
+    padding: 0.4rem 0.6rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .books-terms__table th {
-  text-align: left;
-  font-weight: 600;
-  color: #555;
+    text-align: left;
+    font-weight: 600;
+    color: #555;
 }
 
 .books-terms__table a {
-  text-decoration: none;
+    text-decoration: none;
 }
 .books-terms__tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
 }
 
 .books-chip--tagcloud {
-  font-size: 0.85rem;
-  padding: 0.2rem 0.5rem;
+    font-size: 0.85rem;
+    padding: 0.2rem 0.5rem;
 }
 
 /* optional: чуть крупнее для самых популярных */
-.books-terms--tags .books-chip--tagcloud:nth-child(-n+10) {
-  font-weight: 600;
+.books-terms--tags .books-chip--tagcloud:nth-child(-n + 10) {
+    font-weight: 600;
 }
 
 .theme-toggle {
-  flex: 0 0 auto;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  font-size: 1.60rem;      /* чуть увеличили размер символа смены стиля */
-  line-height: 1;
-  padding: 0;
-  border-radius: 999px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--theme-toggle-icon-color);
-  text-shadow: 0 0 0.5px var(--theme-toggle-icon-shadow);
-  transition: background-color 0.12s ease, transform 0.08s ease, color 0.12s ease;
-  margin-inline-start: clamp(0.4rem, 1.5vw, 0.9rem);  /*только внешний зазор слева от меню */
+    flex: 0 0 auto;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 1.6rem; /* чуть увеличили размер символа смены стиля */
+    line-height: 1;
+    padding: 0;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--theme-toggle-icon-color);
+    text-shadow: 0 0 0.5px var(--theme-toggle-icon-shadow);
+    transition:
+        background-color 0.12s ease,
+        transform 0.08s ease,
+        color 0.12s ease;
+    margin-inline-start: clamp(
+        0.4rem,
+        1.5vw,
+        0.9rem
+    ); /*только внешний зазор слева от меню */
 }
 
 /* сразу после определения .theme-toggle */
 .theme-toggle:focus,
 .theme-toggle:focus-visible,
 .theme-toggle:active {
-  outline: none;
-  box-shadow: none;
+    outline: none;
+    box-shadow: none;
 }
 
-
 .theme-light .theme-toggle {
-  font-size: 1.75rem; /* чуть больше луны только в светлой теме */
+    font-size: 1.75rem; /* чуть больше луны только в светлой теме */
 }
 
 .theme-toggle:hover {
-  background-color: rgba(0, 0, 0, 0.04);
-  transform: translateY(-1px);
+    background-color: rgba(0, 0, 0, 0.04);
+    transform: translateY(-1px);
 }
 
 .theme-light .theme-toggle:hover {
-  background-color: rgba(0, 0, 0, 0.03); /* на чуть‑чуть слабее, чем сейчас */
+    background-color: rgba(0, 0, 0, 0.03); /* на чуть‑чуть слабее, чем сейчас */
 }
 
 .theme-dark .theme-toggle:hover {
-  background-color: rgba(255, 255, 255, 0.08);
+    background-color: rgba(255, 255, 255, 0.08);
 }
-
-
 
 /* нулевая СТУПЕНЬ: условно «шире планшета» — до 1100px. Жёсткая тройка (3 в ряд):*/
 @media (max-width: 1100px) and (min-width: 901px) {
-  .top-main-menu__item { flex: 0 0 20%; } /* примерно 4-5 в строке */
+    .top-main-menu__item {
+        flex: 0 0 20%;
+    } /* примерно 4-5 в строке */
 }
-
 
 /* ПЕРВАЯ СТУПЕНЬ: условно «планшет» — до 900px.
    Разрешаем меню мягко переноситься (обычно получится 3 + 1). */
 @media (max-width: 900px) {
-  .book-topbar__inner {
-    align-items: center;
-  }
+    .book-topbar__inner {
+        align-items: center;
+    }
 
-  .top-main-menu__item {
-    /* не жёстко, даём браузеру самому решать, но чуть ограничиваем ширину */
-    flex: 0 1 auto;
-  }
+    .top-main-menu__item {
+        /* не жёстко, даём браузеру самому решать, но чуть ограничиваем ширину */
+        flex: 0 1 auto;
+    }
 
-  .top-main-menu__item a {
-    font-size: 0.95rem;
-    white-space: nowrap;
-  }
+    .top-main-menu__item a {
+        font-size: 0.95rem;
+        white-space: nowrap;
+    }
 }
 
 /* ВТОРАЯ СТУПЕНЬ: более узкие экраны — до 640px.
    Делаем двухколоночную сетку (2 × 2). */
 @media (max-width: 540px) {
-  .book-topbar__inner {
-    align-items: flex-start;
-    display: flex;
-    flex-wrap: nowrap; /* важно: не переносим дом/меню/кнопку ни при каких ширинах экрана, всегда в одной строке*/
-  }
+    .book-topbar__inner {
+        align-items: flex-start;
+        display: flex;
+        flex-wrap: nowrap; /* важно: не переносим дом/меню/кнопку ни при каких ширинах экрана, всегда в одной строке*/
+    }
 
-  .top-main-menu__list {
-    gap: 0.4rem 0.8rem;
-    flex: 1 1 100%;
-    /* важно: сбросить растягивание */
-    justify-content: center; /* не тянем влево */
-  }
+    .top-main-menu__list {
+        gap: 0.4rem 0.8rem;
+        flex: 1 1 100%;
+        /* важно: сбросить растягивание */
+        justify-content: center; /* не тянем влево */
+    }
 
-  .top-main-menu__item {
-    flex: 0 0 45%; /* два пункта в строку */
-    text-align: center;
-  }
+    .top-main-menu__item {
+        flex: 0 0 45%; /* два пункта в строку */
+        text-align: center;
+    }
 
-  .top-main-menu__item a {
-    display: inline-block;
-    font-size: 0.9rem;
-    /* white-space: nowrap;  старая версия, в которой не переносились на следующую строку, чтобы сами слова не ломались по буквам */
-    white-space: normal;   /* разрешаем перенос строк */
-    word-break: keep-all;  /* переносим только по пробелам, слова не рвём */
-  }
+    .top-main-menu__item a {
+        display: inline-block;
+        font-size: 0.9rem;
+        /* white-space: nowrap;  старая версия, в которой не переносились на следующую строку, чтобы сами слова не ломались по буквам */
+        white-space: normal; /* разрешаем перенос строк */
+        word-break: keep-all; /* переносим только по пробелам, слова не рвём */
+    }
 
-  .theme-toggle {
-    flex: 0 0 auto;
-    align-self: flex-start;
-    margin-top: auto; /* прижать к нижнему краю .book-topbar__inner */
-  }
+    .theme-toggle {
+        flex: 0 0 auto;
+        align-self: flex-start;
+        margin-top: auto; /* прижать к нижнему краю .book-topbar__inner */
+    }
 
-  .topbar-home,
-  .theme-toggle {
-    align-self: flex-end;
-  }
+    .topbar-home,
+    .theme-toggle {
+        align-self: flex-end;
+    }
 }
 
 /* ТРЕТЬЯ СТУПЕНЬ: совсем узкие экраны — до 400px.
    Уходим в одну колонку (1 × 4). */
 @media (max-width: 200px) {
-  .top-main-menu__item {
-    flex: 0 0 100%;
-  }
+    .top-main-menu__item {
+        flex: 0 0 100%;
+    }
 
-  .top-main-menu__list {
-    gap: 0.3rem 0;
-    justify-content: center; /* не тянем влево */
-  }
+    .top-main-menu__list {
+        gap: 0.3rem 0;
+        justify-content: center; /* не тянем влево */
+    }
 
-  .book-topbar__inner {
-    align-items: flex-start;
-  }
+    .book-topbar__inner {
+        align-items: flex-start;
+    }
 
-  .theme-toggle {
-    margin-top: auto;; /* немного отступить от меню */
-  }
+    .theme-toggle {
+        margin-top: auto; /* немного отступить от меню */
+    }
 
-  .topbar-home,
-  .theme-toggle {
-    align-self: flex-end;
-  }
+    .topbar-home,
+    .theme-toggle {
+        align-self: flex-end;
+    }
 }
 
 .topbar-home {
-  flex: 0 0 auto;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  text-decoration: none;
-  /* убираем влияние темы на отступ сверху */
-  margin-top: auto;  /* вот этот параметр опускает кнопку к нижней границе блока */
-  /*color: var(--theme-toggle-icon-color);*/
-  text-shadow: 0 0 0.5px var(--theme-toggle-icon-shadow);
-  transition: background-color 0.12s ease, transform 0.08s ease, color 0.12s ease;
-  /* единый горизонтальный отступ слева от меню */
-  margin-inline-end: clamp(0.4rem, 1.5vw, 0.9rem);  /*margin-inline-start: clamp(0.4rem, 1.5vw, 0.9rem); */ /*только внешний зазор слева от меню */
-  color: var(--home-icon-color);
+    flex: 0 0 auto;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    text-decoration: none;
+    /* убираем влияние темы на отступ сверху */
+    margin-top: auto; /* вот этот параметр опускает кнопку к нижней границе блока */
+    /*color: var(--theme-toggle-icon-color);*/
+    text-shadow: 0 0 0.5px var(--theme-toggle-icon-shadow);
+    transition:
+        background-color 0.12s ease,
+        transform 0.08s ease,
+        color 0.12s ease;
+    /* единый горизонтальный отступ слева от меню */
+    margin-inline-end: clamp(
+        0.4rem,
+        1.5vw,
+        0.9rem
+    ); /*margin-inline-start: clamp(0.4rem, 1.5vw, 0.9rem); */ /*только внешний зазор слева от меню */
+    color: var(--home-icon-color);
 }
 
 .topbar-home__icon {
-  margin-inline-end: 0;
-  font-size: 1.6rem;                 /* больше, чем текст меню */
-  line-height: 1;
-  color: var(--home-icon-color); /* сильнее, чем общий a { color: ... } */
-  text-shadow: 0 0 0.5px currentColor;/* лёгкое «утолщение» за счёт тени */
+    margin-inline-end: 0;
+    font-size: 1.6rem; /* больше, чем текст меню */
+    line-height: 1;
+    color: var(--home-icon-color); /* сильнее, чем общий a { color: ... } */
+    text-shadow: 0 0 0.5px currentColor; /* лёгкое «утолщение» за счёт тени */
 }
-
-
-
-
