@@ -2,7 +2,7 @@
 <div>
     <p
          class="text-[15px] sm:text-base lg:text-lg
-         text-slate-300/90
+         landing-text-main
          max-w-xl
          mt-3 mb-3
          leading-tight
@@ -12,71 +12,73 @@
         Мы изучаем традиционное боевое искусство самураев в школе, отметившей свое 35-летие в России.
     </p>
 
-
     <div class="relative">
-        <div class="relative rounded-3xl overflow-hidden border border-slate-800/80 bg-gradient-to-br from-black via-slate-900 to-black shadow-2xl shadow-black/60">
-            <!-- Бейдж всегда виден, в правом верхнем углу -->
-            <div class="flex flex-col items-center absolute top-4 right-4 z-20">
-                <div class="text-xs tracking-[0.3em] uppercase text-slate-500 mb-1">
+        <div class="relative rounded-3xl overflow-hidden border jj-card-shell bg-gradient-to-br from-black via-slate-900 to-black">
+        <!-- бейдж -->
+            <div class="flex flex-col items-center absolute top-3 right-4 z-20">
+                <div class="text-xs tracking-[0.3em] uppercase jj-card-badge-label mb-1">
                     Jujutsu
                 </div>
-                <div class="border border-slate-700 bg-black/70 px-3 py-4 rounded-2xl text-slate-200 text-sm leading-6 writing-vertical-rl [writing-mode:vertical-rl]">
+                <div
+                        class="border px-3 py-4 rounded-2xl text-sm leading-6 writing-vertical-rl [writing-mode:vertical-rl] jj-card-badge-box"
+                >
                     日本柔術
                 </div>
             </div>
 
-            <!-- Контейнер с фоном, растягивающийся по содержимому -->
-            <div class="relative min-h-[260px] sm:min-h-[280px] lg:min-h-[320px]">
+
+            <div class="relative min-h-[260px] sm:min-h-[280px] lg:min-h-[320px] jj-card-inner-gradient">
                 <div class="absolute inset-0 bg-[radial-gradient(circle_at_0_0,rgba(248,113,113,0.45),transparent_55%),radial-gradient(circle_at_90%_100%,rgba(56,189,248,0.35),transparent_55%)]"></div>
                 <div class="absolute inset-0 bg-[url('https://images.pexels.com/photos/799195/pexels-photo-799195.jpeg?auto=compress&cs=tinysrgb&w=1200')] bg-cover bg-center mix-blend-multiply opacity-70"></div>
-                <div class="absolute inset-0 bg-gradient-to-tr from-black/80 via-black/40 to-slate-900/40"></div>
+                <div class="absolute inset-0 jj-card-overlay-gradient"></div>
 
-                <!-- Контент: верхний блок с зоной под бейдж, ниже — полная ширина -->
                 <div class="relative flex flex-col justify-end h-full gap-3 px-5 sm:px-6 pb-5 sm:pb-6 pt-6 sm:pt-8">
-                    <!-- Верхний текст: ограничиваем ширину, чтобы не залезать под бейдж -->
+                    <!-- верхний текст -->
                     <div class="flex flex-wrap items-start justify-between gap-3 pr-24 sm:pr-28">
                         <div class="max-w-[65%] sm:max-w-[70%]">
-                            <p class="text-xs uppercase tracking-[0.2em] text-slate-300">道場</p>
-                            <p class="text-xs uppercase tracking-[0.2em] text-slate-300">Ценности школы</p>
-                            <p class="text-xs uppercase tracking-[0.2em] text-slate-300">DOJO spirit</p>
-                            <p class="text-sm sm:text-base text-slate-100"></p>
+                            <p class="text-xs uppercase tracking-[0.2em] jj-card-badge-label">道場</p>
+                            <p class="text-xs uppercase tracking-[0.2em] jj-card-badge-label">Ценности школы</p>
+                            <p class="text-xs uppercase tracking-[0.2em] jj-card-badge-label">DOJO spirit</p>
                         </div>
                     </div>
 
-                    <!-- Чипы: можно использовать всю ширину, слова переносятся, начинаются ниже «зоны бейджа» -->
-                    <div class="mt-10 sm:mt-12 flex flex-wrap gap-2 text-[11px] sm:text-xs lg:text-sm text-slate-200">
-          <span class="inline-flex items-center rounded-full bg-black/40 border border-slate-700/80 px-3 py-1 break-words whitespace-normal">
-            Для взрослых*
-          </span>
-          <span class="inline-flex items-center rounded-full bg-black/40 border border-slate-700/80 px-3 py-1 break-words whitespace-normal">
-            Уважение и уверенность
-          </span>
 
-
-                        <span class="inline-flex items-center rounded-full bg-black/40 border border-slate-700/80 px-3 py-1 break-words whitespace-normal">
-            Самооборона без агрессии
-          </span>
-                        <span class="inline-flex items-center rounded-full bg-black/40 border border-slate-700/80 px-3 py-1 break-words whitespace-normal">
-            Подтянутость, физическая форма, выносливость
-          </span>
-                        <span class="inline-flex items-center rounded-full bg-black/40 border border-slate-700/80 px-3 py-1 break-words whitespace-normal">
-            Работа с дыханием, медитации и осознанность
-          </span>
-                        <span class="inline-flex items-center rounded-full bg-black/40 border border-slate-700/80 px-3 py-1 break-words whitespace-normal">
-            Вековые традиции и опыт дзю-дзюцу
-          </span>
-                        <span class="inline-flex items-center rounded-full bg-black/40 border border-slate-700/80 px-3 py-1 break-words whitespace-normal">
-            Современная методика преподавания
-          </span>
+                    <!-- Чипы -->
+                    <div class="mt-12 sm:mt-7 flex flex-wrap gap-2 text-[11px] sm:text-xs lg:text-sm">
+                        <span class="inline-flex items-center rounded-full px-3 py-1 break-words whitespace-normal jj-card-chip">
+                        Для взрослых*
+                        </span>
+                        <span class="inline-flex items-center rounded-full px-3 py-1 break-words whitespace-normal jj-card-chip">
+                        Уважение и уверенность
+                        </span>
+                        <span class="inline-flex items-center rounded-full px-3 py-1 break-words whitespace-normal jj-card-chip">
+                        Самооборона без агрессии
+                        </span>
+                        <span class="inline-flex items-center rounded-full px-3 py-1 break-words whitespace-normal jj-card-chip">
+                        Подтянутость, физическая форма, выносливость
+                        </span>
+                        <span class="inline-flex items-center rounded-full px-3 py-1 break-words whitespace-normal jj-card-chip">
+                        Работа с дыханием, медитации и осознанность
+                        </span>
+                        <span class="inline-flex items-center rounded-full px-3 py-1 break-words whitespace-normal jj-card-chip">
+                        Вековые традиции и опыт дзю-дзюцу
+                        </span>
+                        <span class="inline-flex items-center rounded-full px-3 py-1 break-words whitespace-normal jj-card-chip">
+                        Современная методика преподавания
+                        </span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <p class="text-xs text-slate-500 text-center mb-4">
-        *Для взрослых 18–50 лет: акценты на безопасности, уважении, осознанности и современной методике преподавания.
-    </p>
 
-</div>
+
+
+
+    <p class="text-xs landing-text-main text-center mb-4">
+            *Для взрослых 18–50 лет: акценты на безопасности, уважении, осознанности и современной методике преподавания.
+        </p>
+
+    </div>
 </section>

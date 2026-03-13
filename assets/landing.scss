@@ -33,3 +33,42 @@
 .landing-accent-border {
   border-color: var(--landing-accent);
 }
+.jj-card-shell {
+  background: var(--jj-card-bg);
+  border-color: var(--jj-card-border);
+  box-shadow: var(--jj-card-shadow);
+}
+
+.jj-card-inner-gradient {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--jj-card-inner-gradient-from),
+    var(--jj-card-inner-gradient-via),
+    var(--jj-card-inner-gradient-to)
+  );
+}
+
+.jj-card-overlay-gradient {
+  background-image: linear-gradient(
+    to top right,
+    var(--jj-card-overlay-from),
+    var(--jj-card-overlay-via),
+    var(--jj-card-overlay-to)
+  );
+}
+
+.jj-card-chip {
+  background-color: var(--jj-card-chip-bg);
+  border: 1px solid var(--jj-card-chip-border);
+  color: var(--jj-card-chip-text);
+}
+
+.jj-card-badge-label {
+  color: var(--jj-card-badge-label);
+}
+
+.jj-card-badge-box {
+  border-color: var(--jj-card-badge-border);
+  background-color: var(--jj-card-badge-bg);
+  color: var(--jj-card-badge-text);
+}
