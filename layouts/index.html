@@ -1,12 +1,26 @@
 {{ define "main" }}
 {{ $landingCSS := resources.Get "landing.scss" | css.Sass | postCSS | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $landingCSS.RelPermalink }}">
-
-<main id="top" class="jj-landing mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pt-10 sm:pt-16 pb-16 space-y-24">
-    {{ partial "landing/hero.html" . }}
-    {{ partial "landing/benefits.html" . }}
+<main id="top" class="jj-landing mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pb-16">
+    {{ partial "landing/brand-badge-1.html" . }}
+    {{ partial "landing/brand-badge-2.html" . }}
+    {{ partial "landing/jj_values.html" . }}
+    {{ partial "landing/three_buttons.html" . }}
+<!--{{ partial "landing/benefits.html" . }}
     {{ partial "landing/books.html" . }}
     {{ partial "landing/latest-news.html" . }}
-    {{ partial "landing/cta.html" . }}
+    {{ partial "landing/cta.html" . }}-->
+
+        <!--Лендинг-страницу строим по плану:
+    1. о чем этот ресурс (кратко, один-два предложения)
+    2. Образ Героя (один визуальный блок)
+    3. Ценности Школы (один визуальный блок). О школе сюда же
+    4. несколько кнопок (записаться, что взять на первую тренировку, как проходит тренировка)
+    5. Почему стоит заниматься джиу-джитсту
+    6. Философия
+    7. Для кого подойдут тренировки
+    8. Начни свой путь в джиу-джитсу уже сегодня (блок с возможностью написать имя, телефон, отправить
+    -->
 </main>
 {{ end }}
+
