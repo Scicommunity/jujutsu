@@ -32,6 +32,13 @@
             <div class="film__body">
                 {{ .Content }}
             </div>
+
+            {{ with .Resources.GetMatch "*.mp4" }}
+            <video controls width="800">
+                <source src="{{ .RelPermalink }}" type="video/mp4">
+            </video>
+            {{ end }}
+
         </section>
     </article>
 </main>

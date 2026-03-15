@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "fc2d2b5c8c895c25",
+        "id": "f8d45bb837159776",
         "type": "tabs",
         "children": [
           {
-            "id": "fd8010486584aa1d",
+            "id": "5d20ba881d00efa3",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "content/films/example-film/index.md",
+                "mode": "source",
+                "source": true
+              },
               "icon": "lucide-file",
-              "title": "Новая вкладка"
+              "title": "index"
             }
           }
         ]
@@ -100,6 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "content/films/example-film/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +114,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки"
+              "title": "Обратные ссылки для index"
             }
           },
           {
@@ -182,21 +187,23 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "fd8010486584aa1d",
+  "active": "5d20ba881d00efa3",
   "lastOpenFiles": [
+    "content/films/example-film/index.md~",
+    "layouts/films/single.html~",
+    "public/films/example-film/matrix.mp4",
+    "content/films/example-film/matrix.mp4",
+    "public/en.search.min.051bd495628844e8ad31eb3eb9cb9403224dc9ea5ff1fde5965a02ee1e10899e.js",
+    "public/en.search-data.min.ff6e5eec6dabfb8526ae4d021a0c075f7146d7c30db1b564f1d227e87ab42320.json",
+    "content/films/example-film/index.md",
+    "public/films/example-film/матрица.mp4",
+    "content/films/example-film/матрица.mp4",
+    "матрица.mp4",
     "content/docs/backlog/План работ.excalidraw.md",
     "public/docs/philosophy/metsuki_sutemi/metsuki_sutemi/index.html",
     "public/docs/philosophy/metsuki_sutemi/metsuki_sutemi",
-    "public/docs/philosophy/metsuki_sutemi",
-    "public/en.search.min.871cd11fef3a4329a58db4dd0fde77091478ba0c064b72d1617e0eb075022686.js",
-    "public/en.search-data.min.e144b85151a5ec8e610febca60923ff970af8d9cadcff565a499f4464be450f5.json",
     "content/docs/philosophy/metsuki_sutemi/metsuki_sutemi.md",
-    "content/docs/philosophy/metsuki_sutemi",
-    "public/docs/philosophy/index.xml",
-    "public/docs/philosophy/index.html",
-    "public/docs/philosophy",
     "content/docs/philosophy/_index.md",
-    "content/docs/philosophy",
     "content/docs/about/about.md",
     "content/docs/announcements/hinode_2025/hinode_2025.md",
     "Clippings/Программа HINODE JAPAN 1.md",
@@ -228,7 +235,6 @@
     "static/2025_hinode_5.png",
     "content/docs/posts/shiho_nage/shiho_nage.md",
     "static/2022_mmfbi.jpg",
-    "content/docs/posts/metsuki_sutemi/metsuki_sutemi.md",
     "Без названия 1.canvas",
     "Без названия.canvas",
     "Без названия 3.canvas",
