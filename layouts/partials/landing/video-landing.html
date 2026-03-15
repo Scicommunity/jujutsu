@@ -1,0 +1,293 @@
+<section class="mt-8">
+    <h2 class="text-sm sm:text-base font-semibold tracking-[0.2em] uppercase landing-text-subtle mb-3">
+        Пример тренировки
+    </h2>
+
+    <div class="relative rounded-2xl overflow-hidden border landing-accent-border bg-black/80">
+        <!-- Видео -->
+        <video
+                id="jj-video"
+                class="w-full h-auto"
+                src="{{ relURL "films/example-film/matrix.mp4" }}"
+        preload="metadata"
+        playsinline
+        >
+        Ваш браузер не поддерживает воспроизведение видео.
+        </video>
+
+        <!-- Центральная кнопка Play -->
+        <button
+                id="jj-video-center-play"
+                type="button"
+                class="absolute inset-0 flex items-center justify-center pointer-events-none"
+        >
+      <span
+              class="pointer-events-auto inline-flex h-16 w-16 items-center justify-center rounded-full
+               bg-black/70 border border-white/30 text-white
+               shadow-lg shadow-black/60
+               hover:bg-black/80 hover:scale-[1.03] transition-all"
+      >
+        <!-- иконка Play -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M8 5v14l11-7z" />
+        </svg>
+      </span>
+        </button>
+
+        <!-- Нижняя панель управления -->
+        <div
+                class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent
+             px-4 py-3 flex flex-col gap-2"
+        >
+            <!-- Линия прогресса с ползунком -->
+            <div class="flex items-center gap-3">
+                <!-- время текущ / всего -->
+                <div class="text-[11px] sm:text-xs font-mono text-slate-200 min-w-[72px]" id="jj-video-time">
+                    00:00 / 00:00
+                </div>
+
+                <!-- ползунок прогресса -->
+                <div class="flex-1">
+                    <div class="relative h-1.5 rounded-full bg-slate-700/60 cursor-pointer" id="jj-video-progress-bar">
+                        <!-- заполненная часть -->
+                        <div
+                                id="jj-video-progress-fill"
+                                class="absolute inset-y-0 left-0 rounded-full landing-accent-bg"
+                                style="width: 0%"
+                        ></div>
+                        <!-- ползунок -->
+                        <div
+                                id="jj-video-progress-handle"
+                                class="absolute -top-1 h-4 w-4 rounded-full bg-white shadow-md shadow-black/40
+                     border border-slate-300"
+                                style="left: 0%"
+                        ></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ряд кнопок: play, mute/volume, fullscreen -->
+            <div class="flex items-center justify-between gap-4">
+                <!-- Play / Pause -->
+                <button
+                        id="jj-video-play"
+                        type="button"
+                        class="inline-flex items-center justify-center rounded-full
+                 border border-slate-500 bg-black/60
+                 text-slate-100 px-3 py-1.5 text-xs sm:text-sm
+                 hover:border-emerald-400 hover:text-emerald-300
+                 transition-colors"
+                >
+          <span id="jj-video-play-icon" class="flex items-center gap-1">
+            <!-- иконка Play по умолчанию -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+            <span>Play</span>
+          </span>
+                </button>
+
+                <!-- Блок громкости -->
+                <div class="flex items-center gap-2 min-w-[120px] max-w-xs">
+                    <button
+                            id="jj-video-mute"
+                            type="button"
+                            class="inline-flex items-center justify-center rounded-full
+                   border border-slate-500 bg-black/60
+                   text-slate-100 p-1.5
+                   hover:border-sky-400 hover:text-sky-300
+                   transition-colors"
+                    >
+            <span id="jj-video-mute-icon">
+              <!-- иконка громко -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                        d="M5 9v6h4l5 5V4L9 9H5zm11.54 3a4.5 4.5 0 0 0-1.54-3.39v6.78A4.49 4.49 0 0 0 16.54 12z"
+                />
+              </svg>
+            </span>
+                    </button>
+                    <div class="flex-1">
+                        <input
+                                id="jj-video-volume"
+                                type="range"
+                                min="0"
+                                max="1"
+                                step="0.05"
+                                class="w-full accent-[var(--landing-accent)]"
+                        />
+                    </div>
+                </div>
+
+                <!-- Fullscreen -->
+                <button
+                        id="jj-video-fullscreen"
+                        type="button"
+                        class="inline-flex items-center justify-center rounded-full
+                 border border-slate-500 bg-black/60
+                 text-slate-100 px-3 py-1.5 text-xs sm:text-sm
+                 hover:border-slate-300 hover:text-white
+                 transition-colors"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                                d="M7 7h4V5H5v6h2V7zm6-2v2h4v4h2V5h-6zm4 12h-4v2h6v-6h-2v4zm-10-4H5v6h6v-2H7v-4z"
+                        />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    (function () {
+      const video = document.getElementById('jj-video');
+      if (!video) return;
+
+      const playButton = document.getElementById('jj-video-play');
+      const playIconSpan = document.getElementById('jj-video-play-icon');
+      const centerPlayBtn = document.getElementById('jj-video-center-play');
+
+      const timeLabel = document.getElementById('jj-video-time');
+      const progressBar = document.getElementById('jj-video-progress-bar');
+      const progressFill = document.getElementById('jj-video-progress-fill');
+      const progressHandle = document.getElementById('jj-video-progress-handle');
+
+      const muteButton = document.getElementById('jj-video-mute');
+      const muteIconSpan = document.getElementById('jj-video-mute-icon');
+      const volumeRange = document.getElementById('jj-video-volume');
+
+      const fsButton = document.getElementById('jj-video-fullscreen');
+
+      const formatTime = (seconds) => {
+        if (!isFinite(seconds)) return '00:00';
+        const m = Math.floor(seconds / 60);
+        const s = Math.floor(seconds % 60);
+        return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+      };
+
+      const updatePlayUI = () => {
+        const isPlaying = !video.paused && !video.ended;
+        playIconSpan.innerHTML = isPlaying
+          ? `
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M6 5h4v14H6zm8 0h4v14h-4z" />
+            </svg>
+            <span>Pause</span>
+          `
+          : `
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+            <span>Play</span>
+          `;
+
+        // центральная кнопка: показываем только когда видео на паузе
+        centerPlayBtn.style.opacity = isPlaying ? '0' : '1';
+        centerPlayBtn.style.pointerEvents = isPlaying ? 'none' : 'auto';
+      };
+
+      const togglePlay = () => {
+        if (video.paused || video.ended) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      };
+
+      // Инициализация
+      video.addEventListener('loadedmetadata', () => {
+        timeLabel.textContent = `${formatTime(0)} / ${formatTime(video.duration)}`;
+        if (volumeRange) volumeRange.value = String(video.volume || 1);
+      });
+
+      video.addEventListener('timeupdate', () => {
+        const current = video.currentTime;
+        const duration = video.duration || 0;
+        timeLabel.textContent = `${formatTime(current)} / ${formatTime(duration)}`;
+        const ratio = duration ? (current / duration) : 0;
+        const percent = ratio * 100;
+        progressFill.style.width = `${percent}%`;
+        progressHandle.style.left = `calc(${percent}% - 0.5rem)`; // ~ половина ширины кружка
+      });
+
+      video.addEventListener('play', updatePlayUI);
+      video.addEventListener('pause', updatePlayUI);
+      video.addEventListener('ended', updatePlayUI);
+
+      // Клики Play
+      if (playButton) playButton.addEventListener('click', togglePlay);
+      if (centerPlayBtn) centerPlayBtn.addEventListener('click', togglePlay);
+
+      // Перемотка по прогресс‑бару
+      const seek = (event) => {
+        const rect = progressBar.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const ratio = Math.min(Math.max(x / rect.width, 0), 1);
+        if (!isNaN(video.duration)) {
+          video.currentTime = ratio * video.duration;
+        }
+      };
+
+      if (progressBar) {
+        progressBar.addEventListener('click', seek);
+      }
+
+      // Громкость и mute
+      const updateMuteUI = () => {
+        const muted = video.muted || video.volume === 0;
+        muteIconSpan.innerHTML = muted
+          ? `
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M16.5 12a4.5 4.5 0 0 1-1.54 3.39L13.5 14.93A2.99 2.99 0 0 0 14.5 12a3 3 0 0 0-1-2.24l1.46-1.46A4.5 4.5 0 0 1 16.5 12zM5 9v6h4l5 5V4L9 9H5z"
+              />
+            </svg>
+          `
+          : `
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M5 9v6h4l5 5V4L9 9H5zm11.54 3a4.5 4.5 0 0 0-1.54-3.39v6.78A4.49 4.49 0 0 0 16.54 12z" />
+            </svg>
+          `;
+      };
+
+      if (muteButton) {
+        muteButton.addEventListener('click', () => {
+          if (video.muted || video.volume === 0) {
+            video.muted = false;
+            if (video.volume === 0) video.volume = 0.5;
+            if (volumeRange) volumeRange.value = String(video.volume);
+          } else {
+            video.muted = true;
+          }
+          updateMuteUI();
+        });
+      }
+
+      if (volumeRange) {
+        volumeRange.addEventListener('input', () => {
+          const v = parseFloat(volumeRange.value);
+          video.volume = isNaN(v) ? 1 : v;
+          video.muted = v === 0;
+          updateMuteUI();
+        });
+      }
+
+      // Fullscreen
+      if (fsButton) {
+        fsButton.addEventListener('click', () => {
+          const container = video.parentElement?.parentElement; // div.relative -> div.rounded-2xl
+          if (!document.fullscreenElement) {
+            (container || video).requestFullscreen?.();
+          } else {
+            document.exitFullscreen?.();
+          }
+        });
+      }
+
+      // начальное состояние UI
+      updatePlayUI();
+      updateMuteUI();
+    })();
+</script>
