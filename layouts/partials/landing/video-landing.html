@@ -36,10 +36,12 @@
 
         <!-- Нижняя панель управления -->
         <div
+                id="jj-video-controls"
                 class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent
-             px-4 py-3 flex flex-col gap-2"
+         px-4 py-3 flex flex-col gap-2 transition-opacity duration-300"
         >
-            <!-- Линия прогресса с ползунком -->
+
+        <!-- Линия прогресса с ползунком -->
             <div class="flex items-center gap-3">
                 <!-- время текущ / всего -->
                 <div class="text-[11px] sm:text-xs font-mono text-slate-200 min-w-[72px]" id="jj-video-time">
@@ -148,6 +150,9 @@
       const playButton = document.getElementById('jj-video-play');
       const playIconSpan = document.getElementById('jj-video-play-icon');
       const centerPlayBtn = document.getElementById('jj-video-center-play');
+      const controlsBar = document.getElementById('jj-video-controls');
+      let controlsHideTimeout = null;
+
 
       const timeLabel = document.getElementById('jj-video-time');
       const progressBar = document.getElementById('jj-video-progress-bar');
@@ -186,6 +191,41 @@
         // центральная кнопка: показываем только когда видео на паузе
         centerPlayBtn.style.opacity = isPlaying ? '0' : '1';
         centerPlayBtn.style.pointerEvents = isPlaying ? 'none' : 'auto';
+
+        if (isPlaying) {
+        showControls();
+        } else {
+        // при паузе всегда показываем панель
+            if (controlsBar) {
+                controlsBar.style.opacity = '1';
+                controlsBar.style.pointerEvents = 'auto';
+            }
+            if (controlsHideTimeout) {
+                clearTimeout(controlsHideTimeout);
+                controlsHideTimeout = null;
+            }
+        }
+      };
+
+      const showControls = () => {
+        if (!controlsBar) return;
+        controlsBar.style.opacity = '1';
+        controlsBar.style.pointerEvents = 'auto';
+        if (controlsHideTimeout) {
+        clearTimeout(controlsHideTimeout);
+        controlsHideTimeout = null;
+        }
+        if (!video.paused && !video.ended) {
+            controlsHideTimeout = setTimeout(() => {
+            hideControls();
+            }, 2500);
+        }
+      };
+
+      const hideControls = () => {
+        if (!controlsBar) return;
+        controlsBar.style.opacity = '0';
+        controlsBar.style.pointerEvents = 'none';
       };
 
       const togglePlay = () => {
@@ -215,6 +255,15 @@
       video.addEventListener('play', updatePlayUI);
       video.addEventListener('pause', updatePlayUI);
       video.addEventListener('ended', updatePlayUI);
+
+      // показывать панель при движении мыши / клике по видео
+      ['mousemove', 'click'].forEach((evt) => {
+          video.addEventListener(evt, () => {
+              if (!video.paused && !video.ended) {
+                showControls();
+              }
+          });
+      });
 
       // Клики Play
       if (playButton) playButton.addEventListener('click', togglePlay);
@@ -289,5 +338,8 @@
       // начальное состояние UI
       updatePlayUI();
       updateMuteUI();
+      if (!video.paused && !video.ended) {
+        showControls();
+      }
     })();
 </script>
