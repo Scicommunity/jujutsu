@@ -5,10 +5,22 @@
     --landing-accent-soft: #fee2e2;      /* чуть светлее и воздушнее, чем #fecaca */     /* мягкий розовый фон */
     --landing-text-main: #111827;        /* основной текст — почти чёрный */
     --landing-text-subtle: #6b7280;      /* приглушённый серый, темнее для читаемости */
-    /* CTA primary bullet glow */
+
+    /* CTA primary BULLET color and glow */
     --jj-cta-bullet-color: #22c55e; /* было близко к emerald-400 */
-    --jj-cta-bullet-glow: 0 0 12px rgba(34, 197, 94, 1);
-    --jj-cta-bullet-glow-outer: rgba(34, 197, 94, 0.4);
+    --jj-cta-bullet-glow: 0 0 10px rgba(34, 197, 94, 0.75);
+    --jj-cta-bullet-glow-outer: rgba(34, 197, 94, 0.25);
+
+    /* CTA primary BUTTON colors */
+    --jj-cta-text: #f9fafb;                         /* почти белый текст внутри */
+    --jj-cta-bg: bg-black/40;           /* #4b5563 slate-600: мягкий тёмно-серый */
+    --jj-cta-border: #6b7280;       /* slate-500: рамка чуть светлее фона */
+
+    --jj-cta-bg-hover: #374151;     /* slate-700: лёгкое затемнение при ховере */
+    --jj-cta-border-hover: #10b981; /* emerald-500 */
+
+    --jj-cta-bg-active: #059669;         /* emerald-600: чуть глубже зелёный при нажатии */
+
     /* CTA secondary bullet glow */
     --jj-cta-secondary-bullet-color: #22c7d8; /* мягкий аквамариновый */
     --jj-cta-secondary-bullet-glow: 0 0 10px rgba(34, 199, 216, 0.75);
@@ -85,10 +97,23 @@
     --landing-accent-soft: #7f1d1d;      /* приглушённый тёмно-красный */
     --landing-text-main: #f9fafb;        /* почти белый текст */
     --landing-text-subtle: #9ca3af;      /* мягкий серый */
-    /* CTA primary bullet glow */
+
+    /* CTA primary BULLET color and glow */
     --jj-cta-bullet-color: #22c55e; /* было близко к emerald-400*/
     --jj-cta-bullet-glow: 0 0 12px rgba(34, 197, 94, 1);
     --jj-cta-bullet-glow-outer: rgba(34, 197, 94, 0.4);
+
+    /* CTA primary BUTTON colors */
+    --jj-cta-text: #f1f5f9
+    --jj-cta-bg: rgba(0, 0, 0, 0.40);   /* аналог bg-black/40 */
+    --jj-cta-border: #475569;         /* исходная рамка */
+
+    --jj-cta-bg-hover: rgba(0, 0, 0, 0.55);
+    --jj-cta-border-hover: border-dojo-accent/80;                 /* зелёный оттенок при ховере */
+
+    --jj-cta-bg-active: rgba(22, 163, 74, 0.85); /* зелёный упор при нажатии */
+
+
     /* CTA secondary bullet glow */
     --jj-cta-secondary-bullet-color: #22c7d8; /* мягкий аквамариновый */
     --jj-cta-secondary-bullet-glow: 0 0 10px rgba(34, 199, 216, 0.75);

@@ -2,11 +2,12 @@
 {{ $landingCSS := resources.Get "landing.scss" | css.Sass | postCSS | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $landingCSS.RelPermalink }}">
 <main id="top" class="jj-landing mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pb-16">
-    {{ partial "landing/brand-badge-1.html" . }}
     {{ partial "landing/brand-badge-2.html" . }}
     {{ partial "landing/jj_values.html" . }}
     {{ partial "landing/video-landing.html" . }}
-    {{ partial "landing/three_buttons.html" . }}
+    {{ partial "landing/main_button.html" . }}
+    {{ partial "landing/secondary_buttons.html" . }}
+    {{ partial "landing/brand-badge-1.html" . }}
 <!--{{ partial "landing/benefits.html" . }}
     {{ partial "landing/books.html" . }}
     {{ partial "landing/latest-news.html" . }}
