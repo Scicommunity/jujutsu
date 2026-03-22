@@ -1,7 +1,7 @@
 ---
 title: "Контакты и запись на тренировки"
 type: "trainings"
-weight: 2
+weight: 1
 # bookFlatSection: false
 bookToc: true
 # bookHidden: false
@@ -23,8 +23,12 @@ url: "/ru/contacts"
 
 Подпишитесь на канал [@japanjujutsu](https://t.me/japanjujutsu), QR-код ниже:                   
 
-
-![qr_jujutsu_canal_S.png](/qr_jujutsu_canal_S.png)
+{{< qrimg
+src="qr_jujutsu_canal_S.png"
+alt="QR Jujutsu canal"
+width="280"
+class="qr-image qr-rounded"
+>}}
 
 ## Запись на тренировки и оперативные коммуникации
 
@@ -32,11 +36,20 @@ url: "/ru/contacts"
 [@zhdanig](https://t.me/zhdanig)  
 [@JujutsuCommunity](https://t.me/JujutsuCommunity)
 
-![QR_1](/qr_zhdanig.png)
+{{< qrimg
+src="qr_zhdanig.png"
+alt="instructor"
+width="280"
+class="qr-image qr-rounded"
+>}}
 
+{{< qrimg
+src="qr_jujutsucommunity.png"
+alt="QR_community"
+width="280"
+class="qr-image qr-rounded"
+>}}
 
-
-![QR_community](/qr_jujutsucommunity.png)
 
 Для запросов и предложений по электронной почте:
 

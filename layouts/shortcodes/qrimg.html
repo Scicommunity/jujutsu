@@ -1,0 +1,16 @@
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" | default "" }}
+{{ $width := .Get "width" | default "220" }}
+{{ $class := .Get "class" | default "qr-image" }}
+
+{{ with .Page.Resources.GetMatch $src }}
+{{ $img := . }}
+<figure class="qr-wrapper">
+    <img
+            src="{{ $img.RelPermalink }}"
+            alt="{{ $alt }}"
+            width="{{ $width }}"
+            class="{{ $class }}"
+    >
+</figure>
+{{ end }}
